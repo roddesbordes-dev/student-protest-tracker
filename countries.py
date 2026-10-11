@@ -8,7 +8,6 @@ _R = {
 NAME = {x[:2]: x[3:] for cs in _R.values() for x in cs.split('|')}
 REGION = {x[:2]: r for r, cs in _R.items() for x in cs.split('|')}
 
-# French names, by the same codes
 _FR = ('AL Albanie|AU Autriche|BO Biélorussie|BE Belgique|BK Bosnie-Herzégovine|BU Bulgarie|HR Croatie|CY Chypre|EZ Tchéquie|DA Danemark|EN Estonie|FI Finlande|FR France|GM Allemagne|GR Grèce|HU Hongrie|IC Islande|EI Irlande|IT Italie|KV Kosovo|'
        'LG Lettonie|LH Lituanie|LU Luxembourg|MK Macédoine du Nord|MT Malte|MD Moldavie|MJ Monténégro|NL Pays-Bas|NO Norvège|PL Pologne|PO Portugal|RO Roumanie|RS Russie|RI Serbie|LO Slovaquie|SI Slovénie|SP Espagne|SW Suède|SZ Suisse|UP Ukraine|UK Royaume-Uni|'
        'AR Argentine|BF Bahamas|BB Barbade|BH Belize|BL Bolivie|BR Brésil|CA Canada|CI Chili|CO Colombie|CS Costa Rica|CU Cuba|DR République dominicaine|EC Équateur|ES Salvador|GT Guatemala|GY Guyana|HA Haïti|HO Honduras|JM Jamaïque|MX Mexique|NU Nicaragua|'
