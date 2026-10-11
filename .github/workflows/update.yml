@@ -26,8 +26,8 @@ jobs:
       - run: python update_from_files.py
       - name: Commit the downloaded days
         run: |
-          git config user.name "tracker-update"
-          git config user.email "tracker-update@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/added data/reports
           if git diff --cached --quiet; then echo "no new day"; else git add data/pull_info.json; git commit -m "Days read $(date -u +%F)"; git push || (git pull --rebase && git push); fi
       - run: python build.py ${{ inputs.force && '--force' || '' }}
