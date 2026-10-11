@@ -37,8 +37,7 @@ body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-fami
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script>
-window.TRACKER_PUBLIC = {"repo": "", "full": false};      // tells the page it runs on the public site: it then shows its footer and sets the document language
-// The interface the page expects: tables read from CSV files beside the page, and values computed from them.
+window.TRACKER_PUBLIC = {"repo": "", "full": false};
 window.dash = (() => {
   const TABLES = ["latest", "recent", "monthly", "world", "info", "forms", "articles"], sets = {}, calcs = {}, subs = [];
   const fire = () => subs.forEach((f) => { try { f(); } catch (e) { console.error(e); } });
@@ -57,7 +56,7 @@ window.dash = (() => {
       .then((t) => { const rows = d3.csvParse(t); sets[id] = {status: 'ok', data: rows, columns: rows.columns}; fire(); })
       .catch((e) => { sets[id] = {status: 'error', data: [], columns: [], message: String(e)}; fire(); });
   }
-  let timer, width = window.innerWidth; window.addEventListener('resize', () => { if (window.innerWidth === width) return; width = window.innerWidth; clearTimeout(timer); timer = setTimeout(fire, 150); });      // redraw the charts when the width changes (not when a phone's address bar hides)
+  let timer, width = window.innerWidth; window.addEventListener('resize', () => { if (window.innerWidth === width) return; width = window.innerWidth; clearTimeout(timer); timer = setTimeout(fire, 150); });
   return {data, onData: (fn) => { subs.push(fn); fn(); }, calc: (id, c) => { calcs[id] = c; }, colors: ['var(--series-1)'], refresh() {}, params: () => ({}), setParams() {}, resetParams() {}, setLink() {}};
 })();
 </script>
@@ -135,17 +134,17 @@ window.dash = (() => {
       <h1 id="top" data-i18n="title">Student protest tracker</h1>
       <div class="spt-lang" role="group" aria-label="Language / Langue"><button type="button" data-lang="en" aria-pressed="true">English</button><button type="button" data-lang="fr" aria-pressed="false">Français</button></div>
     </div>
-    <p class="spt-take" id="takeaway" data-source="tiers">—</p>
+    <p class="spt-take" id="takeaway">—</p>
     <p class="spt-muted" data-i18n="take_caveat"></p>
-    <p class="spt-muted" id="spt-sub" data-source="info">—</p>
+    <p class="spt-muted" id="spt-sub">—</p>
     <p class="spt-stale" id="spt-stale" hidden></p>
   </header>
 
   <section class="spt-tiles" id="tiers">
-    <div class="spt-card spt-tile spt-t-exceptional"><span class="spt-num dash-skeleton" data-source="tiers" data-field="n" data-where="tier=exceptional">—</span><span class="spt-lab"><span class="spt-dots">●●●</span><span data-i18n="tier_exceptional">Exceptional</span></span><span class="spt-muted" data-cap="exceptional"></span></div>
-    <div class="spt-card spt-tile spt-t-high"><span class="spt-num dash-skeleton" data-source="tiers" data-field="n" data-where="tier=high">—</span><span class="spt-lab"><span class="spt-dots">●●○</span><span data-i18n="tier_high">High</span></span><span class="spt-muted" data-cap="high"></span></div>
-    <div class="spt-card spt-tile spt-t-elevated"><span class="spt-num dash-skeleton" data-source="tiers" data-field="n" data-where="tier=elevated">—</span><span class="spt-lab"><span class="spt-dots">●○○</span><span data-i18n="tier_elevated">Elevated</span></span><span class="spt-muted" data-cap="elevated"></span></div>
-    <div class="spt-card spt-tile spt-t-usual"><span class="spt-num dash-skeleton" data-source="tiers" data-field="n" data-where="tier=usual">—</span><span class="spt-lab"><span class="spt-dots">○○○</span><span data-i18n="tier_usual">Usual</span></span><span class="spt-muted" data-cap="usual"></span></div>
+    <div class="spt-card spt-tile spt-t-exceptional"><span class="spt-num dash-skeleton" data-field="n" data-where="tier=exceptional">—</span><span class="spt-lab"><span class="spt-dots">●●●</span><span data-i18n="tier_exceptional">Exceptional</span></span><span class="spt-muted" data-cap="exceptional"></span></div>
+    <div class="spt-card spt-tile spt-t-high"><span class="spt-num dash-skeleton" data-field="n" data-where="tier=high">—</span><span class="spt-lab"><span class="spt-dots">●●○</span><span data-i18n="tier_high">High</span></span><span class="spt-muted" data-cap="high"></span></div>
+    <div class="spt-card spt-tile spt-t-elevated"><span class="spt-num dash-skeleton" data-field="n" data-where="tier=elevated">—</span><span class="spt-lab"><span class="spt-dots">●○○</span><span data-i18n="tier_elevated">Elevated</span></span><span class="spt-muted" data-cap="elevated"></span></div>
+    <div class="spt-card spt-tile spt-t-usual"><span class="spt-num dash-skeleton" data-field="n" data-where="tier=usual">—</span><span class="spt-lab"><span class="spt-dots">○○○</span><span data-i18n="tier_usual">Usual</span></span><span class="spt-muted" data-cap="usual"></span></div>
   </section>
 
   <section class="spt-card" id="countries">
@@ -157,11 +156,11 @@ window.dash = (() => {
       <label><input id="spt-above" type="checkbox"> <span data-i18n="above">Only above usual</span></label>
     </div>
     <div class="spt-scroll">
-      <table id="spt-table" data-source="latest" data-row-key="country">
+      <table id="spt-table" data-row-key="country">
         <thead><tr>
           <th data-field="country"><button data-sort="name" data-i18n="th_country">Country</button></th>
           <th class="spt-l" data-field="tier"><button data-sort="rank" data-i18n="th_level">Level</button></th>
-          <th class="spt-l" data-source="recent" data-i18n="th_spark">Last 90 days</th>
+          <th class="spt-l" data-i18n="th_spark">Last 90 days</th>
           <th data-field="reports"><button data-sort="reports" data-i18n="th_reports">Reports, 7 days</button></th>
           <th data-field="active_days"><button data-sort="active_days" data-i18n="th_days">Days</button></th>
           <th data-field="share"><button data-sort="share" data-i18n="th_now">Now, per 1,000</button></th>
@@ -176,10 +175,10 @@ window.dash = (() => {
   </section>
 
   <section class="spt-grid2" id="detail">
-    <div class="spt-card"><h2 id="spt-dtitle"></h2><p class="spt-muted" id="spt-dnote"></p><div class="spt-chart dash-skeleton" id="spt-line" data-source="recent world latest"></div></div>
-    <div class="spt-card"><h2 id="spt-mtitle"></h2><p class="spt-muted" data-i18n="m_note"></p><div class="spt-chart dash-skeleton" id="spt-months" data-source="monthly"></div></div>
-    <div class="spt-card"><h2 id="spt-ftitle"></h2><p class="spt-muted" data-i18n="f_note"></p><div class="spt-forms" id="spt-forms" data-source="forms"></div></div>
-    <div class="spt-card"><h2 id="spt-atitle"></h2><p class="spt-muted" data-i18n="a_note"></p><ul class="spt-arts" id="spt-arts" data-source="articles"></ul></div>
+    <div class="spt-card"><h2 id="spt-dtitle"></h2><p class="spt-muted" id="spt-dnote"></p><div class="spt-chart dash-skeleton" id="spt-line"></div></div>
+    <div class="spt-card"><h2 id="spt-mtitle"></h2><p class="spt-muted" data-i18n="m_note"></p><div class="spt-chart dash-skeleton" id="spt-months"></div></div>
+    <div class="spt-card"><h2 id="spt-ftitle"></h2><p class="spt-muted" data-i18n="f_note"></p><div class="spt-forms" id="spt-forms"></div></div>
+    <div class="spt-card"><h2 id="spt-atitle"></h2><p class="spt-muted" data-i18n="a_note"></p><ul class="spt-arts" id="spt-arts"></ul></div>
   </section>
 
   <p class="spt-muted" data-i18n="sources"></p>
@@ -187,7 +186,6 @@ window.dash = (() => {
 </div>
 
 <script>
-// The texts of the page, in English and French.
 const I18N = {
   en: {
     "title": "Student protest tracker",
@@ -417,7 +415,7 @@ dash.calc('tiers', {
 });
 const state = {sort: 'rank', dir: -1, country: null};
 const root = document.querySelector('.spt');
-const q = (s) => root.querySelector(s) || document.createElement('div');          // a part missing from the page (the public copy has fewer) gets a throwaway element: nothing is drawn and nothing breaks
+const q = (s) => root.querySelector(s) || document.createElement('div');
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 const failed = (box) => { box.classList.remove('dash-skeleton'); box.replaceChildren(el('div', 'spt-fail', t('failed'))); };
 const formName = (f) => (f.startsWith('Target: ') ? t('f_target', {x: t('x_' + f.slice(8))}) : f.startsWith('Actor: ') ? t('f_actor', {x: t('y_' + f.slice(7))}) : t('f_' + f));
@@ -495,7 +493,7 @@ function monthChart(box, rows, name) {
 
 function draw() {
   applyStatic();
-  const SHORT = (window.TRACKER_PUBLIC && !window.TRACKER_PUBLIC.full) || !I18N[lang].sources;          // the public site, or a copy of the page cut for it
+  const SHORT = (window.TRACKER_PUBLIC && !window.TRACKER_PUBLIC.full) || !I18N[lang].sources;
   if (SHORT) root.querySelectorAll('[data-i18n=sources]').forEach((e) => { e.textContent = t('sources_pub'); });
   const L = dash.data('latest'), R = dash.data('recent'), Wd = dash.data('world'), M = dash.data('monthly'), T = dash.data('tiers'), F = dash.data('forms'), A = dash.data('articles'), I = dash.data('info');
   const tbody = q('#spt-table tbody'), take = q('#takeaway'), stale = q('#spt-stale'), info = I.status === 'ok' && I.data.length ? I.data[0] : null;
@@ -547,7 +545,7 @@ function draw() {
     const rr = (byC.get(r.country) || []).slice(-90); if (rr.length) spark(sp, rr, r.usual);
     return tr;
   }));
-  const readOf = new Map();          // the readings of the articles, by country, where the page has them
+  const readOf = new Map();
   const cur = rows.find((r) => r.country === state.country), key = cur ? cur.country : '', name = cur ? cur.name : '';
   q('#spt-dtitle').textContent = t('d_title', {c: name}); q('#spt-mtitle').textContent = t('m_title', {c: name}); q('#spt-ftitle').textContent = t('f_title', {c: name}); q('#spt-atitle').textContent = t('a_title', {c: name});
   q('#spt-dnote').textContent = cur ? t('d_note', {now: fmt(cur.share), u: fmt(cur.usual), tier: t('t_' + cur.tier), n: int(cur.reports), a: isFinite(cur.articles) ? int(cur.articles) : '?', d: int(cur.active_days), w: cur.reports_per_week >= 0.1 ? t('w_some', {x: nf(1).format(cur.reports_per_week)}) : t('w_none'), run: (cur.run_days > 1 ? t('run_n', {k: int(cur.run_days)}) : cur.run_days === 1 ? t('run_1') : '') + (isFinite(cur.far_days_year) ? t('year_far', {k: int(cur.far_days_year)}) : '') + (isFinite(cur.located) && cur.reports > cur.located ? t('d_mis', {m: int(cur.reports - cur.located)}) : '') + (cur.press === 'closed' ? t('d_press') : '') + (readOf.has(cur.country) ? t('d_read', {k: int(num(readOf.get(cur.country).read)), v: t('v_' + readOf.get(cur.country).verdict)}) + (((lang === 'fr' ? readOf.get(cur.country).summary_fr : readOf.get(cur.country).summary_en) || '') ? ' ' + (lang === 'fr' ? readOf.get(cur.country).summary_fr : readOf.get(cur.country).summary_en) : '') : '')}) : '';
