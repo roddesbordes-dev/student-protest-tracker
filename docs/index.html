@@ -181,12 +181,12 @@ window.feed = (() => {
 const I18N = {
   en: {
     "title": "Student protest tracker",
-    "take_some": "News reports of student protest are far above their usual level in {n} of the {N} countries tracked: {top}.",
-    "take_none": "In no country are news reports of student protest far above their usual level; {e} of the {N} countries tracked are at the elevated level.",
+    "take_some": "News reports of student protest are far above their usual level (high or exceptional) in {n} of the {N} countries tracked: {top}.",
+    "take_none": "In no country are news reports of student protest far above their usual level (high or exceptional); countries at the elevated level, of the {N} tracked: {e}.",
     "take_base": " Since {y} the median daily number of such countries is {m}; it reached {n} or more on {d} days, in {e} separate episodes.",
     "take_base1": " Since {y} the median daily number of such countries is {m}; days on which it reached {n} or more: {d}, all in one episode.",
-    "take_base0": " Since {y} the median daily number of such countries is {m}; it had not reached {n} before.",
-    "take_caveat": "The tracker counts event records that GDELT codes automatically from the news; one article can produce several reports. A flag is a reason to read the articles listed for the country, not a finding that students are protesting there: some flags rest on articles about another country.",
+    "take_base0": " Since {y} the median daily number of such countries is {m}; it had not reached {n} before the last 30 days.",
+    "take_caveat": "The tracker counts the protests that GDELT codes automatically from the news with students, pupils, a school or a university as the actor. They are called reports here, and one article can produce several. A flag is a reason to read the articles listed for the country, not a finding that students are protesting there: some flags rest on articles about another country.",
     "sub": "Reports located by GDELT in each country, seven days to {day}: {n} worldwide. Updated {at}.",
     "stale_old": "The data end on {day}: no newer data have been loaded. Read the levels below as those of that day.",
     "stale_bad": "The last update reported a problem: {msg}.",
@@ -204,8 +204,8 @@ const I18N = {
     "cap_elevated": "both at 80 or more; {f}% at this level or above",
     "cap_usual": "no unusual number of reports, which is not proof of calm",
     "countries_h": "Countries, by distance from their own past",
-    "countries_note": "Now: reports per 1,000 events of all kinds that GDELT locates in the country, over seven days. Usual: the median of that level over the country's last three years. Days: the days with at least one report among the seven. Percentile, 3 yr: the percentage of days in the country's last three years with a lower level than now. Percentile, season: the same against the same time of year in earlier years. A country is flagged only if the current level is high both against its last three years and against the same season in earlier years, with at least five reports on at least three different days. Countries are compared with themselves, not with each other. \"Press not free\" marks the countries where the V-Dem index of freedom of expression is under 0.25: there, the absence of a flag says little. Data says how many reports the country usually has (rich, moderate or thin): with thin data a flag rests on few reports. \"Held back\" means that the level is high but the reports are too few, on too few days, or mostly from articles about other places. Countries with fewer than about one report a month are not tracked. Click a country for its chart, what its reports say and the articles behind them.",
-    "search": "Search a country",
+    "countries_note": "Now: reports per 1,000 events of all kinds that GDELT locates in the country, over seven days. Usual: the median of that level over the country's last three years, the latest 30 days aside. Days: the days with at least one report among the seven. Percentile, 3 yr: the percentage of days in the country's last three years with a lower level than now. Percentile, season: the same against the same time of year in earlier years. A country is flagged only if the current level is high both against its last three years and against the same season in earlier years, with at least five reports on at least three different days. Countries are compared with themselves, not with each other. \"Press not free\" marks the countries where the V-Dem index of freedom of expression is under 0.25: there, the absence of a flag says little. \"Data\": how many reports the country usually has (rich, moderate or thin); with thin data a flag rests on few reports. \"Held back\" means that the level is high but the reports are too few, on too few days, or mostly from articles about other places. Countries with fewer than about one report a month are not tracked. Click a country for its chart, what its reports say and the articles behind them.",
+    "search": "Search for a country",
     "region": "Region",
     "all_regions": "All regions",
     "above": "Only flagged countries",
@@ -225,18 +225,18 @@ const I18N = {
     "held": "held back",
     "held_else": "held back (articles about other places)",
     "press_closed": "press not free",
-    "d_mis": " {m} of these reports come from articles in which most of the places named are in other countries; they do not count towards a flag.",
+    "d_mis": " Reports from articles in which most of the places named are in other countries: {m}; they do not count towards a flag.",
     "d_press": " The press is not free here (V-Dem), so the absence of a flag says little.",
     "art_about": "; {p}% of the places it names are in this country",
     "d_title": "{c}: last 180 days",
     "m_title": "{c}, by month since 2017",
     "f_title": "{c}: what the reports say, last 28 days",
     "a_title": "{c}: articles behind the most reports, last 7 days",
-    "d_note": "Reports per 1,000 events over seven days: {now} now, {u} usual. Reports: {n}; articles: {a}; days with a report: {d}; usual week: {w}. Level: {tier}.{run} Dashed line: usual level. Dotted line: the world as a whole.",
+    "d_note": "Reports per 1,000 events over seven days: {now} now, {u} usual. Reports: {n}; articles: {a}; days with a report: {d}; reports in a usual week: {w}. Level: {tier}.{run} Dashed line: usual level. Dotted line: the world as a whole.",
     "w_some": "about {x}",
     "w_none": "almost none",
-    "run_n": " Above usual for {k} days in a row.",
-    "run_1": " Above usual since yesterday.",
+    "run_n": " Flagged for {k} days in a row.",
+    "run_1": " Flagged on the latest day only.",
     "m_note": "Reports per 1,000 events, by month.",
     "year_far": " Days at the high or exceptional level in the last twelve months: {k}.",
     "art_untitled": "{src} (no readable title in the link)",
@@ -284,15 +284,15 @@ const I18N = {
     "foot_articles": "articles",
   },
   fr: {
-    "title": "Suivi des protestations étudiantes",
-    "take_some": "Les mentions de protestations étudiantes dans la presse dépassent nettement leur niveau habituel dans {n} des {N} pays suivis : {top}.",
-    "take_none": "Dans aucun pays les mentions de protestations étudiantes ne dépassent nettement leur niveau habituel ; {e} des {N} pays suivis sont au niveau soutenu.",
+    "title": "Suivi des protestations d'élèves et d'étudiants",
+    "take_some": "Les mentions de protestations d'élèves et d'étudiants dans la presse dépassent nettement leur niveau habituel (niveau fort ou exceptionnel) dans {n} des {N} pays suivis : {top}.",
+    "take_none": "Dans aucun pays les mentions de protestations d'élèves et d'étudiants ne dépassent nettement leur niveau habituel (niveau fort ou exceptionnel) ; pays au niveau soutenu, sur les {N} suivis : {e}.",
     "take_base": " Depuis {y}, le nombre médian de pays dans ce cas est de {m} par jour ; il a atteint {n} ou plus pendant {d} jours, en {e} épisodes distincts.",
     "take_base1": " Depuis {y}, le nombre médian de pays dans ce cas est de {m} par jour ; jours où il a atteint {n} ou plus : {d}, en un seul épisode.",
-    "take_base0": " Depuis {y}, le nombre médian de pays dans ce cas est de {m} par jour ; il n'avait jamais atteint {n}.",
-    "take_caveat": "L'outil compte des événements que GDELT code automatiquement à partir de la presse ; un article peut donner lieu à plusieurs mentions. Une alerte est une raison de lire les articles listés pour le pays, non le constat que des étudiants y protestent : certaines alertes reposent sur des articles consacrés à un autre pays.",
+    "take_base0": " Depuis {y}, le nombre médian de pays dans ce cas est de {m} par jour ; il n'avait jamais atteint {n} avant les 30 derniers jours.",
+    "take_caveat": "L'outil compte les protestations que GDELT code automatiquement à partir de la presse et dont l'acteur est désigné comme des élèves, des étudiants, une école ou une université. Elles sont appelées ici mentions, et un article peut en produire plusieurs. Une alerte est une raison de lire les articles listés pour le pays, non le constat que des élèves ou des étudiants y protestent : certaines alertes reposent sur des articles consacrés à un autre pays.",
     "sub": "Mentions localisées par GDELT dans chaque pays, sur les sept jours jusqu'au {day} : {n} dans le monde. Mise à jour du {at}.",
-    "stale_old": "Les données s'arrêtent au {day} : aucune donnée plus récente n'a été chargée. Les niveaux ci-dessous sont ceux de ce jour.",
+    "stale_old": "Les données s'arrêtent au {day} : aucune donnée plus récente n'a été chargée. Les niveaux ci-dessous sont ceux de ce jour-là.",
     "stale_bad": "La dernière mise à jour a signalé un problème : {msg}.",
     "stale_gap": "Une partie des 192 fichiers quotidiens de GDELT n'a pas pu être lue pour : {days} (fichiers lus entre parenthèses). Les comptages de ces jours sont sous-estimés.",
     "tier_exceptional": "Exceptionnel",
@@ -308,7 +308,7 @@ const I18N = {
     "cap_elevated": "les deux à 80 ou plus ; {f} % à ce niveau ou au-dessus",
     "cap_usual": "pas de nombre inhabituel de mentions, ce qui ne prouve pas le calme",
     "countries_h": "Pays, classés par écart à leur propre passé",
-    "countries_note": "Actuel : mentions pour 1 000 événements de toute nature que GDELT localise dans le pays, sur sept jours. Habituel : la médiane de ce niveau sur les trois dernières années du pays. Jours : les jours comptant au moins une mention parmi les sept. Centile 3 ans : part des jours des trois dernières années où le niveau était plus bas qu'aujourd'hui. Centile saison : même calcul sur la même période des années précédentes. Un pays n'est mis en alerte que si ce niveau est haut à la fois au regard de ses trois dernières années et de la même saison des années précédentes, avec au moins cinq mentions réparties sur au moins trois jours. Les pays sont comparés à eux-mêmes, non entre eux. « Presse non libre » désigne les pays où l'indice de liberté d'expression de V-Dem est inférieur à 0,25 : l'absence d'alerte n'y dit pas grand-chose. Données indique combien de mentions le pays reçoit d'ordinaire (abondantes, moyennes ou rares) : avec des données rares, une alerte repose sur peu de mentions. « Non retenu » signifie que le niveau est haut mais que les mentions sont trop peu nombreuses, concentrées sur trop peu de jours, ou tirées surtout d'articles portant sur d'autres lieux. Les pays comptant moins d'une mention par mois environ ne sont pas suivis. Cliquez sur un pays pour voir sa courbe, ce que disent ses mentions et les articles dont elles proviennent.",
+    "countries_note": "Actuel : mentions pour 1 000 événements de toute nature que GDELT localise dans le pays, sur sept jours. Habituel : la médiane de ce niveau sur les trois dernières années du pays, hors les 30 derniers jours. Jours : les jours comptant au moins une mention parmi les sept. Centile 3 ans : part des jours des trois dernières années où le niveau était plus bas qu'aujourd'hui. Centile saison : même calcul sur la même période des années précédentes. Un pays n'est mis en alerte que si ce niveau est haut à la fois au regard de ses trois dernières années et de la même saison des années précédentes, avec au moins cinq mentions réparties sur au moins trois jours. Les pays sont comparés à eux-mêmes, non entre eux. « Presse non libre » désigne les pays où l'indice de liberté d'expression de V-Dem est inférieur à 0,25 : l'absence d'alerte n'y dit pas grand-chose. « Données » : nombre de mentions que le pays reçoit d'ordinaire (abondantes, moyennes ou rares) ; avec des données rares, une alerte repose sur peu de mentions. « Non retenu » signifie que le niveau est haut mais que les mentions sont trop peu nombreuses, concentrées sur trop peu de jours, ou tirées surtout d'articles portant sur d'autres lieux. Les pays comptant moins d'une mention par mois environ ne sont pas suivis. Cliquez sur un pays pour voir sa courbe, ce que disent ses mentions et les articles dont elles proviennent.",
     "search": "Chercher un pays",
     "region": "Région",
     "all_regions": "Toutes les régions",
@@ -329,18 +329,18 @@ const I18N = {
     "held": "non retenu",
     "held_else": "non retenu (articles portant sur d'autres lieux)",
     "press_closed": "presse non libre",
-    "d_mis": " {m} de ces mentions proviennent d'articles dont la plupart des lieux cités se trouvent dans d'autres pays ; elles ne comptent pas pour une alerte.",
+    "d_mis": " Mentions tirées d'articles dont la plupart des lieux cités se trouvent dans d'autres pays : {m} ; elles ne comptent pas pour une alerte.",
     "d_press": " La presse n'est pas libre ici (V-Dem) : l'absence d'alerte ne dit pas grand-chose.",
     "art_about": " ; {p} % des lieux cités se trouvent dans ce pays",
     "d_title": "{c} : 180 derniers jours",
     "m_title": "{c}, par mois depuis 2017",
     "f_title": "{c} : ce que disent les mentions, 28 derniers jours",
     "a_title": "{c} : articles à l'origine du plus grand nombre de mentions, 7 derniers jours",
-    "d_note": "Mentions pour 1 000 événements sur sept jours : {now} actuellement, {u} habituellement. Mentions : {n} ; articles : {a} ; jours avec mention : {d} ; semaine ordinaire : {w}. Niveau : {tier}.{run} Tirets : niveau habituel. Pointillés : le monde entier.",
+    "d_note": "Mentions pour 1 000 événements sur sept jours : {now} actuellement, {u} habituellement. Mentions : {n} ; articles : {a} ; jours avec mention : {d} ; mentions une semaine ordinaire : {w}. Niveau : {tier}.{run} Tirets : niveau habituel. Pointillés : le monde entier.",
     "w_some": "environ {x}",
     "w_none": "presque aucune",
-    "run_n": " Au-dessus de l'habituel depuis {k} jours consécutifs.",
-    "run_1": " Au-dessus de l'habituel depuis hier.",
+    "run_n": " En alerte depuis {k} jours consécutifs.",
+    "run_1": " En alerte le dernier jour seulement.",
     "m_note": "Mentions pour 1 000 événements, par mois.",
     "year_far": " Jours au niveau fort ou exceptionnel sur douze mois : {k}.",
     "art_untitled": "{src} (pas de titre lisible dans le lien)",
@@ -507,7 +507,7 @@ function draw() {
   const nameOf = new Map(L.data.map((r) => [r.country, nm(r)]));
   if (T.status === 'ok') {
     const n = Object.fromEntries(T.data.map((r) => [r.tier, r.n])); root.querySelectorAll('.spt-num').forEach((e) => { e.textContent = int(n[e.dataset.where.split('=')[1]] ?? 0); });
-    const top = rows.filter((r) => r.tier === 'exceptional' || r.tier === 'high').sort((a, b) => b.rank - a.rank || b.reports - a.reports).slice(0, 8).map((r) => r.name);
+    const top = rows.filter((r) => r.tier === 'exceptional' || r.tier === 'high').sort((a, b) => b.rank - a.rank || b.reports - a.reports).map((r) => r.name);
     const far = n.exceptional + n.high, days = info ? num(info.far_days_at_least_now) : NaN, eps = info ? num(info.far_episodes_at_least_now) : NaN;
     const base = info && isFinite(num(info.far_median)) && isFinite(days) && far ? t(days === 0 ? 'take_base0' : eps === 1 ? 'take_base1' : 'take_base', {y: (info.history_from || '').slice(0, 4), m: int(num(info.far_median)), n: int(far), d: int(days), e: int(eps)}) : '';
     take.textContent = far ? t('take_some', {n: far, N: rows.length, top: top.join(', ')}) + base : t('take_none', {e: n.elevated, N: rows.length});
@@ -525,7 +525,7 @@ function draw() {
     const tr = el('tr'); tr.dataset.key = r.country; tr.tabIndex = 0; tr.setAttribute('aria-selected', String(r.country === state.country));
     const cell = (s, cls) => { const td = el('td', cls, s); tr.append(td); return td; };
     cell(r.name); cell(t('t_' + r.tier), `spt-l spt-pill spt-t-${r.tier}`); const sp = cell('', 'spt-l spt-spark'); cell(int(r.reports)); cell(int(r.active_days)); cell(fmt(r.share)); cell(fmt(r.usual));
-    cell(r.reports > 0 ? int(Math.floor(r.percentile)) : '–'); cell(r.reports > 0 ? int(Math.floor(r.percentile_season)) : '–'); cell(t('d_' + r.data) + (r.signal ? '; ' + t(r.signal === 'elsewhere' ? 'held_else' : 'held') : '') + (r.press === 'closed' ? '; ' + t('press_closed') : ''), 'spt-l');
+    cell(r.reports > 0 ? int(Math.floor(r.percentile)) : '–'); cell(r.reports > 0 ? int(Math.floor(r.percentile_season)) : '–'); cell(t('d_' + r.data) + (r.signal ? ' · ' + t(r.signal === 'elsewhere' ? 'held_else' : 'held') : '') + (r.press === 'closed' ? ' · ' + t('press_closed') : ''), 'spt-l');
     const rr = (byC.get(r.country) || []).slice(-90); if (rr.length) spark(sp, rr, r.usual);
     return tr;
   }));
@@ -537,7 +537,7 @@ function draw() {
   if (M.status === 'ok') monthChart(mb, M.data.filter((r) => r.country === key), name); else if (M.status === 'error') failed(mb); else { mb.replaceChildren(); mb.classList.add('spt-wait'); }
   if (F.status === 'ok') {
     const fr = F.data.filter((r) => r.country === key).map((r) => ({form: r.form, n: num(r.reports), s: num(r.share)})).sort((a, b) => (formGroup(a.form) - formGroup(b.form)) || b.n - a.n);
-    fb.replaceChildren(...(fr.length ? fr.map((r) => { const d = el('div', 'spt-form' + (formGroup(r.form) ? '' : ' spt-main')); const bar = el('span', 'spt-bar'); bar.style.width = Math.max(r.s, 1) + '%'; const w = el('span'); w.append(bar); d.append(el('span', '', formName(r.form)), w, el('span', '', `${int(r.s)} % (${int(r.n)})`.replace(' %', lang === 'fr' ? ' %' : '%'))); return d; }) : [el('p', 'spt-muted', t('no_forms'))]));
+    fb.replaceChildren(...(fr.length ? fr.map((r) => { const d = el('div', 'spt-form' + (formGroup(r.form) ? '' : ' spt-main')); const bar = el('span', 'spt-bar'); bar.style.width = Math.max(r.s, 1) + '%'; const w = el('span'); w.append(bar); d.append(el('span', '', formName(r.form)), w, el('span', '', `${r.s > 0 && r.s < 1 ? '<1' : int(r.s)} % (${int(r.n)})`.replace(' %', lang === 'fr' ? ' %' : '%'))); return d; }) : [el('p', 'spt-muted', t('no_forms'))]));
   } else if (F.status === 'error') failed(fb); else fb.replaceChildren();
   if (A.status === 'ok') {
     const ar = A.data.filter((r) => r.country === key).sort((a, b) => num(a.rank) - num(b.rank));
