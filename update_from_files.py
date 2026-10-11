@@ -12,7 +12,7 @@ URL = 'http://data.gdeltproject.org/gdeltv2/{stamp}.{kind}.CSV.zip'; KINDS = ('e
 GKG_URL = 'http://data.gdeltproject.org/gdeltv2/{stamp}.{kind}.csv.zip'; GKG_KIND = {'export': 'gkg', 'translation.export': 'translation.gkg'}
 REPORT_COLS = ['day', 'fips', 'code', 'target', 'articles', 'url', 'actor', 'own_share', 'main']
 STUDENT = re.compile(r'STUDENT|PUPIL|SCHOOL|UNIVERSIT|LYCEE|LYCEEN|UNDERGRAD|CAMPUS'); MIN_FILES = 180; STALE_DAYS = 2; GRACE_DAYS = 3
-COLS = ['day', 'fips', 'events', 'articles', 'protests', 'education_protests', 'student_protests']
+COLS = ['day', 'fips', 'events', 'student_protests']
 csv.field_size_limit(10 ** 9)
 next_day = lambda k: int((datetime.datetime.strptime(str(k), '%Y%m%d') + datetime.timedelta(days=1)).strftime('%Y%m%d'))
 
@@ -32,11 +32,8 @@ def real_day(s):
 
 def count(r, out, reports):
     if len(r) < 61 or not r[53] or not real_day(r[1]): return False
-    k = out[(int(r[1]), r[53])]; n = int(r[33]) if r[33].isdigit() else 0; k[0] += 1; k[1] += n
-    if r[28] == '14':
-        k[2] += 1; named = bool(STUDENT.search(r[6]))
-        if named or 'EDU' in (r[12], r[13], r[14]): k[3] += 1
-        if named: k[4] += 1; reports.append((int(r[1]), r[53], r[26], r[22], n, r[60], r[6]))
+    k = out[(int(r[1]), r[53])]; n = int(r[33]) if r[33].isdigit() else 0; k[0] += 1
+    if r[28] == '14' and STUDENT.search(r[6]): k[1] += 1; reports.append((int(r[1]), r[53], r[26], r[22], n, r[60], r[6]))
     return True
 
 def places(blob, urls):
@@ -60,7 +57,7 @@ def with_places(new, found):
     return done
 
 def read_day(day):
-    out = defaultdict(lambda: [0, 0, 0, 0, 0]); files = 0; reports = []
+    out = defaultdict(lambda: [0, 0]); files = 0; reports = []
     for q in range(96):
         stamp = f'{day}{q // 4:02d}{15 * (q % 4):02d}00'
         for kind in KINDS:
@@ -82,7 +79,7 @@ def store(day, partial=False):
     if files < MIN_FILES and not partial and before is None: print(f'{day}: {files} of 192 files, not stored', flush=True); return None
     os.makedirs(REPORTS, exist_ok=True); pd.DataFrame(reports, columns=REPORT_COLS).sort_values(['day', 'fips']).to_csv(os.path.join(REPORTS, f'{day}.csv'), index=False)
     first = int(day) == next_day(BASE_LAST_ADDED)
-    rows = [(d, f, *(v if not (first and d < BASE_RECENT_FROM) else [0, 0, 0, 0, v[4]])) for (d, f), v in counts.items() if d >= BASE_FIRST]
+    rows = [(d, f, *(v if not (first and d < BASE_RECENT_FROM) else [0, v[1]])) for (d, f), v in counts.items() if d >= BASE_FIRST]
     rows = [r for r in rows if any(r[2:])]
     pd.DataFrame(rows, columns=COLS).sort_values(['day', 'fips']).to_csv(os.path.join(ADDED, f'{day}.csv'), index=False)
     if int(day) > BASE_LAST_ADDED: pd.concat([cov[cov.day != str(day)], pd.DataFrame([dict(day=str(day), files=files)])]).sort_values('day').to_csv(COVERAGE, index=False)

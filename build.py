@@ -5,7 +5,7 @@ from countries import NAME, REGION, NAME_FR, REGION_FR
 
 HERE = os.path.dirname(os.path.abspath(__file__)); DATA = os.path.join(HERE, 'data'); OUT = os.path.join(HERE, 'out'); os.makedirs(OUT, exist_ok=True)
 CODE = ['usual', 'elevated', 'high', 'exceptional']; CUTS = (80, 95, 99); MIN_REPORTS = 5; MIN_ACTIVE_DAYS = 3; MIN_PER_MONTH = 1.0; MAX_AGE_DAYS = 4
-SEASON = 30; REF_DAYS = 3 * 365; REF_GAP = 30; BACKTEST_FROM = '2020-02-15'; EXCLUDE_FLAGGED = False; MAX_EXCLUDED = 0.25
+SEASON = 30; REF_DAYS = 3 * 365; REF_GAP = 30; HISTORY_FROM = '2020-02-15'
 
 def load():
     D = pd.read_csv(os.path.join(DATA, 'daily.csv.gz'), keep_default_na=False, na_values=['']); D = D[D.fips.isin(NAME)]; D['day'] = pd.to_datetime(D.day.astype(str), format='%Y%m%d', errors='coerce'); D = D[D.day.notna()]
@@ -13,26 +13,22 @@ def load():
     present = set(D.day.unique()); days = pd.date_range(D.day.min(), last); wide = lambda c: D.pivot(index='day', columns='fips', values=c).reindex(days).fillna(0)
     return wide('student_protests'), wide('events'), info, [d for d in days[-60:] if d not in present]
 
-def flags(N, E, first=BACKTEST_FROM, exclude=EXCLUDE_FLAGGED, places=None):
+def flags(N, E, first=HISTORY_FROM, places=None):
     idx, cols = N.index, N.columns; n7 = N.rolling(7).sum().fillna(0).values; e7 = E.rolling(7).sum().fillna(0).values; a7 = (N > 0).rolling(7).sum().fillna(0).values
     with np.errstate(invalid='ignore', divide='ignore'): S = np.where(e7 > 0, 1000 * n7 / e7, np.nan)
     Nv = N.values; doy = idx.dayofyear.values; T, C = Nv.shape; start = min(T - 1, max(REF_GAP + 400, int(idx.searchsorted(pd.Timestamp(first)))))
-    out = {k: np.full((T, C), np.nan) for k in ('tier', 'raw', 'moved', 'pct', 'pcts', 'usual', 'per_week')}; seen = ~np.isnan(S); flagged = np.zeros((T, C), bool)
+    out = {k: np.full((T, C), np.nan) for k in ('tier', 'raw', 'moved', 'pct', 'pcts', 'usual', 'per_week')}; seen = ~np.isnan(S)
     l7, d7 = (places[0].reindex(index=idx, columns=cols).values, places[1].reindex(index=idx, columns=cols).values) if places is not None else (np.full((T, C), np.nan),) * 2
-    def keep(rows):
-        ok = seen[rows]
-        if not exclude: return ok
-        out_ = ok & flagged[rows]; return ok & ~(flagged[rows] & (out_.sum(0) <= MAX_EXCLUDED * np.maximum(ok.sum(0), 1)))
     for i in range(start, T):
-        lo, hi = max(0, i - REF_GAP - REF_DAYS), i - REF_GAP; rows = slice(lo, hi + 1); ref = S[rows]; ok = keep(rows); now = S[i]
+        lo, hi = max(0, i - REF_GAP - REF_DAYS), i - REF_GAP; rows = slice(lo, hi + 1); ref = S[rows]; ok = seen[rows]; now = S[i]
         with np.errstate(invalid='ignore'): pct = 100 * ((ref < now) & ok).sum(0) / np.maximum(ok.sum(0), 1)
-        j = max(0, i - 300); gap = np.abs(doy[:j] - doy[i]); rs = np.flatnonzero(np.minimum(gap, 366 - gap) <= SEASON); sea = S[rs]; oks = keep(rs)
+        j = max(0, i - 300); gap = np.abs(doy[:j] - doy[i]); rs = np.flatnonzero(np.minimum(gap, 366 - gap) <= SEASON); sea = S[rs]; oks = seen[rs]
         with np.errstate(invalid='ignore'): pcts = np.where(oks.sum(0) > 100, 100 * ((sea < now) & oks).sum(0) / np.maximum(oks.sum(0), 1), pct)
         per_week = Nv[rows].sum(0) / (REF_DAYS / 7); m = np.minimum(pct, pcts); raw = sum((m >= c).astype(int) for c in CUTS)
         enough = (n7[i] >= MIN_REPORTS) & (a7[i] >= MIN_ACTIVE_DAYS); tracked = per_week * 4.35 >= MIN_PER_MONTH
         with np.errstate(all='ignore'): out['usual'][i] = np.where(ok.any(0), np.nanmedian(np.where(ok, ref, np.nan), axis=0), np.nan)
         with np.errstate(invalid='ignore'): here = np.isnan(l7[i]) | ((l7[i] >= MIN_REPORTS) & (d7[i] >= MIN_ACTIVE_DAYS))
-        out['tier'][i] = np.where(tracked, raw * enough * here, -1); out['raw'][i] = raw; out['moved'][i] = (raw > 0) & enough & ~here; out['pct'][i] = pct; out['pcts'][i] = pcts; out['per_week'][i] = per_week; flagged[i] = tracked & enough & here & (raw >= 2)
+        out['tier'][i] = np.where(tracked, raw * enough * here, -1); out['raw'][i] = raw; out['moved'][i] = (raw > 0) & enough & ~here; out['pct'][i] = pct; out['pcts'][i] = pcts; out['per_week'][i] = per_week
     frame = lambda X: pd.DataFrame(X, index=idx, columns=cols)
     return dict({k: frame(v).iloc[start:] for k, v in out.items()}, n7=frame(n7), a7=frame(a7), S7=frame(S))
 
@@ -80,7 +76,7 @@ def main():
     days_ranked = (B['tier'] >= 0).values.sum(); freq = {k: round(100 * float((B['tier'] >= k).values.sum() / days_ranked), 1) for k in (1, 2, 3)}
     out = dict(last_day=last.strftime('%Y-%m-%d'), first_day=N.index.min().strftime('%Y-%m-%d'), pulled_at=info['pulled_at'], countries_listed=int(len(N.columns)), countries_tracked=len(tracked), reports_last_7_days=int(world7.iloc[-1]),
                source=info.get('source', ''), checks='passed' if not fatal else '; '.join(fatal), incomplete=' '.join(f'{d}:{n}' for d, n in sorted(recent_gaps.items())),
-               backtest_from=BT.index.min().strftime('%Y-%m-%d'), far_now=int(far.iloc[-1]), far_median=float(past.median()), far_p90=float(past.quantile(0.9)), far_share_days_at_least_now=round(100 * float((past >= far.iloc[-1]).mean()), 1), far_days_at_least_now=int(len(as_many)), far_episodes_at_least_now=episodes, backtest_days=int(len(past)),
+               history_from=BT.index.min().strftime('%Y-%m-%d'), far_now=int(far.iloc[-1]), far_median=float(past.median()), far_p90=float(past.quantile(0.9)), far_share_days_at_least_now=round(100 * float((past >= far.iloc[-1]).mean()), 1), far_days_at_least_now=int(len(as_many)), far_episodes_at_least_now=episodes, history_days=int(len(past)),
                freq_elevated=freq[1], freq_high=freq[2], freq_exceptional=freq[3], usual_zero=int((L[L.tracked == 1].usual == 0).sum()),
                tiers={t: int((L.tier == t).sum()) for t in CODE[::-1]})
     json.dump(out, open(os.path.join(OUT, 'info.json'), 'w'), indent=1); pd.DataFrame([{k: v for k, v in out.items() if k != 'tiers'}]).to_csv(os.path.join(OUT, 'info.csv'), index=False)

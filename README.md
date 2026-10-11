@@ -15,4 +15,6 @@ publics du projet GDELT. Une alerte est une raison de lire les articles listés 
 y protestent.*
 
 Sources: the GDELT Project, events database and knowledge graph, version 2, https://www.gdeltproject.org; V-Dem Country-Year
-Dataset v16, https://www.v-dem.net, for the press-freedom marker. Rodolphe Desbordes.
+Dataset v16, https://www.v-dem.net, for the press-freedom marker.
+
+Author: Rodolphe Desbordes.
