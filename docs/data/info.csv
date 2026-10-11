@@ -1,2 +1,2 @@
-last_day,first_day,pulled_at,countries_listed,countries_tracked,reports_last_7_days,source,checks,incomplete,backtest_from,far_median,far_p90,far_days_at_least_now,far_episodes_at_least_now,freq_elevated,freq_high,freq_exceptional,usual_zero
-2026-10-10,2017-01-01,2026-10-11 19:23 UTC,177,93,760,GDELT 2.0 event files (data.gdeltproject.org/gdeltv2),passed,,2020-02-15,1.0,3.0,91,15,4.1,1.6,0.6,57
+last_day,pulled_at,reports_last_7_days,checks,incomplete,history_from,far_median,far_days_at_least_now,far_episodes_at_least_now,freq_elevated,freq_high,freq_exceptional
+2026-10-10,2026-10-11 20:22 UTC,760,passed,,2020-02-15,1.0,91,15,4.1,1.6,0.6
