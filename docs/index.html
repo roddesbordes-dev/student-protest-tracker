@@ -100,12 +100,10 @@ window.dash = (() => {
 .spt th button { all: unset; cursor: pointer; }
 .spt th button:focus-visible, .spt tbody tr:focus-visible, .spt a:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
 .spt td { text-align: right; padding: .38rem .6rem; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
-.spt #spt-waves td.spt-l, .spt #spt-waves th { white-space: normal; }
 .spt #spt-table tbody tr { cursor: pointer; }
 .spt #spt-table tbody tr:hover, .spt #spt-table tbody tr[aria-selected=true] { background: var(--color-bg); }
 .spt td.spt-spark { padding-block: .1rem; }
 .spt-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr)); gap: var(--cds-gap-md); }
-.spt-grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-md); }
 .spt-chart { position: relative; min-height: 15rem; }
 .spt-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; }
 .spt-fail { display: flex; align-items: center; justify-content: center; gap: .4rem; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); min-height: 6rem; }
@@ -120,9 +118,6 @@ window.dash = (() => {
 .spt-arts { display: flex; flex-direction: column; gap: .55rem; margin: 0; padding: 0; list-style: none; min-height: 8rem; }
 .spt-arts li { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
 .spt-arts a, .spt-foot a { color: var(--color-fg); text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
-.spt-method ol, .spt-method ul { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: .5rem; line-height: 1.5; }
-.spt-method li::marker { color: var(--color-fg-muted); }
-.spt-method b { font-weight: var(--cds-font-weight-medium); }
 .spt-foot { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
 .spt-foot a { color: inherit; }
 .spt [hidden] { display: none !important; }
