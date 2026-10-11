@@ -1,0 +1,5 @@
+# rebuilt at every update
+data/daily.csv.gz
+out/
+__pycache__/
+*.pyc
