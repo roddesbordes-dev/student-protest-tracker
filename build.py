@@ -48,17 +48,16 @@ def main():
     if fatal and '--force' not in sys.argv: raise SystemExit('build stopped, nothing written: ' + '; '.join(fatal))
     recent_gaps = {d: n for d, n in (info.get('incomplete_days') or {}).items() if (last - pd.Timestamp(d)).days < 45}
 
-    r0, r1 = last - pd.Timedelta(days=REF_GAP + REF_DAYS), last - pd.Timedelta(days=REF_GAP); ref = S7.loc[r0:r1]; per_week = B['per_week'].iloc[-1]
+    per_week = B['per_week'].iloc[-1]
     tier, raw, moved = B['tier'].iloc[-1], B['raw'].iloc[-1], B['moved'].iloc[-1]; tracked = [c for c in N.columns if tier[c] >= 0]; run = run_length(B['tier'] >= 1); year = (B['tier'].iloc[-365:] >= 2).sum(); rows = []
     for c in N.columns:
-        base = dict(country=NAME[c], country_fr=NAME_FR[c], region=REGION[c], region_fr=REGION_FR[REGION[c]], tracked=int(c in tracked), day=last.strftime('%Y-%m-%d'), reports=int(n7[c].iloc[-1]), active_days=int(a7[c].iloc[-1]), reports_per_week=round(per_week[c], 1),
+        base = dict(country=NAME[c], country_fr=NAME_FR[c], region=REGION[c], region_fr=REGION_FR[REGION[c]], tracked=int(c in tracked), reports=int(n7[c].iloc[-1]), active_days=int(a7[c].iloc[-1]), reports_per_week=round(per_week[c], 1),
                     data='rich' if per_week[c] >= 3 else 'moderate' if per_week[c] >= 1 else 'thin')
         if c not in tracked:
-            rows.append(dict(base, data='too thin', share=np.nan, usual=np.nan, ratio=np.nan, percentile=np.nan, percentile_season=np.nan, tier='not ranked', signal='', located=np.nan, run_days=np.nan, far_days_year=np.nan, change=np.nan, days_high=np.nan, peak=np.nan, peak_day='')); continue
-        s = S7[c]; h = ref[c].dropna(); now = s.iloc[-1]; usual = B['usual'][c].iloc[-1]; m = s.iloc[-28:]; p95 = h.quantile(0.95)
-        rows.append(dict(base, share=round(now, 3), usual=round(usual, 3), ratio=round(now / usual, 1) if usual > 0 and per_week[c] >= 1 else np.nan, percentile=round(B['pct'][c].iloc[-1], 1), percentile_season=round(B['pcts'][c].iloc[-1], 1), tier=CODE[int(tier[c])],
-                         signal='elsewhere' if moved[c] == 1 else 'held back' if raw[c] > 0 and tier[c] == 0 else '', located=int(l7[c].iloc[-1]) if pd.notna(l7[c].iloc[-1]) else np.nan, run_days=int(run[c]), far_days_year=int(year[c]), change=round(now - s.iloc[-8], 3),
-                         days_high=int(((m > p95) & (n7[c].iloc[-28:] >= MIN_REPORTS)).sum()), peak=round(m.max(), 3), peak_day=m.idxmax().strftime('%Y-%m-%d')))
+            rows.append(dict(base, data='too thin', share=np.nan, usual=np.nan, percentile=np.nan, percentile_season=np.nan, tier='not ranked', signal='', located=np.nan, run_days=np.nan, far_days_year=np.nan)); continue
+        now = S7[c].iloc[-1]; usual = B['usual'][c].iloc[-1]
+        rows.append(dict(base, share=round(now, 3), usual=round(usual, 3), percentile=round(B['pct'][c].iloc[-1], 1), percentile_season=round(B['pcts'][c].iloc[-1], 1), tier=CODE[int(tier[c])],
+                         signal='elsewhere' if moved[c] == 1 else 'held back' if raw[c] > 0 and tier[c] == 0 else '', located=int(l7[c].iloc[-1]) if pd.notna(l7[c].iloc[-1]) else np.nan, run_days=int(run[c]), far_days_year=int(year[c])))
     nf, na, urls = describe.main(last, R); print(f'forms: {nf} rows; articles: {na} rows')
     press = pd.read_csv(os.path.join(DATA, 'press.csv'), keep_default_na=False, na_values=['']).set_index('country').press if os.path.exists(os.path.join(DATA, 'press.csv')) else pd.Series(dtype=str)
     order = {t: i for i, t in enumerate(CODE[::-1])}; L = pd.DataFrame(rows); L['press'] = L.country.map(press).fillna(''); L['articles'] = L.country.map(urls).fillna(0).astype(int)
@@ -68,18 +67,17 @@ def main():
     long = lambda X, v: X[tracked].loc[tail].rename(columns=names).rename_axis('day').reset_index().melt('day', var_name='country', value_name=v)
     R = long(S7.round(3), 'share').merge(long(n7.astype(int), 'reports'), on=['day', 'country']); R['day'] = R.day.dt.strftime('%Y-%m-%d'); R.to_csv(os.path.join(OUT, 'recent.csv'), index=False)
     Nm, Em = N[tracked].resample('MS').sum(), E[tracked].resample('MS').sum(); lm = lambda X, v: X.rename(columns=names).rename_axis('month').reset_index().melt('month', var_name='country', value_name=v)
-    M = lm((1000 * Nm / Em.where(Em > 0)).round(3), 'share').merge(lm(Nm.astype(int), 'reports'), on=['month', 'country']).merge(lm(Em.astype(int), 'events'), on=['month', 'country']).dropna(); M['month'] = M.month.dt.strftime('%Y-%m-%d'); M.to_csv(os.path.join(OUT, 'monthly.csv'), index=False)
-    W = pd.DataFrame({'world': (1000 * n7.sum(axis=1) / e7.sum(axis=1)).round(3), 'reports': world7}).loc[tail].rename_axis('day').reset_index(); W['day'] = W.day.dt.strftime('%Y-%m-%d'); W['reports'] = W.reports.astype(int)
+    M = lm((1000 * Nm / Em.where(Em > 0)).round(3), 'share').merge(lm(Nm.astype(int), 'reports'), on=['month', 'country']).dropna(); M['month'] = M.month.dt.strftime('%Y-%m-%d'); M.to_csv(os.path.join(OUT, 'monthly.csv'), index=False)
+    W = pd.DataFrame({'world': (1000 * n7.sum(axis=1) / e7.sum(axis=1)).round(3)}).loc[tail].rename_axis('day').reset_index(); W['day'] = W.day.dt.strftime('%Y-%m-%d')
     W.to_csv(os.path.join(OUT, 'world.csv'), index=False)
-    BT = pd.DataFrame({CODE[k]: (B['tier'] == k).sum(axis=1) for k in (1, 2, 3)}).astype(int); BT['ranked'] = (B['tier'] >= 0).sum(axis=1).astype(int); far = BT.high + BT.exceptional; past = far.iloc[:-REF_GAP]
+    BT = pd.DataFrame({CODE[k]: (B['tier'] == k).sum(axis=1) for k in (1, 2, 3)}).astype(int); far = BT.high + BT.exceptional; past = far.iloc[:-REF_GAP]
     as_many = past[past >= max(far.iloc[-1], 1)]; episodes = int((as_many.index.to_series().diff().dt.days > 7).sum() + (len(as_many) > 0))
     days_ranked = (B['tier'] >= 0).values.sum(); freq = {k: round(100 * float((B['tier'] >= k).values.sum() / days_ranked), 1) for k in (1, 2, 3)}
-    out = dict(last_day=last.strftime('%Y-%m-%d'), first_day=N.index.min().strftime('%Y-%m-%d'), pulled_at=info['pulled_at'], countries_listed=int(len(N.columns)), countries_tracked=len(tracked), reports_last_7_days=int(world7.iloc[-1]),
-               source=info.get('source', ''), checks='passed' if not fatal else '; '.join(fatal), incomplete=' '.join(f'{d}:{n}' for d, n in sorted(recent_gaps.items())),
-               history_from=BT.index.min().strftime('%Y-%m-%d'), far_now=int(far.iloc[-1]), far_median=float(past.median()), far_p90=float(past.quantile(0.9)), far_share_days_at_least_now=round(100 * float((past >= far.iloc[-1]).mean()), 1), far_days_at_least_now=int(len(as_many)), far_episodes_at_least_now=episodes, history_days=int(len(past)),
-               freq_elevated=freq[1], freq_high=freq[2], freq_exceptional=freq[3], usual_zero=int((L[L.tracked == 1].usual == 0).sum()),
-               tiers={t: int((L.tier == t).sum()) for t in CODE[::-1]})
-    json.dump(out, open(os.path.join(OUT, 'info.json'), 'w'), indent=1); pd.DataFrame([{k: v for k, v in out.items() if k != 'tiers'}]).to_csv(os.path.join(OUT, 'info.csv'), index=False)
-    print(json.dumps(out)); print(L.head(24)[['country', 'reports', 'located', 'active_days', 'share', 'usual', 'percentile', 'percentile_season', 'tier', 'run_days', 'data', 'signal']].to_string(index=False))
+    out = dict(last_day=last.strftime('%Y-%m-%d'), pulled_at=info['pulled_at'], reports_last_7_days=int(world7.iloc[-1]),
+               checks='passed' if not fatal else '; '.join(fatal), incomplete=' '.join(f'{d}:{n}' for d, n in sorted(recent_gaps.items())),
+               history_from=BT.index.min().strftime('%Y-%m-%d'), far_median=float(past.median()), far_days_at_least_now=int(len(as_many)), far_episodes_at_least_now=episodes,
+               freq_elevated=freq[1], freq_high=freq[2], freq_exceptional=freq[3])
+    pd.DataFrame([out]).to_csv(os.path.join(OUT, 'info.csv'), index=False)
+    print(json.dumps(out))
 
 if __name__ == '__main__': main()

@@ -14,7 +14,7 @@ def title_of(url):
     try: u = urllib.parse.urlparse(url); parts = [urllib.parse.unquote(p) for p in u.path.split('/') if p]
     except Exception: return ''
     best = max(parts, key=lambda p: len(re.findall(r'[A-Za-zÀ-ɏͰ-ϿЀ-ӿ]{3,}', p)), default='')
-    t = re.sub(r'\.(html?|php|aspx?|ece|cms)$', '', best); t = re.sub(r'[-_+]+', ' ', t); t = re.sub(r'\b\d{4,}\b', ' ', t); t = re.sub(r'\s+', ' ', t).strip()
+    t = re.sub(r'\.(s?html?|phtml|php|aspx?|ece|cms)$', '', best); t = re.sub(r'[-_+]+', ' ', t); t = re.sub(r'\b\d{4,}\b', ' ', t); t = re.sub(r'^\d{1,3}\.\s*', '', t.strip()); t = re.sub(r'\s+', ' ', t).strip(' .,;:')
     return (t[:1].upper() + t[1:])[:110] if len(re.findall(r'[^\W\d_]{3,}', t)) >= 3 else ''
 
 def source_of(url):
