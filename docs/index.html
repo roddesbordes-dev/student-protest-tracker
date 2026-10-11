@@ -186,6 +186,7 @@ const I18N = {
     "take_base": " Since {y} the median daily number of such countries is {m}; it reached {n} or more on {d} days, in {e} separate episodes.",
     "take_base1": " Since {y} the median daily number of such countries is {m}; days on which it reached {n} or more: {d}, all in one episode.",
     "take_base0": " Since {y} the median daily number of such countries is {m}; it had not reached {n} before the last 30 days.",
+    "take_places": " The check on the places the articles name cannot be applied to past years; without it, {n} countries would be at these levels today.",
     "take_caveat": "The tracker counts the protests that GDELT codes automatically from the news with students, pupils, a school or a university as the actor. They are called reports here, and one article can produce several. A flag is a reason to read the articles listed for the country, not a finding that students are protesting there: some flags rest on articles about another country.",
     "sub": "Reports located by GDELT in each country, seven days to {day}: {n} worldwide. Updated {at}.",
     "stale_old": "The data end on {day}: no newer data have been loaded. Read the levels below as those of that day.",
@@ -290,6 +291,7 @@ const I18N = {
     "take_base": " Depuis {y}, le nombre médian de pays dans ce cas est de {m} par jour ; il a atteint {n} ou plus pendant {d} jours, en {e} épisodes distincts.",
     "take_base1": " Depuis {y}, le nombre médian de pays dans ce cas est de {m} par jour ; jours où il a atteint {n} ou plus : {d}, en un seul épisode.",
     "take_base0": " Depuis {y}, le nombre médian de pays dans ce cas est de {m} par jour ; il n'avait jamais atteint {n} avant les 30 derniers jours.",
+    "take_places": " Le contrôle des lieux cités par les articles ne peut pas être appliqué aux années passées ; sans lui, {n} pays seraient aujourd'hui à ces niveaux.",
     "take_caveat": "L'outil compte les protestations que GDELT code automatiquement à partir de la presse et dont l'acteur est désigné comme des élèves, des étudiants, une école ou une université. Elles sont appelées ici mentions, et un article peut en produire plusieurs. Une alerte est une raison de lire les articles listés pour le pays, non le constat que des élèves ou des étudiants y protestent : certaines alertes reposent sur des articles consacrés à un autre pays.",
     "sub": "Mentions localisées par GDELT dans chaque pays, sur les sept jours jusqu'au {day} : {n} dans le monde. Mise à jour du {at}.",
     "stale_old": "Les données s'arrêtent au {day} : aucune donnée plus récente n'a été chargée. Les niveaux ci-dessous sont ceux de ce jour-là.",
@@ -508,8 +510,8 @@ function draw() {
   if (T.status === 'ok') {
     const n = Object.fromEntries(T.data.map((r) => [r.tier, r.n])); root.querySelectorAll('.spt-num').forEach((e) => { e.textContent = int(n[e.dataset.where.split('=')[1]] ?? 0); });
     const top = rows.filter((r) => r.tier === 'exceptional' || r.tier === 'high').sort((a, b) => b.rank - a.rank || b.reports - a.reports).map((r) => r.name);
-    const far = n.exceptional + n.high, days = info ? num(info.far_days_at_least_now) : NaN, eps = info ? num(info.far_episodes_at_least_now) : NaN;
-    const base = info && isFinite(num(info.far_median)) && isFinite(days) && far ? t(days === 0 ? 'take_base0' : eps === 1 ? 'take_base1' : 'take_base', {y: (info.history_from || '').slice(0, 4), m: int(num(info.far_median)), n: int(far), d: int(days), e: int(eps)}) : '';
+    const far = n.exceptional + n.high, far0 = info && num(info.far_all_places) > far ? num(info.far_all_places) : far, days = info ? num(info.far_days_at_least_now) : NaN, eps = info ? num(info.far_episodes_at_least_now) : NaN;
+    const base = info && isFinite(num(info.far_median)) && isFinite(days) && far ? (far0 > far ? t('take_places', {n: int(far0)}) : '') + t(days === 0 ? 'take_base0' : eps === 1 ? 'take_base1' : 'take_base', {y: (info.history_from || '').slice(0, 4), m: int(num(info.far_median)), n: int(far0), d: int(days), e: int(eps)}) : '';
     take.textContent = far ? t('take_some', {n: far, N: rows.length, top: top.join(', ')}) + base : t('take_none', {e: n.elevated, N: rows.length});
   }
   const sel = q('#spt-region');
