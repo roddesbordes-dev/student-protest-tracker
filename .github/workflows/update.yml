@@ -1,7 +1,7 @@
 name: Update tracker
 on:
   schedule:
-    - cron: '25 5 * * *'      # every day at 05:25 UTC
+    - cron: '25 5 * * *'
   workflow_dispatch:
     inputs:
       force:
@@ -23,7 +23,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
-      - run: python test_tracker.py
       - run: python update_from_files.py
       - name: Commit the downloaded days
         run: |
