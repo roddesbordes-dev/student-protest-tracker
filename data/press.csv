@@ -1,0 +1,174 @@
+fips,country,year,freexp,press
+AE,United Arab Emirates,2025,0.063,closed
+AF,Afghanistan,2025,0.022,closed
+AG,Algeria,2025,0.367,restricted
+AJ,Azerbaijan,2025,0.092,closed
+AL,Albania,2025,0.673,open
+AM,Armenia,2025,0.732,open
+AO,Angola,2025,0.497,restricted
+AR,Argentina,2025,0.736,open
+AS,Australia,2025,0.915,open
+AU,Austria,2025,0.918,open
+BA,Bahrain,2025,0.172,closed
+BB,Barbados,2025,0.911,open
+BC,Botswana,2025,0.798,open
+BE,Belgium,2025,0.969,open
+BG,Bangladesh,2025,0.527,open
+BK,Bosnia and Herzegovina,2025,0.653,open
+BL,Bolivia,2025,0.68,open
+BM,Myanmar,2025,0.026,closed
+BN,Benin,2025,0.676,open
+BO,Belarus,2025,0.025,closed
+BR,Brazil,2025,0.91,open
+BT,Bhutan,2025,0.682,open
+BU,Bulgaria,2025,0.754,open
+BY,Burundi,2025,0.164,closed
+CA,Canada,2025,0.933,open
+CB,Cambodia,2025,0.153,closed
+CD,Chad,2025,0.427,restricted
+CE,Sri Lanka,2025,0.871,open
+CF,Congo,2025,0.373,restricted
+CG,DR Congo,2025,0.599,open
+CH,China,2025,0.045,closed
+CI,Chile,2025,0.926,open
+CM,Cameroon,2025,0.532,open
+CN,Comoros,2025,0.498,restricted
+CO,Colombia,2025,0.81,open
+CS,Costa Rica,2025,0.915,open
+CT,Central African Republic,2025,0.613,open
+CU,Cuba,2025,0.074,closed
+CV,Cape Verde,2025,0.857,open
+CY,Cyprus,2025,0.812,open
+DA,Denmark,2025,0.98,open
+DJ,Djibouti,2025,0.336,restricted
+DR,Dominican Republic,2025,0.901,open
+EC,Ecuador,2025,0.706,open
+EG,Egypt,2025,0.179,closed
+EI,Ireland,2025,0.97,open
+EK,Equatorial Guinea,2025,0.112,closed
+EN,Estonia,2025,0.969,open
+ER,Eritrea,2025,0.024,closed
+ES,El Salvador,2025,0.356,restricted
+ET,Ethiopia,2025,0.285,restricted
+EZ,Czechia,2025,0.947,open
+FI,Finland,2025,0.946,open
+FJ,Fiji,2025,0.724,open
+FR,France,2025,0.959,open
+GA,Gambia,2025,0.814,open
+GB,Gabon,2025,0.748,open
+GG,Georgia,2025,0.687,open
+GH,Ghana,2025,0.896,open
+GM,Germany,2025,0.914,open
+GR,Greece,2025,0.81,open
+GT,Guatemala,2025,0.839,open
+GV,Guinea,2025,0.56,open
+GY,Guyana,2025,0.771,open
+GZ,Gaza,2025,0.234,closed
+HA,Haiti,2025,0.799,open
+HK,Hong Kong,2025,0.227,closed
+HO,Honduras,2025,0.861,open
+HR,Croatia,2025,0.743,open
+HU,Hungary,2025,0.493,restricted
+IC,Iceland,2025,0.846,open
+ID,Indonesia,2025,0.688,open
+IN,India,2025,0.458,restricted
+IR,Iran,2025,0.166,closed
+IS,Israel,2025,0.822,open
+IT,Italy,2025,0.756,open
+IV,Ivory Coast,2025,0.681,open
+IZ,Iraq,2025,0.571,open
+JA,Japan,2025,0.847,open
+JM,Jamaica,2025,0.919,open
+JO,Jordan,2025,0.556,open
+KE,Kenya,2025,0.9,open
+KG,Kyrgyzstan,2025,0.469,restricted
+KN,North Korea,2025,0.013,closed
+KS,South Korea,2025,0.933,open
+KU,Kuwait,2025,0.532,open
+KV,Kosovo,2025,0.766,open
+KZ,Kazakhstan,2025,0.329,restricted
+LA,Laos,2025,0.032,closed
+LE,Lebanon,2025,0.744,open
+LG,Latvia,2025,0.932,open
+LH,Lithuania,2025,0.917,open
+LI,Liberia,2025,0.836,open
+LO,Slovakia,2025,0.765,open
+LT,Lesotho,2025,0.728,open
+LU,Luxembourg,2025,0.957,open
+LY,Libya,2025,0.536,open
+MA,Madagascar,2025,0.635,open
+MD,Moldova,2025,0.652,open
+MG,Mongolia,2025,0.771,open
+MI,Malawi,2025,0.754,open
+MJ,Montenegro,2025,0.853,open
+MK,North Macedonia,2025,0.664,open
+ML,Mali,2025,0.49,restricted
+MO,Morocco,2025,0.579,open
+MP,Mauritius,2025,0.887,open
+MR,Mauritania,2025,0.628,open
+MT,Malta,2025,0.829,open
+MU,Oman,2025,0.151,closed
+MV,Maldives,2025,0.695,open
+MX,Mexico,2025,0.619,open
+MY,Malaysia,2025,0.586,open
+MZ,Mozambique,2025,0.518,open
+NG,Niger,2025,0.756,open
+NI,Nigeria,2025,0.849,open
+NL,Netherlands,2025,0.91,open
+NO,Norway,2025,0.953,open
+NP,Nepal,2025,0.813,open
+NS,Suriname,2025,0.891,open
+NU,Nicaragua,2025,0.018,closed
+NZ,New Zealand,2025,0.927,open
+OD,South Sudan,2025,0.155,closed
+PA,Paraguay,2025,0.751,open
+PE,Peru,2025,0.763,open
+PK,Pakistan,2025,0.559,open
+PL,Poland,2025,0.917,open
+PM,Panama,2025,0.812,open
+PO,Portugal,2025,0.899,open
+PP,Papua New Guinea,2025,0.839,open
+PU,Guinea-Bissau,2025,0.552,open
+QA,Qatar,2025,0.055,closed
+RI,Serbia,2025,0.424,restricted
+RO,Romania,2025,0.777,open
+RP,Philippines,2025,0.676,open
+RS,Russia,2025,0.08,closed
+RW,Rwanda,2025,0.17,closed
+SA,Saudi Arabia,2025,0.092,closed
+SF,South Africa,2025,0.837,open
+SG,Senegal,2025,0.82,open
+SI,Slovenia,2025,0.691,open
+SL,Sierra Leone,2025,0.823,open
+SN,Singapore,2025,0.4,restricted
+SO,Somalia,2025,0.619,open
+SP,Spain,2025,0.843,open
+SU,Sudan,2025,0.289,restricted
+SW,Sweden,2025,0.946,open
+SY,Syria,2025,0.358,restricted
+SZ,Switzerland,2025,0.967,open
+TD,Trinidad and Tobago,2025,0.888,open
+TH,Thailand,2025,0.587,open
+TI,Tajikistan,2025,0.043,closed
+TO,Togo,2025,0.579,open
+TS,Tunisia,2025,0.687,open
+TT,Timor-Leste,2025,0.838,open
+TU,Turkey,2025,0.179,closed
+TW,Taiwan,2025,0.838,open
+TX,Turkmenistan,2025,0.038,closed
+TZ,Tanzania,2025,0.552,open
+UG,Uganda,2025,0.432,restricted
+UK,United Kingdom,2025,0.833,open
+UP,Ukraine,2025,0.418,restricted
+US,United States,2025,0.729,open
+UV,Burkina Faso,2025,0.261,restricted
+UY,Uruguay,2025,0.931,open
+UZ,Uzbekistan,2025,0.234,closed
+VE,Venezuela,2025,0.148,closed
+VM,Vietnam,2025,0.102,closed
+WA,Namibia,2025,0.859,open
+WE,West Bank,2025,0.353,restricted
+WZ,Eswatini,2025,0.113,closed
+YM,Yemen,2025,0.219,closed
+ZA,Zambia,2025,0.778,open
+ZI,Zimbabwe,2025,0.414,restricted
