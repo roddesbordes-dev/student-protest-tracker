@@ -1,0 +1,41 @@
+name: Update tracker
+on:
+  schedule:
+    - cron: '25 5 * * *'      # every day at 05:25 UTC
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Build even if a data check fails'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python test_tracker.py
+      - run: python update_from_files.py
+      - name: Commit the downloaded days
+        run: |
+          git config user.name "tracker-update"
+          git config user.email "tracker-update@users.noreply.github.com"
+          git add data/added data/reports
+          if git diff --cached --quiet; then echo "no new day"; else git add data/pull_info.json; git commit -m "Days read $(date -u +%F)"; git push || (git pull --rebase && git push); fi
+      - run: python build.py ${{ inputs.force && '--force' || '' }}
+      - run: python make_site.py
+      - name: Commit the site
+        run: |
+          git add data/pull_info.json docs
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Daily update $(date -u +%F)"
+          git push || (git pull --rebase && git push)
