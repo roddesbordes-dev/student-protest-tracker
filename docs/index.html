@@ -176,7 +176,7 @@ window.feed = (() => {
   <section class="spt-grid2" id="detail">
     <div class="spt-card"><h2 id="spt-dtitle"></h2><p class="spt-muted" id="spt-dnote"></p><div class="spt-chart spt-wait" id="spt-line"></div></div>
     <div class="spt-card"><h2 id="spt-mtitle"></h2><p class="spt-muted" data-i18n="m_note"></p><div class="spt-chart spt-wait" id="spt-months"></div></div>
-    <div class="spt-card"><h2 id="spt-ftitle"></h2><p class="spt-muted" data-i18n="f_note"></p><div class="spt-forms" id="spt-forms"></div></div>
+    <div class="spt-card"><h2 id="spt-ftitle"></h2><p class="spt-muted" data-i18n="f_note"></p><div class="spt-forms" id="spt-forms"></div><h3 data-i18n="lv_h" style="margin-top: var(--ui-gap-md)"></h3><p class="spt-muted" data-i18n="lv_note"></p><div class="spt-forms" id="spt-levels"></div></div>
     <div class="spt-card"><h2 id="spt-atitle"></h2><p class="spt-muted" data-i18n="a_note"></p><ul class="spt-arts" id="spt-arts"></ul></div>
   </section>
 
@@ -253,6 +253,9 @@ const I18N = {
     "d_press": " The press is not free here (V-Dem), so the absence of a flag says little.",
     "art_about": "; {p}% of the places it names are in this country",
     "art_not": " · not counted",
+    "art_l_secondary": " · secondary school",
+    "art_l_higher": " · higher education",
+    "art_l_both": " · both levels",
     "d_title": "{c}: last 180 days",
     "m_title": "{c}, by month since 2017",
     "f_title": "{c}: what the reports say, last 28 days",
@@ -297,6 +300,12 @@ const I18N = {
     "x_Business": "business",
     "x_Civilians": "civilians",
     "f_actor": "First actor: {x}",
+    "lv_h": "Level named in the article address",
+    "lv_note": "Whether the address of each article names secondary school (lycée, high school, liceo) or higher education (university, campus). Most addresses name no level, so the shares describe only the articles that do; the measure is indicative. Share of the country's reports, last 28 days.",
+    "l_Not stated": "Not stated",
+    "l_Secondary": "Secondary school",
+    "l_Higher education": "Higher education",
+    "l_Both": "Both",
     "y_Students or pupils": "students or pupils",
     "y_School": "a school",
     "y_University or campus": "a university or campus",
@@ -307,6 +316,7 @@ const I18N = {
     "foot_recent": "last 180 days",
     "foot_monthly": "by month since 2017",
     "foot_articles": "articles",
+    "foot_levels": "school level by day",
     "foot_chronique": "Read the chronique",
     "foot_note": "Working note",
   },
@@ -377,6 +387,9 @@ const I18N = {
     "d_press": " La presse n'est pas libre ici (V-Dem) : l'absence d'alerte ne dit pas grand-chose.",
     "art_about": " ; {p} % des lieux cités se trouvent dans ce pays",
     "art_not": " · non compté",
+    "art_l_secondary": " · secondaire",
+    "art_l_higher": " · supérieur",
+    "art_l_both": " · les deux niveaux",
     "d_title": "{c} : 180 derniers jours",
     "m_title": "{c}, par mois depuis 2017",
     "f_title": "{c} : ce que disent les mentions, 28 derniers jours",
@@ -421,6 +434,12 @@ const I18N = {
     "x_Business": "entreprises",
     "x_Civilians": "civils",
     "f_actor": "Premier acteur : {x}",
+    "lv_h": "Niveau cité dans l'adresse de l'article",
+    "lv_note": "Selon que l'adresse de chaque article cite le secondaire (lycée, high school, liceo) ou le supérieur (université, campus). La plupart des adresses ne citent aucun niveau : les parts ne décrivent donc que les articles qui en citent un ; la mesure est indicative. Part des mentions du pays, 28 derniers jours.",
+    "l_Not stated": "Non précisé",
+    "l_Secondary": "Secondaire",
+    "l_Higher education": "Supérieur",
+    "l_Both": "Les deux",
     "y_Students or pupils": "élèves ou étudiants",
     "y_School": "une école",
     "y_University or campus": "une université ou un campus",
@@ -431,6 +450,7 @@ const I18N = {
     "foot_recent": "180 derniers jours",
     "foot_monthly": "par mois depuis 2017",
     "foot_articles": "articles",
+    "foot_levels": "niveau scolaire par jour",
     "foot_chronique": "Lire la chronique",
     "foot_note": "Note de travail",
   },
@@ -457,7 +477,8 @@ const q = (s) => root.querySelector(s) || document.createElement('div');
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 const failed = (box) => { box.classList.remove('spt-wait'); box.replaceChildren(el('div', 'spt-fail', t('failed'))); };
 const formName = (f) => (f.startsWith('Target: ') ? t('f_target', {x: t('x_' + f.slice(8))}) : f.startsWith('Actor: ') ? t('f_actor', {x: t('y_' + f.slice(7))}) : t('f_' + f));
-const formGroup = (f) => (f.startsWith('Target: ') ? 2 : f.startsWith('Actor: ') ? 1 : 0);
+const formGroup = (f) => (f.startsWith('Level: ') ? 3 : f.startsWith('Target: ') ? 2 : f.startsWith('Actor: ') ? 1 : 0);
+const LEVELS = ['Not stated', 'Secondary', 'Higher education', 'Both'];
 
 function applyStatic() {
   root.querySelectorAll('[data-i18n]').forEach((e) => { e.textContent = t(e.dataset.i18n); });
@@ -546,7 +567,7 @@ function draw() {
   const foot = q('#spt-foot');
   {
     const link = (href, text) => { const a = el('a', '', text); a.href = href; return a; }, tables = el('span', '', t('foot_tables') + ' ');
-    [['data/latest.csv', 'foot_latest'], ['data/recent.csv', 'foot_recent'], ['data/monthly.csv', 'foot_monthly'], ['data/articles.csv', 'foot_articles']].forEach(([h, k], i) => { if (i) tables.append(', '); tables.append(link(h, t(k))); });
+    [['data/latest.csv', 'foot_latest'], ['data/recent.csv', 'foot_recent'], ['data/monthly.csv', 'foot_monthly'], ['data/articles.csv', 'foot_articles'], ['data/levels.csv', 'foot_levels']].forEach(([h, k], i) => { if (i) tables.append(', '); tables.append(link(h, t(k))); });
     const parts = [el('span', '', t('foot_update')), tables]; for (const [h, k] of [[LINKS.chronique, 'foot_chronique'], [LINKS.note, 'foot_note']]) if (h) { const sp = el('span'); sp.append(link(h, t(k))); parts.push(sp); }
     foot.replaceChildren(...parts); foot.hidden = false;
   }
@@ -588,12 +609,14 @@ function draw() {
   if (R.status === 'ok' && Wd.status === 'ok') lineChart(lb, byC.get(key) || [], Wd.data, cur ? cur.usual : NaN, name); else if (R.status === 'error' || Wd.status === 'error') failed(lb); else { lb.replaceChildren(); lb.classList.add('spt-wait'); }
   if (M.status === 'ok') monthChart(mb, M.data.filter((r) => r.country === key), name); else if (M.status === 'error') failed(mb); else { mb.replaceChildren(); mb.classList.add('spt-wait'); }
   if (F.status === 'ok') {
-    const fr = F.data.filter((r) => r.country === key).map((r) => ({form: r.form, n: num(r.reports), s: num(r.share)})).sort((a, b) => (formGroup(a.form) - formGroup(b.form)) || b.n - a.n);
-    fb.replaceChildren(...(fr.length ? fr.map((r) => { const d = el('div', 'spt-form' + (formGroup(r.form) ? '' : ' spt-main')); const bar = el('span', 'spt-bar'); bar.style.width = Math.max(r.s, 1) + '%'; const w = el('span'); w.append(bar); d.append(el('span', '', formName(r.form)), w, el('span', '', `${r.s > 0 && r.s < 1 ? '<1' : int(r.s)} % (${int(r.n)})`.replace(' %', lang === 'fr' ? ' %' : '%'))); return d; }) : [el('p', 'spt-muted', t('no_forms'))]));
+    const all = F.data.filter((r) => r.country === key).map((r) => ({form: r.form, n: num(r.reports), s: num(r.share)})), fr = all.filter((r) => formGroup(r.form) < 3).sort((a, b) => (formGroup(a.form) - formGroup(b.form)) || b.n - a.n);
+    const bars = (r, name, main) => { const d = el('div', 'spt-form' + (main ? ' spt-main' : '')); const bar = el('span', 'spt-bar'); bar.style.width = Math.max(r.s, 1) + '%'; const w = el('span'); w.append(bar); d.append(el('span', '', name), w, el('span', '', `${r.s > 0 && r.s < 1 ? '<1' : int(r.s)} % (${int(r.n)})`.replace(' %', lang === 'fr' ? ' %' : '%'))); return d; };
+    const lv = LEVELS.map((k) => all.find((r) => r.form === 'Level: ' + k) || {form: 'Level: ' + k, n: 0, s: 0}); q('#spt-levels').replaceChildren(...(all.some((r) => formGroup(r.form) === 3) ? lv.map((r, i) => bars(r, t('l_' + r.form.slice(7)), i === 0)) : []));
+    fb.replaceChildren(...(fr.length ? fr.map((r) => bars(r, formName(r.form), !formGroup(r.form))) : [el('p', 'spt-muted', t('no_forms'))]));
   } else if (F.status === 'error') failed(fb); else fb.replaceChildren();
   if (A.status === 'ok') {
     const ar = A.data.filter((r) => r.country === key).sort((a, b) => num(a.rank) - num(b.rank));
-    ab.replaceChildren(...(ar.length ? ar.map((r) => { const li = el('li'); const a = el('a', '', r.title || t('art_untitled', {src: r.source})); if (/^https?:\/\//.test(r.url)) { a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; } li.append(a, el('span', 'spt-muted', t(num(r.reports) > 1 ? 'art_meta' : 'art_meta1', {src: r.source, n: int(num(r.reports)), day: longDay(r.first_day)}) + (isFinite(num(r.about)) ? t('art_about', {p: int(num(r.about))}) + (num(r.about) < 50 ? t('art_not') : '') : ''))); return li; }) : [el('li', 'spt-muted', t('no_articles'))]));
+    ab.replaceChildren(...(ar.length ? ar.map((r) => { const li = el('li'); const a = el('a', '', r.title || t('art_untitled', {src: r.source})); if (/^https?:\/\//.test(r.url)) { a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; } li.append(a, el('span', 'spt-muted', t(num(r.reports) > 1 ? 'art_meta' : 'art_meta1', {src: r.source, n: int(num(r.reports)), day: longDay(r.first_day)}) + (isFinite(num(r.about)) ? t('art_about', {p: int(num(r.about))}) + (num(r.about) < 50 ? t('art_not') : '') : '') + (r.level ? t('art_l_' + r.level) : ''))); return li; }) : [el('li', 'spt-muted', t('no_articles'))]));
   } else if (A.status === 'error') failed(ab); else ab.replaceChildren();
 }
 feed.onData(draw);
