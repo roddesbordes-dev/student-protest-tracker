@@ -188,8 +188,8 @@ window.feed = (() => {
 const I18N = {
   en: {
     "title": "Student protest tracker",
-    "take_some": "News reports of student protest are far above their usual level in {n} of the {N} countries tracked: {top}.",
-    "take_none": "In no country are news reports of student protest far above their usual level; countries at the elevated level, of the {N} tracked: {e}.",
+    "take_some": "Every day, this page compares press reports of pupil and student protest in {N} countries with each country's own past. Countries far above their usual level today ({n}): {top}. Choose a country to see its last six months, what its reports describe and the articles behind them.",
+    "take_none": "Every day, this page compares press reports of pupil and student protest in {N} countries with each country's own past. Today no country is far above its usual level ({e} at the elevated level). Choose a country to see its last six months, what its reports describe and the articles behind them.",
     "take_cmp": " For comparison with the past, which cannot use the check on where articles are about, the count would be {n} today; since {y} it has been {m} on a typical day",
     "take_hist": " Since {y} the count has been {m} on a typical day",
     "take_tail": ", and {n} or more on {dd}, in {ee}.",
@@ -322,8 +322,8 @@ const I18N = {
   },
   fr: {
     "title": "Suivi des protestations d'élèves et d'étudiants",
-    "take_some": "Les mentions de protestations d'élèves et d'étudiants dans la presse dépassent nettement leur niveau habituel dans {n} des {N} pays suivis : {top}.",
-    "take_none": "Dans aucun pays les mentions de protestations d'élèves et d'étudiants ne dépassent nettement leur niveau habituel ; pays au niveau élevé, sur les {N} suivis : {e}.",
+    "take_some": "Chaque jour, cette page compare, dans {N} pays, les mentions de protestations d'élèves et d'étudiants dans la presse au passé de chaque pays. Pays nettement au-dessus de leur niveau habituel aujourd'hui ({n}) : {top}. Choisissez un pays pour voir ses six derniers mois, ce que décrivent ses mentions et les articles dont elles proviennent.",
+    "take_none": "Chaque jour, cette page compare, dans {N} pays, les mentions de protestations d'élèves et d'étudiants dans la presse au passé de chaque pays. Aujourd'hui, aucun pays ne dépasse nettement son niveau habituel ({e} au niveau élevé). Choisissez un pays pour voir ses six derniers mois, ce que décrivent ses mentions et les articles dont elles proviennent.",
     "take_cmp": " Pour comparer avec le passé, où le contrôle des lieux cités par les articles n'est pas disponible, on en compterait {n} aujourd'hui ; depuis {y}, on en compte {m} un jour ordinaire",
     "take_hist": " Depuis {y}, on en compte {m} un jour ordinaire",
     "take_tail": ", et {n} ou plus pendant {dd}, en {ee}.",
@@ -583,7 +583,7 @@ function draw() {
     const list = (a) => { try { return new Intl.ListFormat(loc(), {style: 'long', type: 'conjunction'}).format(a); } catch (e) { return a.join(', '); } };
     const v = {y: (info ? info.history_from || '' : '').slice(0, 4), m: info ? int(num(info.far_median)) : '', n: int(far0), dd: days === 1 ? t('days_1') : t('days_n', {d: int(days)}), ee: eps === 1 ? t('eps_1') : t('eps_n', {e: int(eps)})};
     const base = info && isFinite(num(info.far_median)) && isFinite(days) && far ? t(far0 > far ? 'take_cmp' : 'take_hist', v) + t(days === 0 ? 'take_tail0' : 'take_tail', v) : '';
-    take.textContent = far ? t('take_some', {n: far, N: rows.length, top: list(top)}) + base : t('take_none', {e: n.elevated, N: rows.length});
+    take.textContent = far ? t('take_some', {n: far, N: rows.length, top: list(top)}) : t('take_none', {e: n.elevated, N: rows.length});
   }
   const sel = q('#spt-region');
   if (!sel.options.length) { const keep = sel.dataset.value || ''; sel.add(new Option(t('all_regions'), '')); const seen = new Map(rows.map((r) => [r.region, rg(r)])); for (const [v, label] of [...seen].sort((a, b) => a[1].localeCompare(b[1], loc()))) sel.add(new Option(label, v)); sel.value = keep; }
