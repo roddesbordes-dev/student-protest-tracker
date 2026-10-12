@@ -1,5 +1,5 @@
 """Student-protest tracker. Daily update: downloads the files the GDELT Project publishes each day and counts the reports by day and country. Usage: python update_from_files.py"""
-import csv, datetime, functools, io, json, os, re, sys, time, urllib.error, urllib.request, zipfile
+import csv, datetime, functools, html, io, json, os, re, sys, time, urllib.error, urllib.request, zipfile
 from collections import defaultdict
 import pandas as pd
 
@@ -10,7 +10,7 @@ BASE_LAST_ADDED = 20261010
 BASE_RECENT_FROM = 20261001
 URL = 'http://data.gdeltproject.org/gdeltv2/{stamp}.{kind}.CSV.zip'; KINDS = ('export', 'translation.export')
 GKG_URL = 'http://data.gdeltproject.org/gdeltv2/{stamp}.{kind}.csv.zip'; GKG_KIND = {'export': 'gkg', 'translation.export': 'translation.gkg'}
-REPORT_COLS = ['day', 'fips', 'code', 'target', 'articles', 'url', 'actor', 'own_share', 'main']
+REPORT_COLS = ['day', 'fips', 'code', 'target', 'articles', 'url', 'actor', 'own_share', 'main', 'title']
 STUDENT = re.compile(r'STUDENT|PUPIL|SCHOOL|UNIVERSIT|LYCEE|LYCEEN|UNDERGRAD|CAMPUS'); MIN_FILES = 180; STALE_DAYS = 2; GRACE_DAYS = 3
 COLS = ['day', 'fips', 'events', 'student_protests']
 csv.field_size_limit(10 ** 9)
@@ -36,7 +36,9 @@ def count(r, out, reports):
     if r[28] == '14' and STUDENT.search(r[6]): k[1] += 1; reports.append((int(r[1]), r[53], r[26], r[22], n, r[60], r[6]))
     return True
 
-def places(blob, urls):
+PAGE_TITLE = re.compile(rb'<PAGE_TITLE>(.*?)</PAGE_TITLE>', re.S)
+
+def places(blob, urls, titles=None):
     out = {}; want = {u.encode('utf-8', 'replace') for u in urls}
     try: z = zipfile.ZipFile(io.BytesIO(blob)); raw = z.read(z.namelist()[0])
     except Exception: return out
@@ -48,12 +50,14 @@ def places(blob, urls):
                 p = loc.split(b'#')
                 if len(p) > 2 and p[2]: k = p[2].decode('ascii', 'replace'); c[k] = c.get(k, 0) + 1
             out[r[4].decode('utf-8', 'replace')] = c
+            m = PAGE_TITLE.search(line) if titles is not None else None
+            if m: titles[r[4].decode('utf-8', 'replace')] = re.sub(r'\s+', ' ', html.unescape(m.group(1).decode('utf-8', 'replace'))).strip()[:200]
     return out
 
-def with_places(new, found):
+def with_places(new, found, titles=None):
     done = []
     for r in new:
-        c = found.get(r[5]) or {}; n = sum(c.values()); done.append(r + ((round(c.get(r[1], 0) / n, 3), max(c, key=c.get)) if n else ('', '')))
+        c = found.get(r[5]) or {}; n = sum(c.values()); done.append(r + ((round(c.get(r[1], 0) / n, 3), max(c, key=c.get)) if n else ('', '')) + ((titles or {}).get(r[5], ''),))
     return done
 
 def read_day(day):
@@ -68,7 +72,7 @@ def read_day(day):
             files += 1; n0 = len(reports)
             for r in csv.reader(io.StringIO(text), delimiter='\t', quoting=csv.QUOTE_NONE): count(r, out, reports)
             if len(reports) > n0:
-                blob = fetch(GKG_URL.format(stamp=stamp, kind=GKG_KIND[kind])); reports[n0:] = with_places(reports[n0:], places(blob, {r[5] for r in reports[n0:]}) if blob else {})
+                blob = fetch(GKG_URL.format(stamp=stamp, kind=GKG_KIND[kind])); titles = {}; reports[n0:] = with_places(reports[n0:], places(blob, {r[5] for r in reports[n0:]}, titles) if blob else {}, titles)
     return out, files, reports
 
 def store(day, partial=False):

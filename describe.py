@@ -10,11 +10,16 @@ TARGET = {'GOV': 'Government', 'COP': 'Police', 'EDU': 'Schools and universities
 PLACES_FROM = pd.Timestamp('2026-09-27'); MAJORITY = 0.5
 ACTOR = lambda a: 'Students or pupils' if re.search(r'STUDENT|PUPIL|LYCEEN|UNDERGRAD', a) else 'University or campus' if re.search(r'UNIVERSIT|CAMPUS', a) else 'School'
 
+NONLATIN = {'ru', 'su', 'by', 'ua', 'kz', 'kg', 'uz', 'az', 'am', 'ge', 'bg', 'rs', 'mk', 'gr', 'il', 'ir', 'sa', 'ae', 'eg', 'cn', 'tw', 'jp', 'kr', 'th'}
+ENGLISH = re.compile(r'\b(the|of|in|to|and|for|on|at|as|with|from|by|students?|protests?|school|university)\b', re.I)
+
 def title_of(url):
     try: u = urllib.parse.urlparse(url); parts = [urllib.parse.unquote(p) for p in u.path.split('/') if p]
     except Exception: return ''
     best = max(parts, key=lambda p: len(re.findall(r'[A-Za-zÀ-ɏͰ-ϿЀ-ӿ]{3,}', p)), default='')
     t = re.sub(r'\.(s?html?|phtml|php|aspx?|ece|cms)$', '', best); t = re.sub(r'[-_+]+', ' ', t); t = re.sub(r'\b\d{4,}\b', ' ', t); t = re.sub(r'^\d{1,3}\.\s*', '', t.strip()); t = re.sub(r'\s+', ' ', t).strip(' .,;:')
+    t = ' '.join(w for w in t.split() if not (len(w) >= 6 and re.fullmatch(r'[A-Za-z0-9]+', w) and re.search(r'[A-Za-z]', w) and re.search(r'\d', w))); t = re.sub(r'(\s+\d+)+$', '', t)
+    if u.netloc.rsplit('.', 1)[-1].lower() in NONLATIN and not ENGLISH.search(t): return ''
     return (t[:1].upper() + t[1:])[:110] if len(re.findall(r'[^\W\d_]{3,}', t)) >= 3 else ''
 
 def source_of(url):
@@ -26,6 +31,7 @@ def load(last):
     parts += [pd.read_csv(os.path.join(REP, f), keep_default_na=False, na_values=[''], dtype={'code': str}) for f in sorted(os.listdir(REP)) if f[:8].isdigit() and int(f[:8]) > BASE_LAST_ADDED]
     R = pd.concat(parts, ignore_index=True); R = R[R.fips.isin(NAME)].copy(); R['date'] = pd.to_datetime(R.day.astype(str), format='%Y%m%d', errors='coerce'); R = R[R.date.notna() & (R.date <= last)].copy(); R['country'] = R.fips.map(NAME)
     if 'own_share' not in R: R['own_share'] = float('nan')
+    R['title'] = R.title.fillna('').astype(str) if 'title' in R else ''
     R['own_share'] = pd.to_numeric(R.own_share, errors='coerce'); R['elsewhere'] = R.own_share.notna() & (R.own_share < MAJORITY); return R
 
 def located(R, days, countries):
@@ -40,8 +46,8 @@ def main(last, R=None):
     m['who'] = 'Actor: ' + m.actor.fillna('').astype(str).map(ACTOR); P = m.groupby(['country', 'who']).size().rename('reports').reset_index().rename(columns={'who': 'form'}); P['share'] = (100 * P.reports / P.country.map(m.groupby('country').size())).round(1)
     pd.concat([F, T, P], ignore_index=True).sort_values(['country', 'reports'], ascending=[True, False]).to_csv(os.path.join(OUT, 'forms.csv'), index=False)
     w = R[(R.date > last - pd.Timedelta(days=7)) & R.url.fillna('').str.startswith('http')]; busy = w.groupby('country').size(); w = w[w.country.isin(busy[busy >= 5].index)]
-    A = w.groupby(['country', 'url']).agg(reports=('day', 'size'), first_day=('date', 'min'), about=('own_share', 'first')).reset_index().sort_values(['country', 'reports', 'first_day'], ascending=[True, False, False])
-    A['title'] = A.url.map(title_of); A['source'] = A.url.map(source_of); A['about'] = (100 * A.about).round()
+    A = w.groupby(['country', 'url']).agg(reports=('day', 'size'), first_day=('date', 'min'), about=('own_share', 'first'), title=('title', 'max')).reset_index().sort_values(['country', 'reports', 'first_day'], ascending=[True, False, False])
+    A['title'] = [t or title_of(x) for t, x in zip(A.title, A.url)]; A['source'] = A.url.map(source_of); A['about'] = (100 * A.about).round()
     A['rank'] = A.groupby('country').cumcount() + 1; A = A[A['rank'] <= 8]; A['first_day'] = A.first_day.dt.strftime('%Y-%m-%d')
     A[['country', 'rank', 'title', 'source', 'url', 'reports', 'first_day', 'about']].to_csv(os.path.join(OUT, 'articles.csv'), index=False)
     return len(F), len(A), R[R.date > last - pd.Timedelta(days=7)].groupby('country').url.nunique().to_dict()

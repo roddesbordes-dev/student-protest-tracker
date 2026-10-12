@@ -72,11 +72,11 @@ def main():
     W.to_csv(os.path.join(OUT, 'world.csv'), index=False)
     T0 = B['tier'].where(~((B['moved'] == 1) & (B['tier'] >= 0)), B['raw']); far0 = (T0 >= 2).sum(axis=1); past = far0.iloc[:-REF_GAP]
     as_many = past[past >= max(far0.iloc[-1], 1)]; episodes = int((as_many.index.to_series().diff().dt.days > 7).sum() + (len(as_many) > 0))
-    days_ranked = (T0 >= 0).values.sum(); freq = {k: round(100 * float((T0 >= k).values.sum() / days_ranked), 1) for k in (1, 2, 3)}
+    days_ranked = (T0 >= 0).values.sum(); at = {k: round(100 * float((T0 == k).values.sum() / days_ranked), 1) for k in (1, 2, 3)}
     out = dict(last_day=last.strftime('%Y-%m-%d'), pulled_at=info['pulled_at'], reports_last_7_days=int(world7.iloc[-1]),
                checks='passed' if not fatal else '; '.join(fatal), incomplete=' '.join(f'{d}:{n}' for d, n in sorted(recent_gaps.items())),
                history_from=T0.index.min().strftime('%Y-%m-%d'), far_all_places=int(far0.iloc[-1]), far_median=float(past.median()), far_days_at_least_now=int(len(as_many)), far_episodes_at_least_now=episodes,
-               freq_elevated=freq[1], freq_high=freq[2], freq_exceptional=freq[3])
+               at_elevated=at[1], at_high=at[2], at_exceptional=at[3])
     pd.DataFrame([out]).to_csv(os.path.join(OUT, 'info.csv'), index=False)
     print(json.dumps(out))
 
