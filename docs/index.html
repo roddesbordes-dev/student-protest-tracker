@@ -192,14 +192,6 @@ const I18N = {
     "title": "Student protest tracker",
     "take_some": "Every day, this page compares press reports of pupil and student protest in {N} countries with each country's own past. Countries far above their usual level today ({n}): {top}. Choose a country to see its last six months, what its reports describe and the articles behind them.",
     "take_none": "Every day, this page compares press reports of pupil and student protest in {N} countries with each country's own past. Today no country is far above its usual level ({e} at the elevated level). Choose a country to see its last six months, what its reports describe and the articles behind them.",
-    "take_cmp": " For comparison with the past, which cannot use the check on where articles are about, the count would be {n} today; since {y} it has been {m} on a typical day",
-    "take_hist": " Since {y} the count has been {m} on a typical day",
-    "take_tail": ", and {n} or more on {dd}, in {ee}.",
-    "take_tail0": ", and never {n} or more before the last 30 days.",
-    "days_n": "{d} days",
-    "days_1": "one day",
-    "eps_n": "{e} episodes",
-    "eps_1": "one episode",
     "take_compare": "GDELT covers some countries far better than others, so levels cannot be compared between countries; the tracker compares each country with its own past.",
     "take_caveat": "The tracker counts the protests that GDELT codes automatically from the news with students, pupils, a school or a university as the actor. They are called reports here, and one article can produce several. A flag is a reason to read the articles listed for the country, not a finding that students are protesting there: some flags rest on articles about another country.",
     "sub": "{n} reports worldwide in the seven days to {day}. Updated {at}.",
@@ -341,14 +333,6 @@ const I18N = {
     "title": "Suivi des protestations d'élèves et d'étudiants",
     "take_some": "Chaque jour, cette page compare, pays par pays, les mentions dans la presse de protestations d'élèves et d'étudiants au passé du pays ({N} pays suivis). Pays nettement au-dessus de leur niveau habituel aujourd'hui ({n}) : {top}. Choisissez un pays pour voir ses six derniers mois, ce que décrivent ses mentions et les articles dont elles proviennent.",
     "take_none": "Chaque jour, cette page compare, pays par pays, les mentions dans la presse de protestations d'élèves et d'étudiants au passé du pays ({N} pays suivis). Aujourd'hui, aucun pays ne dépasse nettement son niveau habituel ({e} au niveau élevé). Choisissez un pays pour voir ses six derniers mois, ce que décrivent ses mentions et les articles dont elles proviennent.",
-    "take_cmp": " Pour comparer avec le passé, où le contrôle des lieux cités par les articles n'est pas disponible, on en compterait {n} aujourd'hui ; depuis {y}, on en compte {m} un jour ordinaire",
-    "take_hist": " Depuis {y}, on en compte {m} un jour ordinaire",
-    "take_tail": ", et {n} ou plus pendant {dd}, en {ee}.",
-    "take_tail0": ", et jamais {n} ou plus avant les 30 derniers jours.",
-    "days_n": "{d} jours",
-    "days_1": "un jour",
-    "eps_n": "{e} épisodes",
-    "eps_1": "un épisode",
     "take_compare": "GDELT couvre certains pays bien mieux que d'autres : les niveaux ne se comparent pas d'un pays à l'autre ; l'outil compare chaque pays à son propre passé.",
     "take_caveat": "L'outil compte les protestations que GDELT code automatiquement à partir de la presse et dont l'acteur est désigné comme des élèves, des étudiants, une école ou une université. Elles sont appelées ici mentions, et un article peut en produire plusieurs. Une alerte est une raison de lire les articles listés pour le pays, non le constat que des élèves ou des étudiants y protestent : certaines alertes reposent sur des articles consacrés à un autre pays.",
     "sub": "{n} mentions dans le monde sur les sept jours allant jusqu'au {day}. Mise à jour du {at}.",
@@ -612,10 +596,8 @@ function draw() {
   if (T.status === 'ok') {
     const n = Object.fromEntries(T.data.map((r) => [r.tier, r.n])); root.querySelectorAll('.spt-num').forEach((e) => { e.textContent = int(n[e.dataset.where.split('=')[1]] ?? 0); });
     const top = rows.filter((r) => r.tier === 'exceptional' || r.tier === 'high').sort((a, b) => b.rank - a.rank || b.reports - a.reports).map((r) => r.name);
-    const far = n.exceptional + n.high, far0 = info && num(info.far_all_places) > far ? num(info.far_all_places) : far, days = info ? num(info.far_days_at_least_now) : NaN, eps = info ? num(info.far_episodes_at_least_now) : NaN;
+    const far = n.exceptional + n.high;
     const list = (a) => { try { return new Intl.ListFormat(loc(), {style: 'long', type: 'conjunction'}).format(a); } catch (e) { return a.join(', '); } };
-    const v = {y: (info ? info.history_from || '' : '').slice(0, 4), m: info ? int(num(info.far_median)) : '', n: int(far0), dd: days === 1 ? t('days_1') : t('days_n', {d: int(days)}), ee: eps === 1 ? t('eps_1') : t('eps_n', {e: int(eps)})};
-    const base = info && isFinite(num(info.far_median)) && isFinite(days) && far ? t(far0 > far ? 'take_cmp' : 'take_hist', v) + t(days === 0 ? 'take_tail0' : 'take_tail', v) : '';
     take.textContent = far ? t('take_some', {n: far, N: rows.length, top: list(top)}) : t('take_none', {e: n.elevated, N: rows.length});
   }
   const sel = q('#spt-region');
