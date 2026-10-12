@@ -1,5 +1,5 @@
 """Student-protest tracker. Forms of protest and articles by country, for the page. Called by build.py."""
-import os, re, urllib.parse
+import os, re, unicodedata, urllib.parse
 import pandas as pd
 from countries import NAME
 from update_from_files import BASE_LAST_ADDED
@@ -22,6 +22,16 @@ def title_of(url):
     if u.netloc.rsplit('.', 1)[-1].lower() in NONLATIN and not ENGLISH.search(t): return ''
     return (t[:1].upper() + t[1:])[:110] if len(re.findall(r'[^\W\d_]{3,}', t)) >= 3 else ''
 
+SECONDARY = re.compile(r'lycee|high[-_ ]?school|secondary[-_ ]school|(?<![a-z])pupils?(?![a-z])|(?<![a-z])lice[oi](?![a-z])|liceal|studenti[-_ ]medi|schueler|(?<![a-z])schuler(?![a-z])|gymnasium|(?<![a-z])institutos?(?![a-z])|secundari|(?<![a-z])eleves?(?![a-z])')
+HIGHER = re.compile(r'universit|universid|campus|etudiant|ateneo|hochschul|studierend|facultad|(?<![a-z])fac(?![a-z])|(?<![a-z])bts(?![a-z])|(?<![a-z])prepas?(?![a-z])|sciences[-_]po(?![a-z])|(?<![a-z])faculty|undergrad|postgrad|polytechnic')
+LEVEL = {'': 'Not stated', 'secondary': 'Secondary', 'higher': 'Higher education', 'both': 'Both'}
+
+def level(url):
+    try: u = urllib.parse.urlparse(str(url)); s = urllib.parse.unquote(u.path + ('?' + u.query if u.query else ''))
+    except Exception: return ''
+    s = ''.join(c for c in unicodedata.normalize('NFKD', s.lower()) if not unicodedata.combining(c)); a, b = bool(SECONDARY.search(s)), bool(HIGHER.search(s))
+    return 'both' if a and b else 'secondary' if a else 'higher' if b else ''
+
 def source_of(url):
     try: return re.sub(r'^www\.', '', urllib.parse.urlparse(url).netloc.split(':')[0])
     except Exception: return ''
@@ -32,7 +42,7 @@ def load(last):
     R = pd.concat(parts, ignore_index=True); R = R[R.fips.isin(NAME)].copy(); R['date'] = pd.to_datetime(R.day.astype(str), format='%Y%m%d', errors='coerce'); R = R[R.date.notna() & (R.date <= last)].copy(); R['country'] = R.fips.map(NAME)
     if 'own_share' not in R: R['own_share'] = float('nan')
     R['title'] = R.title.fillna('').astype(str) if 'title' in R else ''
-    R['own_share'] = pd.to_numeric(R.own_share, errors='coerce'); R['elsewhere'] = R.own_share.notna() & (R.own_share < MAJORITY); return R
+    R['own_share'] = pd.to_numeric(R.own_share, errors='coerce'); R['elsewhere'] = R.own_share.notna() & (R.own_share < MAJORITY); R['level'] = R.url.fillna('').map(level); return R
 
 def located(R, days, countries):
     L = R[~R.elsewhere].groupby(['date', 'fips']).size().unstack().reindex(index=days, columns=countries).fillna(0); l7 = L.rolling(7).sum(); d7 = (L > 0).rolling(7).sum()
@@ -44,10 +54,14 @@ def main(last, R=None):
     F = m.groupby(['country', 'form']).size().rename('reports').reset_index(); F['share'] = (100 * F.reports / F.groupby('country').reports.transform('sum')).round(1)
     T = m[m.target.isin(TARGET)].assign(form='Target: ' + m.target.map(TARGET)).groupby(['country', 'form']).size().rename('reports').reset_index(); T['share'] = (100 * T.reports / T.country.map(m.groupby('country').size())).round(1)
     m['who'] = 'Actor: ' + m.actor.fillna('').astype(str).map(ACTOR); P = m.groupby(['country', 'who']).size().rename('reports').reset_index().rename(columns={'who': 'form'}); P['share'] = (100 * P.reports / P.country.map(m.groupby('country').size())).round(1)
-    pd.concat([F, T, P], ignore_index=True).sort_values(['country', 'reports'], ascending=[True, False]).to_csv(os.path.join(OUT, 'forms.csv'), index=False)
+    V = m.assign(form='Level: ' + m.level.map(LEVEL)).groupby(['country', 'form']).size().rename('reports').reset_index(); V['share'] = (100 * V.reports / V.country.map(m.groupby('country').size())).round(1)
+    pd.concat([F, T, P, V], ignore_index=True).sort_values(['country', 'reports'], ascending=[True, False]).to_csv(os.path.join(OUT, 'forms.csv'), index=False)
     w = R[(R.date > last - pd.Timedelta(days=7)) & R.url.fillna('').str.startswith('http')]; busy = w.groupby('country').size(); w = w[w.country.isin(busy[busy >= 5].index)]
     A = w.groupby(['country', 'url']).agg(reports=('day', 'size'), first_day=('date', 'min'), about=('own_share', 'first'), title=('title', 'max')).reset_index().sort_values(['country', 'reports', 'first_day'], ascending=[True, False, False])
-    A['title'] = [t or title_of(x) for t, x in zip(A.title, A.url)]; A['source'] = A.url.map(source_of); A['about'] = (100 * A.about).round()
+    A['title'] = [t or title_of(x) for t, x in zip(A.title, A.url)]; A['source'] = A.url.map(source_of); A['level'] = A.url.map(level); A['about'] = (100 * A.about).round()
     A['rank'] = A.groupby('country').cumcount() + 1; A = A[A['rank'] <= 8]; A['first_day'] = A.first_day.dt.strftime('%Y-%m-%d')
-    A[['country', 'rank', 'title', 'source', 'url', 'reports', 'first_day', 'about']].to_csv(os.path.join(OUT, 'articles.csv'), index=False)
+    A[['country', 'rank', 'title', 'source', 'url', 'reports', 'first_day', 'about', 'level']].to_csv(os.path.join(OUT, 'articles.csv'), index=False)
+    g = R.groupby(['date', 'country']); D = pd.DataFrame({'reports': g.size(), 'stated': g['level'].apply(lambda s: int((s != '').sum()))})
+    for k, name in (('secondary', 'secondary'), ('higher', 'higher_education'), ('both', 'both'), ('', 'not_stated')): D[name] = (100 * g['level'].apply(lambda s, k=k: (s == k).sum()) / D.reports).round(1)
+    D = D.reset_index().rename(columns={'date': 'day'}); D['day'] = D.day.dt.strftime('%Y-%m-%d'); D.to_csv(os.path.join(OUT, 'levels.csv'), index=False)
     return len(F), len(A), R[R.date > last - pd.Timedelta(days=7)].groupby('country').url.nunique().to_dict()
