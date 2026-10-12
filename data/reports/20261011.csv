@@ -1,0 +1,65 @@
+day,fips,code,target,articles,url,actor,own_share,main
+20260911,CE,141,,10,https://slguardian.org/sri-lankas-state-universities-struggle-as-vacancies-mount/,UNIVERSITY,1.0,CE
+20261004,US,141,,2,https://www.dailymail.com/news/article-16199195/Cornell-Universitys-shocking-sex-pamphlets-students-encouraging-orgies.html,STUDENT,0.875,US
+20261004,US,141,,5,https://www.dailymail.com/news/article-16199195/Cornell-Universitys-shocking-sex-pamphlets-students-encouraging-orgies.html,STUDENT,0.875,US
+20261004,US,141,,1,https://www.dailymail.com/news/article-16199195/Cornell-Universitys-shocking-sex-pamphlets-students-encouraging-orgies.html,STUDENT,0.875,US
+20261010,FR,141,OPP,10,http://www.ciudadccs.info/index.php/publicacion/51679-francia-mas-de-6-mil-arrestos-tras-2-semanas-de-protesta-estudiantil,STUDENT,1.0,FR
+20261011,CA,141,GOV,10,https://www.cornwallseawaynews.com/local/group-seeks-la-citadelle-replacement/,SCHOOL,0.5,FR
+20261011,CH,141,LAB,10,https://www.iefimerida.gr/kosmos/kina-adimosieyta-plana-exegersi-plateia-tienanmen,STUDENT,0.737,CH
+20261011,FR,141,,10,https://www.liputan6.com/photo/read/8310534/marc-marquez-juara-sprint-race-motogp-mandalika-2026-dan-rebut-puncak-klasemen,STUDENT,1.0,FR
+20261011,FR,141,,8,https://www.theguardian.com/education/2026/oct/11/schools-exams-extreme-heat-neu-daniel-kebede,STUDENT PROTESTER,0.143,UK
+20261011,FR,141,,2,https://elpais.com/internacional/2026-10-11/daniel-cohn-bendit-no-se-puede-comparar-el-mayo-del-68-con-lo-que-ocurre-ahora-en-francia.html,STUDENT,0.857,FR
+20261011,FR,145,,10,https://noticiasyprotagonistas.com/editoriales/de-la-bastilla-pasando-por-la-revolucion-irani-a-este-presente-de-hoy/,SCHOOL,0.667,FR
+20261011,FR,141,,10,https://www.ethnos.gr/Economy/article/423399/hsygkroyshbabyboomerskaigenzsthgalliapostokostostonsyntaxeoneythynetaigiatismathhtikesdiamartyries,STUDENT,0.897,FR
+20261011,FR,143,,10,https://es.euronews.com/2026/10/11/revuelta-adolescente-o-revolucion-las-protestas-estudiantiles-que-amenazan-la-carrera-pres,STUDENT,0.947,FR
+20261011,FR,141,,10,https://www.elciudadano.com/en/frances-burden-why-the-mega-rich-should-pay-their-fair-share-instead-of-the-public/10/11/,SCHOOL,0.902,FR
+20261011,FR,141,CVL,5,https://www.winnipegfreepress.com/world/2026/10/11/frances-far-left-presidential-candidate-cheers-gen-z-school-protests,SCHOOL,0.895,FR
+20261011,FR,141,CVL,5,https://www.newsday.com/news/nation/melenchon-france-presidential-election-protests-c99415,SCHOOL,0.913,FR
+20261011,FR,140,COP,8,https://www.vesti.ru/ns/dukhovnost-i-patriotizm-protiv-radikalizma-vektor-gosudarstvennoj-politiki-rf,STUDENT,0.667,FR
+20261011,FR,140,COP,2,https://www.vesti.ru/ns/dukhovnost-i-patriotizm-protiv-radikalizma-vektor-gosudarstvennoj-politiki-rf,STUDENT,0.667,FR
+20261011,FR,141,EDU,10,https://ria.ru/20261011/ukraina-2123841354.html,SCHOOL,0.412,FR
+20261011,FR,141,EDU,10,https://www.yourdemocracy.net.au/drupal/node/61356,SCHOOL,0.565,FR
+20261011,IN,141,,10,https://pakobserver.net/listen-before-frustration-turns-into-agitation/,STUDENT,0.375,FR
+20261011,IN,140,COP,10,https://www.rediff.com/news/interview/prashant-bhushan-this-is-worse-than-the-emergency/20261011.htm,STUDENT,1.0,IN
+20261011,IN,1411,GOV,10,https://dailypioneer.com/news/protesters-hide-in-gurudwara-washrooms-to-dodge-detention,STUDENT PROTESTER,1.0,IN
+20261011,IN,141,GOV,5,https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/11/indian-cockroaches-plan-new-protest-amid-heavy-delhi-security,STUDENT,1.0,IN
+20261011,IN,141,GOV,5,https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/11/indian-cockroaches-plan-new-protest-amid-heavy-delhi-security,STUDENT,1.0,IN
+20261011,IN,141,,6,https://www.deccanchronicle.com/legalnews/cjp-protests-sc-to-order-normal-metro-services-restore-internet-1994854,SCHOOL,1.0,IN
+20261011,IN,141,OPP,4,https://www.deccanchronicle.com/legalnews/cjp-protests-sc-to-order-normal-metro-services-restore-internet-1994854,SCHOOL,1.0,IN
+20261011,IN,141,,10,https://www.thestar.com.my/news/world/2026/10/11/from-theatre-to-streets-gen-z-protester-neha-bora-a-new-face-of-india039s-youth-unrest,STUDENT,0.95,IN
+20261011,IN,141,,2,http://www.bignewsnetwork.com/news/279365407/hitler-did-the-same-during-his-final-days-sanjay-raut-calls-situation-in-india-emergency-like-slams-bjp,STUDENT,0.955,IN
+20261011,IN,141,,10,https://www.moneycontrol.com/news/india/from-theatre-to-streets-gen-z-protester-neha-bora-a-new-face-of-india-s-youth-unrest-14049454.html,STUDENT,0.962,IN
+20261011,IN,141,,4,https://www.moneycontrol.com/news/india/from-theatre-to-streets-gen-z-protester-neha-bora-a-new-face-of-india-s-youth-unrest-14049454.html,STUDENT,0.962,IN
+20261011,IN,141,CVL,1,https://www.dailyexcelsior.com/us-student-group-backs-delhi-protests-raises-concerns-over-indias-voter-roll-revision/,US STUDENT,0.824,IN
+20261011,IN,140,LAB,4,https://timesofindia.indiatimes.com/city/delhi/aisa-workers-detained-during-protest-against-cec-gyanesh-kumar-in-delhi/articleshow/134868831.cms,STUDENT,1.0,IN
+20261011,IN,141,,10,https://www.thehindu.com/news/cities/Coimbatore/dyfi-sfi-stage-demonstration-demanding-cec-gyanesh-kumars-resignation/article71571879.ece,STUDENT,1.0,IN
+20261011,IN,141,CVL,6,https://www.freepressjournal.in/pune/nashik-students-hold-candle-march-demand-cec-gyanesh-kumars-resignation,STUDENT,1.0,IN
+20261011,IN,141,CVL,4,https://www.freepressjournal.in/pune/nashik-students-hold-candle-march-demand-cec-gyanesh-kumars-resignation,STUDENT,1.0,IN
+20261011,IN,141,OPP,2,https://www.freepressjournal.in/pune/nashik-students-hold-candle-march-demand-cec-gyanesh-kumars-resignation,STUDENT,1.0,IN
+20261011,IN,141,OPP,8,https://www.freepressjournal.in/pune/nashik-students-hold-candle-march-demand-cec-gyanesh-kumars-resignation,STUDENT,1.0,IN
+20261011,IN,140,,6,http://www.bignewsnetwork.com/news/279365674/delhi-police-couldnt-hit-new-lows-venugopal-slams-police-over-alleged-crackdown-on-journalists-protesters,STUDENT,1.0,IN
+20261011,IN,143,,10,https://life.ru/p/uchastniki-protestov-v-parizhe-horom-speli-katyushu-na-frantsuzskom,STUDENT,0.111,FR
+20261011,IN,140,COP,10,https://www.freepressjournal.in/mumbai/mumbai-cjp-protest-around-300-detained-at-shivaji-park-shiv-sena-ubt-leader-aaditya-thackeray-amit-thackeray-oppose-police-action,STUDENT,1.0,IN
+20261011,IN,141,OPP,10,https://www.siasat.com/jantar-mantar-crackdown-hyderabad-students-stage-sir-protest-3556012/,STUDENT,1.0,IN
+20261011,IN,140,EDU,10,https://www.thehindu.com/news/national/anti-cec-protests-continue-journalists-detained-despite-sc-order-rahul-gandhi-announces-march-to-supreme-court-as-delhi-braces-for-fresh-curbs/article71572486.ece,STUDENT,1.0,IN
+20261011,IN,141,,3,https://www.business-standard.com/politics/india-leads-world-in-demonstrations-for-fifth-straight-year-acled-data-126101100861_1.html,UNIVERSITY,0.765,IN
+20261011,IN,141,,7,https://www.business-standard.com/politics/india-leads-world-in-demonstrations-for-fifth-straight-year-acled-data-126101100861_1.html,UNIVERSITY,0.765,IN
+20261011,IN,141,GOV,10,https://www.infomoney.com.br/mundo/lideres-de-movimento-estudantil-prometem-manter-protestos-apos-libertacao-na-india/,STUDENT,1.0,IN
+20261011,IN,143,GOV,5,https://www.oxfordstudent.com/2026/10/11/democratic-resilience-blavatnik/,SCHOOL,0.5,UK
+20261011,IS,141,,10,https://www.7kanal.co.il/news/293376,UNIVERSITY,0.333,CO
+20261011,MZ,141,,10,https://globalvoices.org/2026/10/11/when-free-speech-has-a-price-youth-voices-in-mozambique/,SCHOOL,0.909,MZ
+20261011,NI,141,,2,https://thenationonlineng.net/enugu-teachers-endorse-mbah-tinubu-for-2027-elections/,SCHOOL,1.0,NI
+20261011,NI,141,,8,https://thenationonlineng.net/enugu-teachers-endorse-mbah-tinubu-for-2027-elections/,SCHOOL,1.0,NI
+20261011,NI,141,,2,https://punchng.com/20-varsities-face-suit-over-health-workers-allowance/,UNIVERSITY,0.983,NI
+20261011,NI,141,,2,https://punchng.com/20-varsities-face-suit-over-health-workers-allowance/,UNIVERSITY,0.983,NI
+20261011,RI,141,GOV,40,https://www.syri.net/rajoni/922593/rusia-be-ja-kina-shba-ja-kah-cili-vend-anojne-18-listat-zgjedhore-ne-serbi/,STUDENT,0.442,RI
+20261011,RP,141,MIL,6,https://www.manilatimes.net/2026/10/12/opinion/columns/ust-activist-suspensions-testing-the-boundaries-of-academic-freedom-and-student-rights/2443319,STUDENT,1.0,RP
+20261011,RP,141,MIL,4,https://www.manilatimes.net/2026/10/12/opinion/columns/ust-activist-suspensions-testing-the-boundaries-of-academic-freedom-and-student-rights/2443319,STUDENT,1.0,RP
+20261011,SP,141,,10,https://blogforiowa.com/2026/10/11/sunday-funday-corruption-edition/,STUDENT,0.045,US
+20261011,SP,140,,10,https://www.libertaddigital.com/internacional/europa/2026-10-11/santiago-navajas-kale-borroka-islamoizquierdista-en-paris-7473979/,STUDENT,0.25,FR
+20261011,SZ,141,CVL,7,https://www.dailyexcelsior.com/us-student-group-backs-delhi-protests-raises-concerns-over-indias-voter-roll-revision/,US STUDENT,0.059,IN
+20261011,UK,141,,2,https://www.theguardian.com/education/2026/oct/11/schools-exams-extreme-heat-neu-daniel-kebede,STUDENT PROTESTER,0.857,UK
+20261011,UP,141,CVL,5,https://www.wsbradio.com/news/world/frances-far-left/OC2B3HAOFE4SXOMNYA67WE32YM/,SCHOOL,0.059,FR
+20261011,US,141,,1,https://www.dailymail.com/news/article-16199195/Cornell-Universitys-shocking-sex-pamphlets-students-encouraging-orgies.html,STUDENT,0.875,US
+20261011,US,141,,1,https://www.dailymail.com/news/article-16199195/Cornell-Universitys-shocking-sex-pamphlets-students-encouraging-orgies.html,STUDENT,0.875,US
+20261011,US,141,,10,https://www.wglt.org/local-news/2026-10-11/iwu-president-discusses-enrollment-trends-and-college-affordability,STUDENT,1.0,US
