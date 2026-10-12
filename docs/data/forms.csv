@@ -2,20 +2,29 @@ country,form,reports,share
 Afghanistan,Demonstration,1,100.0
 Afghanistan,Target: Schools and universities,1,100.0
 Afghanistan,Actor: University or campus,1,100.0
+Afghanistan,Level: Not stated,1,100.0
 Albania,Demonstration,6,85.7
 Albania,Actor: Students or pupils,6,85.7
+Albania,Level: Not stated,6,85.7
 Albania,Target: Government,2,28.6
 Albania,Blockade or occupation,1,14.3
 Albania,Actor: School,1,14.3
+Albania,Level: Higher education,1,14.3
 Algeria,Demonstration,3,100.0
 Algeria,Actor: Students or pupils,3,100.0
+Algeria,Level: Not stated,2,66.7
+Algeria,Level: Secondary,1,33.3
 Argentina,Demonstration,13,86.7
+Argentina,Level: Not stated,11,73.3
 Argentina,Actor: Students or pupils,8,53.3
 Argentina,Actor: University or campus,5,33.3
 Argentina,Target: Government,3,20.0
+Argentina,Level: Higher education,3,20.0
 Argentina,Strike or boycott,2,13.3
 Argentina,Actor: School,2,13.3
 Argentina,Target: Courts,1,6.7
+Argentina,Level: Both,1,6.7
+Australia,Level: Not stated,29,100.0
 Australia,Demonstration,25,86.2
 Australia,Actor: Students or pupils,23,79.3
 Australia,Strike or boycott,4,13.8
@@ -28,10 +37,15 @@ Australia,Target: Labour,1,3.4
 Australia,Target: Parliament,1,3.4
 Austria,Demonstration,2,100.0
 Austria,Actor: Students or pupils,2,100.0
+Austria,Level: Not stated,1,50.0
+Austria,Level: Secondary,1,50.0
 Bangladesh,Demonstration,7,100.0
 Bangladesh,Actor: Students or pupils,7,100.0
+Bangladesh,Level: Higher education,4,57.1
+Bangladesh,Level: Not stated,3,42.9
 Bangladesh,Target: Police,2,28.6
 Bangladesh,Target: Government,1,14.3
+Belgium,Level: Not stated,46,97.9
 Belgium,Demonstration,43,91.5
 Belgium,Actor: Students or pupils,40,85.1
 Belgium,Actor: School,6,12.8
@@ -42,11 +56,14 @@ Belgium,Target: Courts,1,2.1
 Belgium,Target: Police,1,2.1
 Belgium,Target: Schools and universities,1,2.1
 Belgium,Actor: University or campus,1,2.1
+Belgium,Level: Higher education,1,2.1
+Bosnia and Herzegovina,Level: Not stated,3,100.0
 Bosnia and Herzegovina,Strike or boycott,2,66.7
 Bosnia and Herzegovina,Actor: School,2,66.7
 Bosnia and Herzegovina,Demonstration,1,33.3
 Bosnia and Herzegovina,Actor: Students or pupils,1,33.3
 Brazil,Demonstration,21,100.0
+Brazil,Level: Not stated,19,90.5
 Brazil,Actor: Students or pupils,16,76.2
 Brazil,Actor: University or campus,3,14.3
 Brazil,Target: Opposition,2,9.5
@@ -54,17 +71,24 @@ Brazil,Target: Schools and universities,2,9.5
 Brazil,Actor: School,2,9.5
 Brazil,Target: Government,1,4.8
 Brazil,Target: Parliament,1,4.8
+Brazil,Level: Higher education,1,4.8
+Brazil,Level: Secondary,1,4.8
 Bulgaria,Demonstration,3,100.0
 Bulgaria,Actor: Students or pupils,3,100.0
+Bulgaria,Level: Not stated,3,100.0
 Bulgaria,Target: Schools and universities,1,33.3
 Canada,Demonstration,24,100.0
+Canada,Level: Not stated,23,95.8
 Canada,Actor: Students or pupils,17,70.8
 Canada,Actor: School,6,25.0
 Canada,Target: Government,2,8.3
 Canada,Actor: University or campus,1,4.2
+Canada,Level: Secondary,1,4.2
 Chile,Demonstration,3,100.0
 Chile,Actor: Students or pupils,3,100.0
+Chile,Level: Not stated,3,100.0
 Chile,Target: Government,1,33.3
+China,Level: Not stated,9,100.0
 China,Demonstration,8,88.9
 China,Actor: Students or pupils,6,66.7
 China,Actor: School,2,22.2
@@ -73,30 +97,40 @@ China,Target: Government,1,11.1
 China,Target: Labour,1,11.1
 China,Actor: University or campus,1,11.1
 Colombia,Demonstration,2,100.0
+Colombia,Level: Not stated,2,100.0
 Colombia,Target: Police,1,50.0
 Colombia,Actor: School,1,50.0
 Colombia,Actor: Students or pupils,1,50.0
 Croatia,Demonstration,2,100.0
+Croatia,Level: Not stated,2,100.0
 Croatia,Actor: School,1,50.0
 Croatia,Actor: Students or pupils,1,50.0
 Cuba,Demonstration,3,100.0
 Cuba,Actor: Students or pupils,3,100.0
+Cuba,Level: Not stated,3,100.0
 Cuba,Target: Schools and universities,2,66.7
 Cyprus,Demonstration,1,100.0
 Cyprus,Target: Civilians,1,100.0
 Cyprus,Actor: Students or pupils,1,100.0
+Cyprus,Level: Not stated,1,100.0
 Czechia,Demonstration,1,100.0
 Czechia,Actor: School,1,100.0
+Czechia,Level: Not stated,1,100.0
 Denmark,Demonstration,1,100.0
 Denmark,Actor: School,1,100.0
+Denmark,Level: Not stated,1,100.0
 Ecuador,Demonstration,2,100.0
 Ecuador,Actor: Students or pupils,2,100.0
+Ecuador,Level: Higher education,2,100.0
 Egypt,Strike or boycott,1,100.0
 Egypt,Target: Labour,1,100.0
 Egypt,Actor: Students or pupils,1,100.0
+Egypt,Level: Not stated,1,100.0
 France,Demonstration,377,83.4
+France,Level: Not stated,369,81.6
 France,Actor: Students or pupils,259,57.3
 France,Actor: School,187,41.4
+France,Level: Secondary,71,15.7
 France,Target: Schools and universities,61,13.5
 France,Target: Police,47,10.4
 France,Target: Government,41,9.1
@@ -105,24 +139,31 @@ France,Strike or boycott,35,7.7
 France,Target: Labour,13,2.9
 France,Target: Opposition,12,2.7
 France,Target: Civilians,9,2.0
+France,Level: Higher education,7,1.5
 France,Actor: University or campus,6,1.3
+France,Level: Both,5,1.1
 France,Blockade or occupation,4,0.9
 France,Target: Parliament,3,0.7
 Germany,Demonstration,39,92.9
+Germany,Level: Not stated,39,92.9
 Germany,Actor: Students or pupils,30,71.4
 Germany,Target: Military,14,33.3
 Germany,Actor: School,9,21.4
 Germany,Strike or boycott,3,7.1
 Germany,Actor: University or campus,3,7.1
+Germany,Level: Secondary,3,7.1
 Germany,Target: Opposition,2,4.8
 Germany,Target: Civilians,1,2.4
 Germany,Target: Government,1,2.4
 Ghana,Strike or boycott,1,100.0
 Ghana,Actor: University or campus,1,100.0
+Ghana,Level: Not stated,1,100.0
 Greece,Demonstration,39,97.5
+Greece,Level: Not stated,34,85.0
 Greece,Actor: Students or pupils,25,62.5
 Greece,Actor: School,11,27.5
 Greece,Target: Government,6,15.0
+Greece,Level: Higher education,6,15.0
 Greece,Actor: University or campus,4,10.0
 Greece,Target: Parliament,3,7.5
 Greece,Strike or boycott,1,2.5
@@ -131,14 +172,19 @@ Greece,Target: Opposition,1,2.5
 Greece,Target: Schools and universities,1,2.5
 Haiti,Demonstration,2,100.0
 Haiti,Actor: Students or pupils,2,100.0
+Haiti,Level: Not stated,2,100.0
 Hong Kong,Demonstration,1,100.0
 Hong Kong,Actor: Students or pupils,1,100.0
+Hong Kong,Level: Not stated,1,100.0
 Hungary,Actor: Students or pupils,3,100.0
+Hungary,Level: Not stated,3,100.0
 Hungary,Demonstration,2,66.7
 Hungary,Strike or boycott,1,33.3
 Hungary,Target: Civilians,1,33.3
 India,Actor: Students or pupils,435,90.2
+India,Level: Not stated,424,88.0
 India,Demonstration,411,85.3
+India,Level: Higher education,58,12.0
 India,Target: Government,50,10.4
 India,Target: Police,46,9.5
 India,Hunger strike,45,9.3
@@ -157,13 +203,17 @@ India,Target: Military,2,0.4
 India,Target: Business,1,0.2
 Indonesia,Demonstration,11,100.0
 Indonesia,Actor: Students or pupils,11,100.0
+Indonesia,Level: Not stated,11,100.0
 Indonesia,Target: Government,1,9.1
 Iran,Demonstration,14,93.3
 Iran,Actor: Students or pupils,14,93.3
+Iran,Level: Not stated,12,80.0
 Iran,Target: Schools and universities,3,20.0
+Iran,Level: Higher education,3,20.0
 Iran,Strike or boycott,1,6.7
 Iran,Target: Police,1,6.7
 Iran,Actor: School,1,6.7
+Ireland,Level: Not stated,15,93.8
 Ireland,Demonstration,13,81.2
 Ireland,Actor: Students or pupils,11,68.8
 Ireland,Actor: University or campus,3,18.8
@@ -172,40 +222,53 @@ Ireland,Target: Labour,2,12.5
 Ireland,Actor: School,2,12.5
 Ireland,Hunger strike,1,6.2
 Ireland,Target: Schools and universities,1,6.2
+Ireland,Level: Higher education,1,6.2
 Israel,Demonstration,58,95.1
+Israel,Level: Not stated,56,91.8
 Israel,Actor: Students or pupils,43,70.5
 Israel,Actor: University or campus,13,21.3
 Israel,Target: Government,5,8.2
 Israel,Actor: School,5,8.2
+Israel,Level: Higher education,5,8.2
 Israel,Target: Business,4,6.6
 Israel,Target: Opposition,3,4.9
 Israel,Violent protest,2,3.3
 Israel,Hunger strike,1,1.6
 Israel,Target: Parliament,1,1.6
+Italy,Level: Not stated,37,92.5
 Italy,Demonstration,31,77.5
 Italy,Actor: Students or pupils,25,62.5
 Italy,Actor: School,14,35.0
 Italy,Strike or boycott,8,20.0
 Italy,Target: Government,7,17.5
 Italy,Target: Police,2,5.0
+Italy,Level: Higher education,2,5.0
 Italy,Violent protest,1,2.5
 Italy,Target: Schools and universities,1,2.5
 Italy,Actor: University or campus,1,2.5
+Italy,Level: Secondary,1,2.5
 Jamaica,Demonstration,1,100.0
 Jamaica,Actor: Students or pupils,1,100.0
+Jamaica,Level: Not stated,1,100.0
 Japan,Demonstration,3,100.0
 Japan,Actor: Students or pupils,3,100.0
+Japan,Level: Not stated,3,100.0
 Kenya,Demonstration,3,100.0
 Kenya,Actor: School,2,66.7
+Kenya,Level: Not stated,2,66.7
 Kenya,Target: Business,1,33.3
 Kenya,Actor: University or campus,1,33.3
+Kenya,Level: Higher education,1,33.3
 Kosovo,Demonstration,10,100.0
 Kosovo,Actor: Students or pupils,10,100.0
+Kosovo,Level: Not stated,10,100.0
 Kosovo,Target: Government,1,10.0
 Kosovo,Target: Military,1,10.0
 Kosovo,Target: Parliament,1,10.0
 Mexico,Actor: Students or pupils,57,93.4
 Mexico,Demonstration,54,88.5
+Mexico,Level: Not stated,51,83.6
+Mexico,Level: Higher education,10,16.4
 Mexico,Strike or boycott,5,8.2
 Mexico,Target: Government,5,8.2
 Mexico,Actor: University or campus,3,4.9
@@ -216,10 +279,14 @@ Mexico,Target: Schools and universities,1,1.6
 Mexico,Actor: School,1,1.6
 Nepal,Demonstration,2,100.0
 Nepal,Actor: Students or pupils,2,100.0
+Nepal,Level: Not stated,2,100.0
 Nepal,Target: Government,1,50.0
 Netherlands,Demonstration,2,100.0
 Netherlands,Actor: Students or pupils,1,50.0
 Netherlands,Actor: University or campus,1,50.0
+Netherlands,Level: Higher education,1,50.0
+Netherlands,Level: Not stated,1,50.0
+Nigeria,Level: Not stated,17,94.4
 Nigeria,Demonstration,16,88.9
 Nigeria,Actor: School,7,38.9
 Nigeria,Actor: Students or pupils,7,38.9
@@ -227,20 +294,27 @@ Nigeria,Target: Government,4,22.2
 Nigeria,Actor: University or campus,4,22.2
 Nigeria,Strike or boycott,2,11.1
 Nigeria,Target: Labour,1,5.6
+Nigeria,Level: Higher education,1,5.6
 Norway,Demonstration,1,100.0
 Norway,Actor: School,1,100.0
+Norway,Level: Not stated,1,100.0
 Pakistan,Demonstration,3,75.0
 Pakistan,Actor: Students or pupils,3,75.0
+Pakistan,Level: Higher education,2,50.0
+Pakistan,Level: Not stated,2,50.0
 Pakistan,Violent protest,1,25.0
 Pakistan,Target: Government,1,25.0
 Pakistan,Actor: University or campus,1,25.0
 Panama,Demonstration,3,100.0
 Panama,Actor: Students or pupils,3,100.0
+Panama,Level: Not stated,3,100.0
 Peru,Demonstration,2,100.0
+Peru,Level: Secondary,2,100.0
 Peru,Target: Civilians,1,50.0
 Peru,Target: Schools and universities,1,50.0
 Peru,Actor: School,1,50.0
 Peru,Actor: Students or pupils,1,50.0
+Philippines,Level: Not stated,15,100.0
 Philippines,Demonstration,13,86.7
 Philippines,Actor: Students or pupils,10,66.7
 Philippines,Actor: University or campus,4,26.7
@@ -249,15 +323,19 @@ Philippines,Target: Military,2,13.3
 Philippines,Target: Courts,1,6.7
 Philippines,Target: Schools and universities,1,6.7
 Philippines,Actor: School,1,6.7
+Poland,Level: Not stated,4,100.0
 Poland,Actor: School,3,75.0
 Poland,Demonstration,2,50.0
 Poland,Strike or boycott,2,50.0
 Poland,Actor: Students or pupils,1,25.0
 Portugal,Demonstration,1,100.0
 Portugal,Actor: School,1,100.0
+Portugal,Level: Not stated,1,100.0
 Romania,Demonstration,2,100.0
 Romania,Actor: School,2,100.0
+Romania,Level: Not stated,2,100.0
 Russia,Demonstration,25,92.6
+Russia,Level: Not stated,25,92.6
 Russia,Actor: Students or pupils,19,70.4
 Russia,Actor: School,4,14.8
 Russia,Actor: University or campus,4,14.8
@@ -267,48 +345,65 @@ Russia,Target: Government,2,7.4
 Russia,Target: Opposition,2,7.4
 Russia,Target: Schools and universities,2,7.4
 Russia,Target: Civilians,1,3.7
+Russia,Level: Higher education,1,3.7
+Russia,Level: Secondary,1,3.7
 Senegal,Demonstration,2,100.0
+Senegal,Level: Not stated,2,100.0
 Senegal,Target: Government,1,50.0
 Senegal,Actor: School,1,50.0
 Senegal,Actor: Students or pupils,1,50.0
 Serbia,Actor: Students or pupils,17,94.4
+Serbia,Level: Not stated,17,94.4
 Serbia,Demonstration,16,88.9
 Serbia,Target: Government,6,33.3
 Serbia,Strike or boycott,1,5.6
 Serbia,Violent protest,1,5.6
 Serbia,Target: Civilians,1,5.6
 Serbia,Actor: University or campus,1,5.6
+Serbia,Level: Higher education,1,5.6
 Slovakia,Demonstration,1,100.0
 Slovakia,Actor: Students or pupils,1,100.0
+Slovakia,Level: Not stated,1,100.0
 South Africa,Demonstration,13,100.0
+South Africa,Level: Not stated,13,100.0
 South Africa,Actor: Students or pupils,10,76.9
 South Africa,Target: Government,8,61.5
 South Africa,Actor: University or campus,2,15.4
 South Africa,Actor: School,1,7.7
 South Korea,Demonstration,2,66.7
 South Korea,Actor: University or campus,2,66.7
+South Korea,Level: Higher education,2,66.7
 South Korea,Strike or boycott,1,33.3
 South Korea,Actor: Students or pupils,1,33.3
+South Korea,Level: Not stated,1,33.3
 Spain,Demonstration,26,81.2
+Spain,Level: Not stated,25,78.1
 Spain,Actor: Students or pupils,21,65.6
 Spain,Strike or boycott,6,18.8
 Spain,Actor: University or campus,6,18.8
 Spain,Actor: School,5,15.6
+Spain,Level: Higher education,5,15.6
 Spain,Target: Civilians,2,6.2
+Spain,Level: Secondary,2,6.2
 Spain,Target: Schools and universities,1,3.1
 Sri Lanka,Demonstration,3,100.0
 Sri Lanka,Actor: University or campus,2,66.7
+Sri Lanka,Level: Higher education,2,66.7
 Sri Lanka,Target: Schools and universities,1,33.3
 Sri Lanka,Actor: Students or pupils,1,33.3
+Sri Lanka,Level: Not stated,1,33.3
 Sweden,Demonstration,19,95.0
+Sweden,Level: Not stated,17,85.0
 Sweden,Actor: Students or pupils,14,70.0
 Sweden,Actor: School,6,30.0
 Sweden,Target: Government,4,20.0
+Sweden,Level: Higher education,3,15.0
 Sweden,Target: Civilians,2,10.0
 Sweden,Target: Labour,2,10.0
 Sweden,Violent protest,1,5.0
 Sweden,Target: Business,1,5.0
 Sweden,Target: Police,1,5.0
+Switzerland,Level: Not stated,4,100.0
 Switzerland,Demonstration,3,75.0
 Switzerland,Actor: School,2,50.0
 Switzerland,Violent protest,1,25.0
@@ -316,6 +411,7 @@ Switzerland,Target: Civilians,1,25.0
 Switzerland,Target: Opposition,1,25.0
 Switzerland,Actor: Students or pupils,1,25.0
 Switzerland,Actor: University or campus,1,25.0
+Syria,Level: Not stated,8,100.0
 Syria,Demonstration,6,75.0
 Syria,Actor: Students or pupils,6,75.0
 Syria,Strike or boycott,2,25.0
@@ -323,13 +419,18 @@ Syria,Target: Schools and universities,2,25.0
 Syria,Actor: School,2,25.0
 Taiwan,Demonstration,3,100.0
 Taiwan,Actor: Students or pupils,3,100.0
+Taiwan,Level: Not stated,3,100.0
 Thailand,Demonstration,4,100.0
 Thailand,Actor: Students or pupils,4,100.0
+Thailand,Level: Not stated,3,75.0
 Thailand,Target: Government,1,25.0
 Thailand,Target: Labour,1,25.0
+Thailand,Level: Higher education,1,25.0
 Tunisia,Demonstration,3,100.0
+Tunisia,Level: Not stated,3,100.0
 Tunisia,Actor: Students or pupils,2,66.7
 Tunisia,Actor: University or campus,1,33.3
+Turkey,Level: Not stated,6,100.0
 Turkey,Demonstration,5,83.3
 Turkey,Actor: School,4,66.7
 Turkey,Target: Courts,2,33.3
@@ -339,8 +440,10 @@ Turkey,Target: Parliament,1,16.7
 Turkey,Actor: Students or pupils,1,16.7
 Turkey,Actor: University or campus,1,16.7
 Ukraine,Demonstration,14,93.3
+Ukraine,Level: Not stated,12,80.0
 Ukraine,Actor: Students or pupils,8,53.3
 Ukraine,Actor: University or campus,5,33.3
+Ukraine,Level: Higher education,3,20.0
 Ukraine,Actor: School,2,13.3
 Ukraine,Blockade or occupation,1,6.7
 Ukraine,Target: Civilians,1,6.7
@@ -349,9 +452,12 @@ Ukraine,Target: Military,1,6.7
 Ukraine,Target: Schools and universities,1,6.7
 United Arab Emirates,Demonstration,1,100.0
 United Arab Emirates,Actor: Students or pupils,1,100.0
+United Arab Emirates,Level: Not stated,1,100.0
 United Kingdom,Demonstration,24,82.8
+United Kingdom,Level: Not stated,23,79.3
 United Kingdom,Actor: Students or pupils,19,65.5
 United Kingdom,Actor: School,8,27.6
+United Kingdom,Level: Higher education,6,20.7
 United Kingdom,Strike or boycott,5,17.2
 United Kingdom,Target: Business,2,6.9
 United Kingdom,Actor: University or campus,2,6.9
@@ -360,27 +466,34 @@ United Kingdom,Target: Parliament,1,3.4
 United Kingdom,Target: Police,1,3.4
 United Kingdom,Target: Schools and universities,1,3.4
 United States,Demonstration,262,97.0
+United States,Level: Not stated,226,83.7
 United States,Actor: Students or pupils,163,60.4
 United States,Actor: School,64,23.7
 United States,Actor: University or campus,43,15.9
+United States,Level: Higher education,33,12.2
 United States,Target: Government,11,4.1
 United States,Target: Business,9,3.3
 United States,Target: Schools and universities,9,3.3
 United States,Target: Opposition,7,2.6
+United States,Level: Secondary,6,2.2
 United States,Strike or boycott,5,1.9
+United States,Level: Both,5,1.9
 United States,Target: Civilians,4,1.5
 United States,Target: Courts,3,1.1
 United States,Target: Labour,3,1.1
 United States,Violent protest,2,0.7
 United States,Hunger strike,1,0.4
 Venezuela,Demonstration,9,100.0
+Venezuela,Level: Not stated,9,100.0
 Venezuela,Actor: Students or pupils,6,66.7
 Venezuela,Actor: University or campus,2,22.2
 Venezuela,Target: Government,1,11.1
 Venezuela,Actor: School,1,11.1
+Vietnam,Level: Not stated,4,100.0
 Vietnam,Demonstration,3,75.0
 Vietnam,Actor: Students or pupils,3,75.0
 Vietnam,Blockade or occupation,1,25.0
 Vietnam,Actor: School,1,25.0
 Zimbabwe,Violent protest,1,100.0
 Zimbabwe,Actor: School,1,100.0
+Zimbabwe,Level: Not stated,1,100.0
