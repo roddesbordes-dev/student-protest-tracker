@@ -70,12 +70,10 @@ def main():
     M = lm((1000 * Nm / Em.where(Em > 0)).round(3), 'share').merge(lm(Nm.astype(int), 'reports'), on=['month', 'country']).dropna(); M['month'] = M.month.dt.strftime('%Y-%m-%d'); M.to_csv(os.path.join(OUT, 'monthly.csv'), index=False)
     W = pd.DataFrame({'world': (1000 * n7.sum(axis=1) / e7.sum(axis=1)).round(3)}).loc[tail].rename_axis('day').reset_index(); W['day'] = W.day.dt.strftime('%Y-%m-%d')
     W.to_csv(os.path.join(OUT, 'world.csv'), index=False)
-    T0 = B['tier'].where(~((B['moved'] == 1) & (B['tier'] >= 0)), B['raw']); far0 = (T0 >= 2).sum(axis=1); past = far0.iloc[:-REF_GAP]
-    as_many = past[past >= max(far0.iloc[-1], 1)]; episodes = int((as_many.index.to_series().diff().dt.days > 7).sum() + (len(as_many) > 0))
+    T0 = B['tier'].where(~((B['moved'] == 1) & (B['tier'] >= 0)), B['raw'])
     days_ranked = (T0 >= 0).values.sum(); at = {k: round(100 * float((T0 == k).values.sum() / days_ranked), 1) for k in (1, 2, 3)}
     out = dict(last_day=last.strftime('%Y-%m-%d'), pulled_at=info['pulled_at'], reports_last_7_days=int(world7.iloc[-1]),
                checks='passed' if not fatal else '; '.join(fatal), incomplete=' '.join(f'{d}:{n}' for d, n in sorted(recent_gaps.items())),
-               history_from=T0.index.min().strftime('%Y-%m-%d'), far_all_places=int(far0.iloc[-1]), far_median=float(past.median()), far_days_at_least_now=int(len(as_many)), far_episodes_at_least_now=episodes,
                at_elevated=at[1], at_high=at[2], at_exceptional=at[3])
     pd.DataFrame([out]).to_csv(os.path.join(OUT, 'info.csv'), index=False)
     print(json.dumps(out))
