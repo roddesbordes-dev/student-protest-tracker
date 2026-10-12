@@ -149,6 +149,7 @@ window.feed = (() => {
     <h2 data-i18n="countries_h">Countries, by distance from their own past</h2>
     <p class="spt-muted" data-i18n="countries_hint"></p>
     <details class="spt-how"><summary data-i18n="how_h"></summary><dl id="spt-how"></dl></details>
+    <details class="spt-how"><summary data-i18n="calc_h"></summary><dl id="spt-calc"></dl></details>
     <div class="spt-controls">
       <input id="spt-search" type="search" data-i18n-ph="search">
       <label><span data-i18n="region">Region</span> <select id="spt-region"></select></label>
@@ -229,6 +230,20 @@ const I18N = {
       ["Press not free", "Countries where the V-Dem index of freedom of expression is under 0.25: there, the absence of a flag says little."],
       ["Data", "How many reports the country usually has (rich, moderate or thin); with thin data a flag rests on few reports. Countries with fewer than about one report a month are not tracked."],
       ["Held back", "The level is high but the reports are too few, on too few days, or mostly from articles about other places."]],
+    "calc_h": "How the numbers are computed",
+    "calc": [
+      ["Report", "A GDELT event of type 14 (protest) whose first actor's name contains STUDENT, PUPIL, SCHOOL, UNIVERSIT, LYCEE, UNDERGRAD or CAMPUS, placed by GDELT in the country. One article can yield several reports."],
+      ["Rate", "1,000 × reports over the last seven days ÷ events of all kinds that GDELT places in the country over the same seven days. Dividing by all events corrects for changes in press coverage."],
+      ["Usual", "The median of the daily seven-day rate over the three years that end 30 days before the latest day."],
+      ["Reports, articles, days", "Over the last seven days: the number of reports, the number of distinct article addresses behind them, and the number of days with at least one report."],
+      ["Reports in a usual week", "Reports over the three-year reference window divided by 1,095/7. Data are rich at three or more a week, moderate at one to three, thin below one."],
+      ["Percentiles", "3 yr: the share of days in the reference window with a lower rate than today. Season: the same, against days within 30 days of today's calendar date in earlier years; if there are fewer than 100 such days, the 3-year percentile is used."],
+      ["Level", "The lower of the two percentiles is compared with 80, 95 and 99: elevated, high, exceptional. A level counts only with at least five reports on at least three of the seven days; otherwise the country is held back."],
+      ["Flagged for N days", "The number of consecutive days, up to today, on which the country was at any level (elevated or above)."],
+      ["Days at high or exceptional", "The days in the last 365 on which the country was at high or exceptional."],
+      ["Articles about other countries", "Each article is assigned to the country where most of its reports are placed. Reports from articles mostly about other countries are counted but cannot raise a flag: a flag needs five reports on three days from articles about the country itself. This check runs from 27 September 2026 only."],
+      ["Chart lines", "Solid: the country's rate. Dashed: its usual rate. Dotted: the world rate, all reports ÷ all events × 1,000."],
+      ["Limits", "GDELT codes news articles automatically: some reports are miscoded or duplicated, and coverage varies with the language and freedom of the press. The tracker measures press attention to protest, not the number of protesters."]],
     "search": "Search for a country",
     "region": "Region",
     "all_regions": "All regions",
@@ -363,6 +378,20 @@ const I18N = {
       ["Presse non libre", "Pays où l'indice de liberté d'expression de V-Dem est inférieur à 0,25 : l'absence d'alerte n'y dit pas grand-chose."],
       ["Données", "Nombre de mentions que le pays reçoit d'ordinaire (abondantes, moyennes ou rares) ; avec des données rares, une alerte repose sur peu de mentions. Les pays comptant moins d'une mention par mois environ ne sont pas suivis."],
       ["Non retenu", "Le niveau est haut mais les mentions sont trop peu nombreuses, concentrées sur trop peu de jours, ou tirées surtout d'articles portant sur d'autres lieux."]],
+    "calc_h": "Comment les chiffres sont calculés",
+    "calc": [
+      ["Mention", "Événement GDELT de type 14 (protestation) dont le premier acteur porte un nom contenant STUDENT, PUPIL, SCHOOL, UNIVERSIT, LYCEE, UNDERGRAD ou CAMPUS, et que GDELT situe dans le pays. Un même article peut produire plusieurs mentions."],
+      ["Taux", "1 000 × mentions des sept derniers jours ÷ événements de toute nature que GDELT situe dans le pays sur ces sept jours. Le dénominateur corrige des variations de la couverture de presse."],
+      ["Habituel", "Médiane du taux quotidien sur sept jours, sur les trois années qui s'achèvent 30 jours avant le dernier jour."],
+      ["Mentions, articles, jours", "Sur les sept derniers jours : nombre de mentions, nombre d'adresses d'articles distinctes dont elles proviennent, et nombre de jours comptant au moins une mention."],
+      ["Mentions d'une semaine habituelle", "Mentions de la fenêtre de référence de trois ans divisées par 1 095/7. Données abondantes à partir de trois par semaine, moyennes entre une et trois, rares en dessous d'une."],
+      ["Centiles", "3 ans : part des jours de la fenêtre de référence dont le taux est plus bas qu'aujourd'hui. Saison : le même calcul, sur les jours situés à moins de 30 jours de la date du jour les années précédentes ; s'il y en a moins de 100, le centile 3 ans est retenu."],
+      ["Niveau", "Le plus bas des deux centiles est comparé à 80, 95 et 99 : élevé, haut, exceptionnel. Un niveau ne compte qu'avec au moins cinq mentions sur au moins trois des sept jours ; sinon, le pays n'est pas retenu."],
+      ["En alerte depuis N jours", "Nombre de jours consécutifs, jusqu'à aujourd'hui, où le pays a atteint un niveau quelconque (élevé ou plus)."],
+      ["Jours haut ou exceptionnel", "Jours des 365 derniers où le pays était au niveau haut ou exceptionnel."],
+      ["Articles sur d'autres pays", "Chaque article est rattaché au pays où se situent la plupart de ses mentions. Les mentions tirées d'articles portant surtout sur d'autres pays sont comptées mais ne peuvent pas déclencher d'alerte : il faut cinq mentions sur trois jours tirées d'articles sur le pays lui-même. Ce contrôle n'existe que depuis le 27 septembre 2026."],
+      ["Courbes", "Trait plein : taux du pays. Tirets : son taux habituel. Pointillés : taux mondial, toutes les mentions ÷ tous les événements × 1 000."],
+      ["Limites", "GDELT code les articles de presse automatiquement : certaines mentions sont mal codées ou en double, et la couverture varie selon la langue et la liberté de la presse. L'outil mesure l'attention de la presse aux protestations, non le nombre de manifestants."]],
     "search": "Chercher un pays",
     "region": "Région",
     "all_regions": "Toutes les régions",
@@ -486,6 +515,7 @@ function applyStatic() {
   root.querySelectorAll('.spt-lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
   q('#spt-region').setAttribute('aria-label', t('region'));
   q('#spt-how').replaceChildren(...(I18N[lang].how || []).flatMap(([a, b]) => [el('dt', '', a), el('dd', '', b)]));
+  q('#spt-calc').replaceChildren(...(I18N[lang].calc || []).flatMap(([a, b]) => [el('dt', '', a), el('dd', '', b)]));
   document.documentElement.lang = lang; document.title = t('title');
 }
 root.querySelectorAll('.spt-lang button').forEach((b) => b.addEventListener('click', () => { if (b.dataset.lang === lang) return; lang = b.dataset.lang; try { localStorage.setItem('spt-lang', lang); } catch (err) {} q('#spt-region').replaceChildren(); draw(); }));
