@@ -8,7 +8,7 @@ Each country is compared with its own past: the page shows where such reports ar
 It is a screening tool: a flag is a reason to read the articles listed for the country, not a finding that students are
 protesting there.
 
-The page is refreshed every day at about 05:25 UTC by the workflow in `.github/workflows/update.yml`.
+The page is refreshed every day at about 02:40 UTC by the workflow in `.github/workflows/update.yml`.
 
 *Suivi quotidien des mentions, dans la presse, de protestations d'élèves et d'étudiants, pays par pays, à partir des fichiers
 publics du projet GDELT. Une alerte est une raison de lire les articles listés pour le pays, non le constat que des étudiants
