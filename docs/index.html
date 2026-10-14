@@ -217,6 +217,7 @@ const I18N = {
       ["Now", "Reports per 1,000 events of all kinds that GDELT locates in the country, over seven days."],
       ["Usual", "The median of that rate over the country's last three years, the latest 30 days aside."],
       ["Days", "The days with at least one report among the seven."],
+      ["Per day", "Reports on a single day, shown as bars under each country's chart and in its note. They are not used for the levels: GDELT codes about half as much press at weekends, and most countries have no report on a given day."],
       ["Percentile, 3 yr", "The percentage of days in the country's last three years with a lower rate than now."],
       ["Percentile, season", "The same, against the same time of year in earlier years."],
       ["Flag rule", "A country is flagged only if today's rate is in the top 20% of its past days on both percentiles, with at least five reports on at least three different days. Each country is compared only with its own past."],
@@ -230,6 +231,7 @@ const I18N = {
       ["Now (rate)", "1,000 × reports over the last seven days ÷ events of all kinds that GDELT places in the country over the same seven days. Dividing by all events partly corrects for changes in press coverage.", "120 reports and 20,000 events over seven days give 1,000 × 120 ÷ 20,000 = 6.0."],
       ["Usual", "The median of the seven-day rate, computed for each day, over the three years that end 30 days before the latest day.", "On 12 October 2026 the window runs from mid-September 2023 to 12 September 2026. If the rate was at or below 0.20 on half of those days, the usual rate is 0.20."],
       ["Reports, articles, days", "Over the last seven days: the number of reports, the number of distinct article addresses behind them, and the number of days with at least one report.", "40 reports from 25 articles, spread over 5 of the 7 days."],
+      ["Reports per day", "The number of reports on one day, not divided by events. Shown for reading only: the levels use seven days because the volume of press GDELT codes drops at weekends.", "29 reports on a Tuesday and 13 on the Saturday before: the fall on Saturday comes from the press, not necessarily from the protests; over seven days, 188 reports make an average of 27 a day."],
       ["Reports in a usual week", "Reports over the three-year reference window divided by 1,095/7. Data are rich at three or more a week, moderate at one to three, thin below one.", "470 reports over three years give 470 ÷ (1,095/7) = 3.0 a week: rich."],
       ["Percentiles", "3-year: the share of days in the reference window with a lower rate than today. A percentile of 96 means today is in the top 4% of those days; 100 means every day was lower. Season: the same, against days within 30 days of today's calendar date in earlier years; if there are 100 or fewer such days, the 3-year percentile is used.", "3-year percentile 96: the rate was lower on 96% of the 1,095 days, so today is in the top 4%. Season percentile 90 on 12 October: today is in the top 10% of the days between 12 September and 11 November in earlier years."],
       ["Level", "Today's rate must be in the top 20% of the country's past days on both comparisons for elevated, the top 5% for high, the top 1% for exceptional (percentiles of 80, 95 and 99, applied to the lower of the two). A level counts only with at least five reports on at least three of the seven days; otherwise the country is held back.", "Top 1% on the 3-year comparison (99) but only top 4% on the season comparison (96): high, not exceptional. With 4 reports, or 8 reports on only two days, the country is held back."],
@@ -282,7 +284,10 @@ const I18N = {
     "l_now": "now",
     "l_usual": "usual",
     "l_world": "world",
-    "tip_day": "{date}: {v} per 1,000 (reports in 7 days: {n})",
+    "tip_day": "{date}: {v} per 1,000 (reports in 7 days: {n}; that day: {k})",
+    "tip_day0": "{date}: {v} per 1,000 (reports in 7 days: {n})",
+    "l_day": "reports per day",
+    "d_day": " {date}: {k} reports that day (seven-day average: {avg}). Bars under the chart: reports per day, fewer at weekends, when GDELT codes less press.",
     "tip_month": "{date}: {v} per 1,000 (reports: {n})",
     "no_recent": "No recent data for this country.",
     "no_history": "No history for this country.",
@@ -358,6 +363,7 @@ const I18N = {
       ["Actuel", "Mentions pour 1 000 événements de toute nature que GDELT localise dans le pays, sur sept jours."],
       ["Habituel", "La médiane de ce taux sur les trois dernières années du pays, hors les 30 derniers jours."],
       ["Jours", "Les jours comptant au moins une mention parmi les sept."],
+      ["Par jour", "Mentions d'un seul jour, en barres sous la courbe de chaque pays et dans sa note. Elles ne servent pas aux niveaux : GDELT code environ deux fois moins de presse le week-end, et la plupart des pays n'ont aucune mention un jour donné."],
       ["Centile 3 ans", "Part des jours des trois dernières années du pays où le taux était plus bas qu'aujourd'hui."],
       ["Centile saison", "Le même calcul, sur la même période des années précédentes."],
       ["Règle d'alerte", "Un pays n'est mis en alerte que si son taux actuel figure parmi les 20 % de jours les plus hauts de son passé sur les deux centiles, avec au moins cinq mentions réparties sur au moins trois jours. Chaque pays n'est comparé qu'à son propre passé."],
@@ -371,6 +377,7 @@ const I18N = {
       ["Actuel (taux)", "1 000 × mentions des sept derniers jours ÷ événements de toute nature que GDELT situe dans le pays sur ces sept jours. Le dénominateur corrige en partie les variations de la couverture de presse.", "120 mentions et 20 000 événements sur sept jours donnent 1 000 × 120 ÷ 20 000 = 6,0."],
       ["Habituel", "Médiane du taux sur sept jours, calculé chaque jour, sur les trois années qui s'achèvent 30 jours avant le dernier jour.", "le 12 octobre 2026, la fenêtre va de la mi-septembre 2023 au 12 septembre 2026. Si le taux était inférieur ou égal à 0,20 la moitié de ces jours, le taux habituel vaut 0,20."],
       ["Mentions, articles, jours", "Sur les sept derniers jours : nombre de mentions, nombre d'adresses d'articles distinctes dont elles proviennent, et nombre de jours comptant au moins une mention.", "40 mentions tirées de 25 articles, réparties sur 5 des 7 jours."],
+      ["Mentions par jour", "Nombre de mentions d'un seul jour, sans division par le nombre d'événements. Affiché pour la lecture seulement : les niveaux reposent sur sept jours, car le volume de presse que code GDELT baisse le week-end.", "29 mentions un mardi et 13 le samedi précédent : la baisse du samedi vient de la presse, pas forcément des manifestations ; sur sept jours, 188 mentions font une moyenne de 27 par jour."],
       ["Mentions d'une semaine habituelle", "Mentions de la fenêtre de référence de trois ans divisées par 1 095/7. Données abondantes à partir de trois par semaine, moyennes entre une et trois, rares en dessous d'une.", "470 mentions sur trois ans donnent 470 ÷ (1 095/7) = 3,0 par semaine : données abondantes."],
       ["Centiles", "3 ans : part des jours de la fenêtre de référence dont le taux est plus bas qu'aujourd'hui. Un centile de 96 signifie qu'aujourd'hui figure parmi les 4 % de jours les plus hauts ; 100, que tous les jours étaient plus bas. Saison : le même calcul, sur les jours situés à moins de 30 jours de la date du jour les années précédentes ; s'il y en a 100 ou moins, le centile 3 ans est retenu.", "centile 3 ans de 96 : le taux était plus bas 96 % des 1 095 jours, aujourd'hui figure donc parmi les 4 % les plus hauts. Centile saison de 90 le 12 octobre : parmi les 10 % les plus hauts des jours compris entre le 12 septembre et le 11 novembre les années précédentes."],
       ["Niveau", "Le taux du jour doit figurer parmi les 20 % de jours les plus hauts du passé du pays sur les deux comparaisons pour le niveau élevé, parmi les 5 % pour fort, parmi les 1 % pour exceptionnel (centiles de 80, 95 et 99, appliqués au plus bas des deux). Un niveau ne compte qu'avec au moins cinq mentions sur au moins trois des sept jours ; sinon, le pays n'est pas retenu.", "parmi les 1 % les plus hauts sur trois ans (99) mais seulement parmi les 4 % sur la saison (96) : niveau fort, pas exceptionnel. Avec 4 mentions, ou 8 mentions sur deux jours seulement, le pays n'est pas retenu."],
@@ -423,7 +430,10 @@ const I18N = {
     "l_now": "actuel",
     "l_usual": "habituel",
     "l_world": "monde",
-    "tip_day": "{date} : {v} pour 1 000 (mentions en 7 jours : {n})",
+    "tip_day": "{date} : {v} pour 1 000 (mentions en 7 jours : {n} ; ce jour-là : {k})",
+    "tip_day0": "{date} : {v} pour 1 000 (mentions en 7 jours : {n})",
+    "l_day": "mentions par jour",
+    "d_day": " {date} : {k} mentions ce jour-là (moyenne sur sept jours : {avg}). Barres sous la courbe : mentions par jour, moins nombreuses le week-end, quand GDELT code moins de presse.",
     "tip_month": "{date} : {v} pour 1 000 (mentions : {n})",
     "no_recent": "Pas de données récentes pour ce pays.",
     "no_history": "Pas d'historique pour ce pays.",
@@ -534,7 +544,7 @@ const place = (tip, box, px, py, W, H) => { const tw = tip.node().offsetWidth; t
 function lineChart(box, rows, world, usual, name) {
   box.classList.remove('spt-wait'); box.replaceChildren();
   const W = Math.max(box.clientWidth, 280), H = 240, m = {t: 10, r: 96, b: 24, l: 40};
-  const P = rows.map((r) => ({d: new Date(r.day), v: num(r.share), n: num(r.reports)})).filter((p) => isFinite(p.v)), Wd = world.map((r) => ({d: new Date(r.day), v: num(r.world)})).filter((p) => isFinite(p.v));
+  const P = rows.map((r) => ({d: new Date(r.day), v: num(r.share), n: num(r.reports), k: num(r.reports_day)})).filter((p) => isFinite(p.v)), Wd = world.map((r) => ({d: new Date(r.day), v: num(r.world)})).filter((p) => isFinite(p.v));
   if (!P.length) { box.textContent = t('no_recent'); return; }
   const x = d3.scaleUtc(d3.extent(P, (p) => p.d), [m.l, W - m.r]), y = d3.scaleLinear([0, Math.max(d3.max(P, (p) => p.v), (usual || 0) * 1.5, d3.max(Wd, (p) => p.v) || 0, 1e-6) * 1.08], [H - m.b, m.t]);
   const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', t('d_title', {c: name}));
@@ -551,8 +561,22 @@ function lineChart(box, rows, world, usual, name) {
   const tip = d3.select(box).append('div').attr('class', 'spt-tip').attr('hidden', true), dot = svg.append('circle').attr('r', 3.5).attr('fill', feed.colors[0]).attr('opacity', 0), full = dfmt({day: 'numeric', month: 'long', year: 'numeric'});
   svg.on('pointermove', (e) => {
     const [mx] = d3.pointer(e), p = P[d3.leastIndex(P, (z) => Math.abs(x(z.d) - mx))]; dot.attr('cx', x(p.d)).attr('cy', y(p.v)).attr('opacity', 1);
-    tip.attr('hidden', null).text(t('tip_day', {date: full.format(p.d), v: fmt(p.v), n: int(isFinite(p.n) ? p.n : 0)})); place(tip, box, x(p.d), y(p.v), W, H);
+    tip.attr('hidden', null).text(t(isFinite(p.k) ? 'tip_day' : 'tip_day0', {date: full.format(p.d), v: fmt(p.v), n: int(isFinite(p.n) ? p.n : 0), k: int(p.k)})); place(tip, box, x(p.d), y(p.v), W, H);
   }).on('pointerleave', () => { tip.attr('hidden', true); dot.attr('opacity', 0); });
+  const B = P.filter((p) => isFinite(p.k));
+  if (B.length) {
+    const h2 = 64, y2 = d3.scaleLinear([0, Math.max(d3.max(B, (p) => p.k), 1)], [h2 - 4, 16]), bw = Math.max(1, (W - m.l - m.r) / B.length - 1);
+    const svg2 = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${h2}`).attr('role', 'img').attr('aria-label', t('l_day'));
+    svg2.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y2(0)).attr('y2', y2(0)).attr('stroke', 'var(--ui-chart-grid)');
+    svg2.append('g').selectAll('rect').data(B).join('rect').attr('x', (p) => x(p.d) - bw / 2).attr('width', bw).attr('y', (p) => y2(p.k)).attr('height', (p) => y2(0) - y2(p.k)).attr('fill', feed.colors[0]).attr('opacity', 0.5);
+    svg2.append('text').attr('x', m.l).attr('y', 11).attr('fill', 'var(--color-fg-muted)').attr('font-size', 11).text(t('l_day'));
+    const lk = B[B.length - 1]; svg2.append('text').attr('x', W - m.r + 6).attr('y', y2(lk.k) + 3).attr('fill', feed.colors[0]).attr('font-size', 11).text(int(lk.k));
+  }
+}
+
+function dayLine(rows) {
+  const P = (rows || []).filter((r) => isFinite(num(r.reports_day))); if (!P.length) return '';
+  const last = P[P.length - 1]; return t('d_day', {date: dfmt({day: 'numeric', month: 'long'}).format(new Date(last.day)), k: int(num(last.reports_day)), avg: nf(0).format(num(last.reports) / 7)});
 }
 
 function monthChart(box, rows, name) {
@@ -619,7 +643,7 @@ function draw() {
   }));
   const cur = rows.find((r) => r.country === state.country), key = cur ? cur.country : '', name = cur ? cur.name : '';
   q('#spt-dtitle').textContent = t('d_title', {c: name}); q('#spt-mtitle').textContent = t('m_title', {c: name}); q('#spt-ftitle').textContent = t('f_title', {c: name}); q('#spt-atitle').textContent = t('a_title', {c: name});
-  q('#spt-dnote').textContent = cur ? t('d_note', {now: fmt(cur.share), u: fmt(cur.usual), tier: t('t_' + cur.tier), n: int(cur.reports), a: isFinite(cur.articles) ? int(cur.articles) : '?', d: int(cur.active_days), w: cur.reports_per_week >= 0.1 ? t('w_some', {x: nf(1).format(cur.reports_per_week)}) : t('w_none'), run: (cur.run_days > 1 ? t('run_n', {k: int(cur.run_days)}) : cur.run_days === 1 ? t('run_1') : '') + (isFinite(cur.far_days_year) ? t('year_far', {k: int(cur.far_days_year)}) : '') + (isFinite(cur.located) && cur.reports > cur.located ? t('d_mis', {m: int(cur.reports - cur.located)}) : '') + (cur.press === 'closed' ? t('d_press') : '')}) : '';
+  q('#spt-dnote').textContent = cur ? t('d_note', {now: fmt(cur.share), u: fmt(cur.usual), tier: t('t_' + cur.tier), n: int(cur.reports), a: isFinite(cur.articles) ? int(cur.articles) : '?', d: int(cur.active_days), w: cur.reports_per_week >= 0.1 ? t('w_some', {x: nf(1).format(cur.reports_per_week)}) : t('w_none'), run: (cur.run_days > 1 ? t('run_n', {k: int(cur.run_days)}) : cur.run_days === 1 ? t('run_1') : '') + (isFinite(cur.far_days_year) ? t('year_far', {k: int(cur.far_days_year)}) : '') + (isFinite(cur.located) && cur.reports > cur.located ? t('d_mis', {m: int(cur.reports - cur.located)}) : '') + (cur.press === 'closed' ? t('d_press') : '')}) + dayLine(byC.get(key)) : '';
   const lb = q('#spt-line'), mb = q('#spt-months'), fb = q('#spt-forms'), ab = q('#spt-arts');
   if (R.status === 'ok' && Wd.status === 'ok') lineChart(lb, byC.get(key) || [], Wd.data, cur ? cur.usual : NaN, name); else if (R.status === 'error' || Wd.status === 'error') failed(lb); else { lb.replaceChildren(); lb.classList.add('spt-wait'); }
   if (M.status === 'ok') monthChart(mb, M.data.filter((r) => r.country === key), name); else if (M.status === 'error') failed(mb); else { mb.replaceChildren(); mb.classList.add('spt-wait'); }
