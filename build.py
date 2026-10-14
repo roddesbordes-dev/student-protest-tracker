@@ -65,7 +65,7 @@ def main():
     L = L.sort_values(['o', 'p', 'reports'], ascending=[True, False, False]).drop(columns=['o', 'p']); L.to_csv(os.path.join(OUT, 'latest.csv'), index=False)
     names = {c: NAME[c] for c in tracked}; tail = slice(last - pd.Timedelta(days=179), last)
     long = lambda X, v: X[tracked].loc[tail].rename(columns=names).rename_axis('day').reset_index().melt('day', var_name='country', value_name=v)
-    R = long(S7.round(3), 'share').merge(long(n7.astype(int), 'reports'), on=['day', 'country']); R['day'] = R.day.dt.strftime('%Y-%m-%d'); R.to_csv(os.path.join(OUT, 'recent.csv'), index=False)
+    R = long(S7.round(3), 'share').merge(long(n7.astype(int), 'reports'), on=['day', 'country']).merge(long(N.astype(int), 'reports_day'), on=['day', 'country']); R['day'] = R.day.dt.strftime('%Y-%m-%d'); R.to_csv(os.path.join(OUT, 'recent.csv'), index=False)
     Nm, Em = N[tracked].resample('MS').sum(), E[tracked].resample('MS').sum(); lm = lambda X, v: X.rename(columns=names).rename_axis('month').reset_index().melt('month', var_name='country', value_name=v)
     M = lm((1000 * Nm / Em.where(Em > 0)).round(3), 'share').merge(lm(Nm.astype(int), 'reports'), on=['month', 'country']).dropna(); M['month'] = M.month.dt.strftime('%Y-%m-%d'); M.to_csv(os.path.join(OUT, 'monthly.csv'), index=False)
     W = pd.DataFrame({'world': (1000 * n7.sum(axis=1) / e7.sum(axis=1)).round(3)}).loc[tail].rename_axis('day').reset_index(); W['day'] = W.day.dt.strftime('%Y-%m-%d')
