@@ -176,8 +176,8 @@ window.feed = (() => {
   </section>
 
   <section class="spt-grid2" id="detail">
-    <div class="spt-card"><h2 id="spt-dtitle"></h2><p class="spt-muted" id="spt-dnote"></p><div class="spt-chart spt-wait" id="spt-line"></div></div>
-    <div class="spt-card"><h2 id="spt-mtitle"></h2><p class="spt-muted" data-i18n="m_note"></p><div class="spt-chart spt-wait" id="spt-months"></div></div>
+    <div class="spt-card"><h2 id="spt-dtitle"></h2><div class="spt-chart spt-wait" id="spt-line"></div><p class="spt-muted" id="spt-dnote"></p></div>
+    <div class="spt-card"><h2 id="spt-mtitle"></h2><div class="spt-chart spt-wait" id="spt-months"></div><p class="spt-muted" data-i18n="m_note"></p></div>
     <div class="spt-card"><h2 id="spt-ftitle"></h2><p class="spt-muted" data-i18n="f_note"></p><div class="spt-forms" id="spt-forms"></div><h3 data-i18n="lv_h" style="margin-top: var(--ui-gap-md)"></h3><p class="spt-muted" data-i18n="lv_note"></p><div class="spt-forms" id="spt-levels"></div></div>
     <div class="spt-card"><h2 id="spt-atitle"></h2><p class="spt-muted" data-i18n="a_note"></p><ul class="spt-arts" id="spt-arts"></ul></div>
   </section>
@@ -217,7 +217,7 @@ const I18N = {
       ["Now", "Reports per 1,000 events of all kinds that GDELT locates in the country, over seven days."],
       ["Usual", "The median of that rate over the country's last three years, the latest 30 days aside."],
       ["Days", "The days with at least one report among the seven."],
-      ["Per day", "Reports on a single day, shown as bars under each country's chart and in its note. They are not used for the levels: GDELT codes about half as much press at weekends, and most countries have no report on a given day."],
+      ["Per day", "Reports on a single day, shown as bars in each country's chart (right-hand scale) and in its note. They are not used for the levels: GDELT codes about half as much press at weekends, and most countries have no report on a given day."],
       ["Percentile, 3 yr", "The percentage of days in the country's last three years with a lower rate than now."],
       ["Percentile, season", "The same, against the same time of year in earlier years."],
       ["Flag rule", "A country is flagged only if today's rate is in the top 20% of its past days on both percentiles, with at least five reports on at least three different days. Each country is compared only with its own past."],
@@ -287,7 +287,8 @@ const I18N = {
     "tip_day": "{date}: {v} per 1,000 (reports in 7 days: {n}; that day: {k})",
     "tip_day0": "{date}: {v} per 1,000 (reports in 7 days: {n})",
     "l_day": "reports per day",
-    "d_day": " {date}: {k} reports that day (seven-day average: {avg}). Bars under the chart: reports per day, fewer at weekends, when GDELT codes less press.",
+    "l_rate": "per 1,000 events",
+    "d_day": " {date}: {k} reports that day (seven-day average: {avg}). Bars: reports per day (right-hand scale), fewer at weekends, when GDELT codes less press.",
     "tip_month": "{date}: {v} per 1,000 (reports: {n})",
     "no_recent": "No recent data for this country.",
     "no_history": "No history for this country.",
@@ -363,7 +364,7 @@ const I18N = {
       ["Actuel", "Mentions pour 1 000 événements de toute nature que GDELT localise dans le pays, sur sept jours."],
       ["Habituel", "La médiane de ce taux sur les trois dernières années du pays, hors les 30 derniers jours."],
       ["Jours", "Les jours comptant au moins une mention parmi les sept."],
-      ["Par jour", "Mentions d'un seul jour, en barres sous la courbe de chaque pays et dans sa note. Elles ne servent pas aux niveaux : GDELT code environ deux fois moins de presse le week-end, et la plupart des pays n'ont aucune mention un jour donné."],
+      ["Par jour", "Mentions d'un seul jour, en barres dans le graphique de chaque pays (échelle de droite) et dans sa note. Elles ne servent pas aux niveaux : GDELT code environ deux fois moins de presse le week-end, et la plupart des pays n'ont aucune mention un jour donné."],
       ["Centile 3 ans", "Part des jours des trois dernières années du pays où le taux était plus bas qu'aujourd'hui."],
       ["Centile saison", "Le même calcul, sur la même période des années précédentes."],
       ["Règle d'alerte", "Un pays n'est mis en alerte que si son taux actuel figure parmi les 20 % de jours les plus hauts de son passé sur les deux centiles, avec au moins cinq mentions réparties sur au moins trois jours. Chaque pays n'est comparé qu'à son propre passé."],
@@ -433,7 +434,8 @@ const I18N = {
     "tip_day": "{date} : {v} pour 1 000 (mentions en 7 jours : {n} ; ce jour-là : {k})",
     "tip_day0": "{date} : {v} pour 1 000 (mentions en 7 jours : {n})",
     "l_day": "mentions par jour",
-    "d_day": " {date} : {k} mentions ce jour-là (moyenne sur sept jours : {avg}). Barres sous la courbe : mentions par jour, moins nombreuses le week-end, quand GDELT code moins de presse.",
+    "l_rate": "pour 1 000 événements",
+    "d_day": " {date} : {k} mentions ce jour-là (moyenne sur sept jours : {avg}). Barres : mentions par jour (échelle de droite), moins nombreuses le week-end, quand GDELT code moins de presse.",
     "tip_month": "{date} : {v} pour 1 000 (mentions : {n})",
     "no_recent": "Pas de données récentes pour ce pays.",
     "no_history": "Pas d'historique pour ce pays.",
@@ -543,12 +545,20 @@ const place = (tip, box, px, py, W, H) => { const tw = tip.node().offsetWidth; t
 
 function lineChart(box, rows, world, usual, name) {
   box.classList.remove('spt-wait'); box.replaceChildren();
-  const W = Math.max(box.clientWidth, 280), H = 240, m = {t: 10, r: 96, b: 24, l: 40};
   const P = rows.map((r) => ({d: new Date(r.day), v: num(r.share), n: num(r.reports), k: num(r.reports_day)})).filter((p) => isFinite(p.v)), Wd = world.map((r) => ({d: new Date(r.day), v: num(r.world)})).filter((p) => isFinite(p.v));
   if (!P.length) { box.textContent = t('no_recent'); return; }
+  const B = P.filter((p) => isFinite(p.k));
+  const W = Math.max(box.clientWidth, 280), H = 260, m = {t: 18, r: B.length ? 128 : 96, b: 24, l: 40}, lx = W - m.r + (B.length ? 34 : 6);
   const x = d3.scaleUtc(d3.extent(P, (p) => p.d), [m.l, W - m.r]), y = d3.scaleLinear([0, Math.max(d3.max(P, (p) => p.v), (usual || 0) * 1.5, d3.max(Wd, (p) => p.v) || 0, 1e-6) * 1.08], [H - m.b, m.t]);
   const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', t('d_title', {c: name}));
   const short = dfmt({day: 'numeric', month: 'short'}); axes(svg, x, y, W, H, m, (d) => short.format(d), 110);
+  if (B.length) {
+    const yk = d3.scaleLinear([0, Math.max(d3.max(B, (p) => p.k), 1) / 0.75], [H - m.b, m.t]).nice(), bw = Math.max(1, (W - m.l - m.r) / B.length - 0.5);
+    svg.append('g').selectAll('rect').data(B).join('rect').attr('x', (p) => x(p.d) - bw / 2).attr('width', bw).attr('y', (p) => yk(p.k)).attr('height', (p) => yk(0) - yk(p.k)).attr('fill', feed.colors[0]).attr('opacity', 0.3);
+    svg.append('g').attr('transform', `translate(${W - m.r + 2},0)`).call(d3.axisRight(yk).ticks(3).tickFormat((v) => nf(0).format(v)).tickSize(0)).attr('font-size', null).attr('font-family', null).attr('color', 'var(--color-fg-muted)').select('.domain').remove();
+    svg.append('text').attr('x', W - m.r + 4).attr('y', 9).attr('fill', 'var(--color-fg-muted)').attr('font-size', 10).text(t('l_day'));
+    svg.append('text').attr('x', m.l).attr('y', 9).attr('fill', 'var(--color-fg-muted)').attr('font-size', 10).text(t('l_rate'));
+  }
   const line = d3.line((p) => x(p.d), (p) => y(p.v));
   svg.append('path').attr('d', line(Wd.filter((p) => p.d >= P[0].d))).attr('fill', 'none').attr('stroke', 'var(--ui-chart-muted)').attr('stroke-width', 1.5).attr('stroke-dasharray', '1 3').attr('stroke-linecap', 'round');
   if (isFinite(usual)) svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(usual)).attr('y2', y(usual)).attr('stroke', 'var(--ui-chart-reference)').attr('stroke-dasharray', '5 4');
@@ -557,21 +567,12 @@ function lineChart(box, rows, world, usual, name) {
   if (isFinite(usual)) labels.push({s: `${t('l_usual')} ${fmt(usual)}`, y: y(usual), c: 'var(--color-fg-muted)'});
   if (Wd.length) labels.push({s: `${t('l_world')} ${fmt(Wd[Wd.length - 1].v)}`, y: y(Wd[Wd.length - 1].v), c: 'var(--color-fg-muted)'});
   labels.sort((a, b) => a.y - b.y); for (let i = 1; i < labels.length; i++) labels[i].y = Math.max(labels[i].y, labels[i - 1].y + 12);
-  svg.append('g').selectAll('text').data(labels).join('text').attr('x', W - m.r + 6).attr('y', (l) => l.y + 3).attr('fill', (l) => l.c).attr('font-size', 11).text((l) => l.s);
+  svg.append('g').selectAll('text').data(labels).join('text').attr('x', lx).attr('y', (l) => l.y + 3).attr('fill', (l) => l.c).attr('font-size', 11).text((l) => l.s);
   const tip = d3.select(box).append('div').attr('class', 'spt-tip').attr('hidden', true), dot = svg.append('circle').attr('r', 3.5).attr('fill', feed.colors[0]).attr('opacity', 0), full = dfmt({day: 'numeric', month: 'long', year: 'numeric'});
   svg.on('pointermove', (e) => {
     const [mx] = d3.pointer(e), p = P[d3.leastIndex(P, (z) => Math.abs(x(z.d) - mx))]; dot.attr('cx', x(p.d)).attr('cy', y(p.v)).attr('opacity', 1);
     tip.attr('hidden', null).text(t(isFinite(p.k) ? 'tip_day' : 'tip_day0', {date: full.format(p.d), v: fmt(p.v), n: int(isFinite(p.n) ? p.n : 0), k: int(p.k)})); place(tip, box, x(p.d), y(p.v), W, H);
   }).on('pointerleave', () => { tip.attr('hidden', true); dot.attr('opacity', 0); });
-  const B = P.filter((p) => isFinite(p.k));
-  if (B.length) {
-    const h2 = 64, y2 = d3.scaleLinear([0, Math.max(d3.max(B, (p) => p.k), 1)], [h2 - 4, 16]), bw = Math.max(1, (W - m.l - m.r) / B.length - 1);
-    const svg2 = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${h2}`).attr('role', 'img').attr('aria-label', t('l_day'));
-    svg2.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y2(0)).attr('y2', y2(0)).attr('stroke', 'var(--ui-chart-grid)');
-    svg2.append('g').selectAll('rect').data(B).join('rect').attr('x', (p) => x(p.d) - bw / 2).attr('width', bw).attr('y', (p) => y2(p.k)).attr('height', (p) => y2(0) - y2(p.k)).attr('fill', feed.colors[0]).attr('opacity', 0.5);
-    svg2.append('text').attr('x', m.l).attr('y', 11).attr('fill', 'var(--color-fg-muted)').attr('font-size', 11).text(t('l_day'));
-    const lk = B[B.length - 1]; svg2.append('text').attr('x', W - m.r + 6).attr('y', y2(lk.k) + 3).attr('fill', feed.colors[0]).attr('font-size', 11).text(int(lk.k));
-  }
 }
 
 function dayLine(rows) {
