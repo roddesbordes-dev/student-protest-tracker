@@ -1,55 +1,59 @@
 country,country_fr,region,region_fr,tracked,reports,active_days,reports_per_week,data,share,usual,percentile,percentile_season,tier,signal,located,run_days,far_days_year,press,articles
-France,France,Europe,Europe,1,174,7,5.4,rich,5.89,0.18,100.0,100.0,exceptional,,136,39,36,,147
-Italy,Italie,Europe,Europe,1,100,7,7.5,rich,4.701,0.323,100.0,100.0,exceptional,,80,10,18,,90
-Albania,Albanie,Europe,Europe,1,96,7,1.1,moderate,13.575,0.0,100.0,100.0,exceptional,,80,7,33,,89
-Belgium,Belgique,Europe,Europe,1,26,7,0.7,thin,3.357,0.0,100.0,100.0,exceptional,,6,17,28,,25
-Argentina,Argentine,Americas,Amériques,1,21,5,1.6,moderate,2.179,0.12,99.4,100.0,exceptional,,19,16,15,,18
-Greece,Grèce,Europe,Europe,1,31,5,4.8,rich,2.893,0.361,99.1,100.0,exceptional,,25,2,8,,28
-Brazil,Brésil,Americas,Amériques,1,11,3,2.1,moderate,0.784,0.145,98.8,100.0,high,,11,4,14,,9
-India,Inde,Asia and Pacific,Asie et Pacifique,1,168,7,44.9,rich,3.34,0.632,96.5,99.6,high,,164,97,75,,94
-Indonesia,Indonésie,Asia and Pacific,Asie et Pacifique,1,14,4,6.0,rich,1.709,0.217,95.5,93.6,elevated,,14,2,22,,10
-Spain,Espagne,Europe,Europe,1,15,6,3.2,rich,0.855,0.126,99.4,92.9,elevated,,7,7,9,,13
-United Kingdom,Royaume-Uni,Europe,Europe,1,14,6,9.9,rich,0.315,0.161,90.0,89.8,elevated,,6,1,0,,11
-Israel,Israël,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,34,6,51.3,rich,0.856,0.437,81.8,98.9,elevated,,14,2,0,,27
-Portugal,Portugal,Europe,Europe,1,7,3,0.6,thin,1.721,0.0,99.5,100.0,usual,elsewhere,2,0,0,,7
-Tunisia,Tunisie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,3,3,0.3,thin,3.198,0.0,99.1,99.6,usual,held back,1,0,0,,3
-Austria,Autriche,Europe,Europe,1,3,2,0.3,thin,1.039,0.0,97.8,97.8,usual,held back,3,0,0,,2
-Germany,Allemagne,Europe,Europe,1,15,5,3.2,rich,1.023,0.128,97.7,100.0,usual,elsewhere,2,0,43,,14
-Russia,Russie,Europe,Europe,1,13,5,3.2,rich,0.199,0.05,98.7,96.2,usual,elsewhere,2,0,1,closed,11
-Liberia,Liberia,Sub-Saharan Africa,Afrique subsaharienne,1,4,3,0.5,thin,2.89,0.0,98.0,96.0,usual,held back,4,0,0,,4
-North Macedonia,Macédoine du Nord,Europe,Europe,1,4,2,1.0,moderate,2.354,0.0,95.7,98.5,usual,held back,0,0,28,,4
-Kosovo,Kosovo,Europe,Europe,1,3,2,0.6,thin,2.982,0.0,95.6,98.9,usual,held back,2,0,5,,3
-Hungary,Hongrie,Europe,Europe,1,3,2,0.5,thin,0.89,0.0,99.6,95.1,usual,held back,0,0,0,,2
-Vietnam,Viêt Nam,Asia and Pacific,Asie et Pacifique,1,4,2,2.9,moderate,1.142,0.303,90.4,98.7,usual,held back,0,0,6,closed,2
-Serbia,Serbie,Europe,Europe,1,14,5,4.9,rich,4.905,0.682,88.8,99.6,usual,elsewhere,4,0,0,,12
-Switzerland,Suisse,Europe,Europe,1,1,1,0.7,thin,0.282,0.0,85.2,87.2,usual,held back,0,0,0,,1
-South Korea,Corée du Sud,Asia and Pacific,Asie et Pacifique,1,3,2,1.8,moderate,0.385,0.112,83.9,84.9,usual,held back,1,0,9,,2
-Morocco,Maroc,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,1,1,0.4,thin,0.294,0.0,73.4,73.8,usual,,0,0,0,,1
-Chile,Chili,Americas,Amériques,1,2,1,0.7,thin,0.817,0.0,83.9,71.4,usual,,2,0,21,,2
-Japan,Japon,Asia and Pacific,Asie et Pacifique,1,1,1,1.0,moderate,0.136,0.088,71.2,76.1,usual,,0,0,0,,1
-Iran,Iran,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,7,5,5.0,rich,0.331,0.103,80.9,69.2,usual,,1,0,19,closed,7
-Uganda,Ouganda,Sub-Saharan Africa,Afrique subsaharienne,1,1,1,0.3,thin,0.394,0.0,80.3,68.1,usual,,0,0,0,,1
-Czechia,Tchéquie,Europe,Europe,1,1,1,0.6,thin,0.351,0.0,71.2,66.7,usual,,1,0,5,,1
-Colombia,Colombie,Americas,Amériques,1,3,2,1.2,moderate,0.33,0.117,86.3,64.7,usual,,1,0,0,,2
-Mexico,Mexique,Americas,Amériques,1,8,4,7.1,rich,0.477,0.29,75.6,62.8,usual,,6,0,14,,7
-Australia,Australie,Asia and Pacific,Asie et Pacifique,1,3,2,3.6,rich,0.161,0.112,65.1,61.4,usual,,0,0,18,,2
-Ireland,Irlande,Europe,Europe,1,2,2,2.1,moderate,0.272,0.133,69.0,58.8,usual,,1,0,3,,2
-Egypt,Égypte,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,1,1,1.4,moderate,0.108,0.053,68.8,55.7,usual,,1,0,0,closed,1
-Kenya,Kenya,Sub-Saharan Africa,Afrique subsaharienne,1,1,1,1.5,moderate,0.194,0.172,54.7,57.0,usual,,0,0,0,,1
-China,Chine,Asia and Pacific,Asie et Pacifique,1,3,3,3.8,rich,0.117,0.1,57.1,51.2,usual,,1,0,3,closed,3
-Turkey,Turquie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,1,1,3.0,rich,0.073,0.073,50.3,54.1,usual,,1,0,0,closed,1
-Canada,Canada,Americas,Amériques,1,6,3,6.3,rich,0.242,0.194,59.8,50.1,usual,,6,0,0,,4
-Romania,Roumanie,Europe,Europe,1,1,1,1.1,moderate,0.118,0.118,50.0,63.9,usual,,1,0,4,,1
-Nigeria,Nigeria,Sub-Saharan Africa,Afrique subsaharienne,1,5,4,5.2,rich,0.198,0.173,56.6,48.3,usual,,5,0,0,,4
-Sweden,Suède,Europe,Europe,1,4,4,3.4,rich,0.359,0.294,62.0,48.1,usual,,0,0,0,,4
-Ukraine,Ukraine,Europe,Europe,1,4,3,2.8,moderate,0.069,0.049,66.0,45.4,usual,,2,0,0,,4
-United States,États-Unis,Americas,Amériques,1,64,7,103.0,rich,0.26,0.262,48.8,41.7,usual,,46,0,14,,54
-South Africa,Afrique du Sud,Sub-Saharan Africa,Afrique subsaharienne,1,2,2,4.1,rich,0.235,0.319,38.2,30.2,usual,,2,0,11,,2
-Bangladesh,Bangladesh,Asia and Pacific,Asie et Pacifique,1,2,2,16.4,rich,0.416,1.221,26.3,41.7,usual,,2,0,0,,2
-Pakistan,Pakistan,Asia and Pacific,Asie et Pacifique,1,1,1,4.1,rich,0.079,0.152,35.3,17.5,usual,,0,0,9,,1
+France,France,Europe,Europe,1,186,7,5.4,rich,6.003,0.18,100.0,100.0,exceptional,,148,40,37,,158
+Italy,Italie,Europe,Europe,1,107,7,7.5,rich,4.9,0.323,100.0,100.0,exceptional,,88,11,19,,95
+Albania,Albanie,Europe,Europe,1,83,7,1.1,moderate,12.67,0.0,100.0,100.0,exceptional,,65,8,34,,76
+Belgium,Belgique,Europe,Europe,1,25,7,0.7,thin,3.453,0.0,100.0,100.0,exceptional,,5,18,29,,24
+Greece,Grèce,Europe,Europe,1,38,6,4.8,rich,3.583,0.361,99.5,100.0,exceptional,,28,3,9,,34
+Austria,Autriche,Europe,Europe,1,7,3,0.3,thin,2.444,0.0,99.4,100.0,exceptional,,7,1,1,,6
+Brazil,Brésil,Americas,Amériques,1,11,3,2.1,moderate,0.783,0.146,98.8,100.0,high,,11,5,15,,9
+Argentina,Argentine,Americas,Amériques,1,16,5,1.6,moderate,1.647,0.12,97.8,98.9,high,,13,17,16,,14
+India,Inde,Asia and Pacific,Asie et Pacifique,1,149,7,44.9,rich,3.06,0.633,96.2,99.5,high,,145,98,76,,86
+Indonesia,Indonésie,Asia and Pacific,Asie et Pacifique,1,21,5,6.0,rich,2.508,0.218,96.7,95.8,high,,21,3,23,,15
+United Kingdom,Royaume-Uni,Europe,Europe,1,14,6,9.9,rich,0.328,0.161,91.3,90.9,elevated,,8,2,0,,10
+Spain,Espagne,Europe,Europe,1,14,6,3.2,rich,0.785,0.126,98.6,90.5,elevated,,5,8,9,,12
+Israel,Israël,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,34,6,51.3,rich,0.854,0.438,81.8,98.9,elevated,,12,3,0,,28
+Tunisia,Tunisie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,4,4,0.3,thin,4.255,0.0,99.9,100.0,usual,held back,2,0,0,,4
+Portugal,Portugal,Europe,Europe,1,8,4,0.6,thin,1.967,0.0,99.8,100.0,usual,elsewhere,3,0,0,,8
+Germany,Allemagne,Europe,Europe,1,17,6,3.2,rich,1.157,0.127,98.9,100.0,usual,elsewhere,2,0,43,,16
+Jordan,Jordanie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,2,1,0.4,thin,1.249,0.0,99.3,98.9,usual,held back,0,0,0,,1
+Russia,Russie,Europe,Europe,1,15,6,3.2,rich,0.226,0.05,99.5,97.3,usual,elsewhere,2,0,1,closed,13
+Liberia,Liberia,Sub-Saharan Africa,Afrique subsaharienne,1,5,4,0.5,thin,3.207,0.0,98.5,97.1,usual,elsewhere,4,0,0,,5
+North Macedonia,Macédoine du Nord,Europe,Europe,1,4,2,1.0,moderate,2.46,0.0,96.0,98.7,usual,held back,0,0,28,,4
+Hungary,Hongrie,Europe,Europe,1,3,2,0.5,thin,0.877,0.0,99.6,95.1,usual,held back,0,0,0,,2
+Iraq,Irak,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,3,1,0.5,thin,0.879,0.0,98.1,94.0,usual,held back,1,0,0,,2
+Serbia,Serbie,Europe,Europe,1,17,5,4.9,rich,5.848,0.684,90.8,99.8,usual,elsewhere,2,0,0,,14
+Vietnam,Viêt Nam,Asia and Pacific,Asie et Pacifique,1,4,2,2.9,moderate,1.1,0.304,90.1,98.9,usual,held back,0,0,6,closed,2
+Japan,Japon,Asia and Pacific,Asie et Pacifique,1,2,2,1.0,moderate,0.278,0.088,89.1,92.9,usual,held back,1,0,0,,2
+Algeria,Algérie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,1,1,0.3,thin,0.806,0.0,94.8,84.7,usual,held back,0,0,0,,1
+Kosovo,Kosovo,Europe,Europe,1,1,1,0.6,thin,1.029,0.0,84.4,88.5,usual,held back,1,0,5,,1
+New Zealand,Nouvelle-Zélande,Asia and Pacific,Asie et Pacifique,1,1,1,0.5,thin,0.265,0.0,86.8,84.0,usual,held back,1,0,0,,1
+Switzerland,Suisse,Europe,Europe,1,1,1,0.7,thin,0.265,0.0,83.9,85.4,usual,held back,0,0,0,,1
+South Korea,Corée du Sud,Asia and Pacific,Asie et Pacifique,1,3,2,1.8,moderate,0.372,0.111,83.5,84.3,usual,held back,1,0,9,,2
+Turkey,Turquie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,3,1,3.1,rich,0.209,0.073,79.5,83.4,usual,,0,0,0,closed,2
+Netherlands,Pays-Bas,Europe,Europe,1,1,1,1.2,moderate,0.274,0.0,75.1,79.1,usual,,0,0,0,,1
+Iran,Iran,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,10,5,5.0,rich,0.465,0.102,85.8,73.8,usual,,1,0,19,closed,9
+Sweden,Suède,Europe,Europe,1,7,5,3.4,rich,0.647,0.294,88.6,73.8,usual,,0,0,0,,6
+Morocco,Maroc,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,1,1,0.4,thin,0.305,0.0,73.4,74.9,usual,,0,0,0,,1
+Chile,Chili,Americas,Amériques,1,2,1,0.7,thin,0.88,0.0,84.9,72.3,usual,,2,0,21,,2
+Australia,Australie,Asia and Pacific,Asie et Pacifique,1,4,3,3.6,rich,0.219,0.112,76.3,71.0,usual,,0,0,18,,3
+Uganda,Ouganda,Sub-Saharan Africa,Afrique subsaharienne,1,1,1,0.3,thin,0.365,0.0,79.7,67.9,usual,,0,0,0,,1
+Czechia,Tchéquie,Europe,Europe,1,1,1,0.6,thin,0.354,0.0,71.4,65.8,usual,,1,0,5,,1
+Canada,Canada,Americas,Amériques,1,8,4,6.2,rich,0.312,0.193,72.3,62.3,usual,,8,0,0,,6
+Ireland,Irlande,Europe,Europe,1,2,2,2.1,moderate,0.28,0.133,70.2,59.7,usual,,1,0,3,,2
+Venezuela,Venezuela,Americas,Amériques,1,1,1,1.6,moderate,0.176,0.119,66.1,56.5,usual,,1,0,2,closed,1
+Nigeria,Nigeria,Sub-Saharan Africa,Afrique subsaharienne,1,6,5,5.2,rich,0.23,0.172,63.4,55.2,usual,,6,0,0,,5
+Kenya,Kenya,Sub-Saharan Africa,Afrique subsaharienne,1,1,1,1.5,moderate,0.199,0.172,54.9,57.4,usual,,0,0,0,,1
+Colombia,Colombie,Americas,Amériques,1,2,1,1.2,moderate,0.228,0.117,74.4,53.2,usual,,0,0,0,,1
+United States,États-Unis,Americas,Amériques,1,70,7,103.0,rich,0.284,0.262,55.8,51.7,usual,,52,0,14,,59
+Egypt,Égypte,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,1,1,1.4,moderate,0.102,0.054,67.0,51.4,usual,,1,0,0,closed,1
+Romania,Roumanie,Europe,Europe,1,1,1,1.1,moderate,0.123,0.118,51.1,64.7,usual,,1,0,4,,1
+Ukraine,Ukraine,Europe,Europe,1,3,2,2.8,moderate,0.052,0.049,52.6,31.9,usual,,1,0,0,,3
+China,Chine,Asia and Pacific,Asie et Pacifique,1,2,2,3.8,rich,0.079,0.1,40.8,31.7,usual,,1,0,3,closed,2
+South Africa,Afrique du Sud,Sub-Saharan Africa,Afrique subsaharienne,1,2,2,4.1,rich,0.232,0.319,38.0,30.4,usual,,2,0,11,,2
+Bangladesh,Bangladesh,Asia and Pacific,Asie et Pacifique,1,2,2,16.5,rich,0.409,1.221,26.1,41.7,usual,,2,0,0,,2
+Mexico,Mexique,Americas,Amériques,1,3,3,7.1,rich,0.177,0.29,32.1,22.8,usual,,3,0,14,,3
 United Arab Emirates,Émirats arabes unis,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,closed,0
 Afghanistan,Afghanistan,Asia and Pacific,Asie et Pacifique,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,closed,0
-Algeria,Algérie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Bosnia and Herzegovina,Bosnie-Herzégovine,Europe,Europe,1,0,0,0.2,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Myanmar,Birmanie,Asia and Pacific,Asie et Pacifique,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,closed,0
 Benin,Bénin,Sub-Saharan Africa,Afrique subsaharienne,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
@@ -67,18 +71,15 @@ Gaza,Gaza,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.6
 Haiti,Haïti,Americas,Amériques,1,0,0,0.4,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Hong Kong,Hong Kong,Asia and Pacific,Asie et Pacifique,1,0,0,0.6,thin,0.0,0.0,0.0,0.0,usual,,0,0,1,closed,0
 Croatia,Croatie,Europe,Europe,1,0,0,0.4,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
-Iraq,Irak,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.5,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Jamaica,Jamaïque,Americas,Amériques,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
-Jordan,Jordanie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.4,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Lebanon,Liban,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.8,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Slovakia,Slovaquie,Europe,Europe,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,3,,0
 Malaysia,Malaisie,Asia and Pacific,Asie et Pacifique,1,0,0,0.4,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
-Netherlands,Pays-Bas,Europe,Europe,1,0,0,1.2,moderate,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Norway,Norvège,Europe,Europe,1,0,0,0.5,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
-Nepal,Népal,Asia and Pacific,Asie et Pacifique,1,0,0,1.5,moderate,0.0,0.0,0.0,0.0,usual,,0,0,20,,0
+Nepal,Népal,Asia and Pacific,Asie et Pacifique,1,0,0,1.4,moderate,0.0,0.0,0.0,0.0,usual,,0,0,20,,0
 Nicaragua,Nicaragua,Americas,Amériques,1,0,0,0.4,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,closed,0
-New Zealand,Nouvelle-Zélande,Asia and Pacific,Asie et Pacifique,1,0,0,0.5,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Peru,Pérou,Americas,Amériques,1,0,0,0.6,thin,0.0,0.0,0.0,0.0,usual,,0,0,9,,0
+Pakistan,Pakistan,Asia and Pacific,Asie et Pacifique,1,0,0,4.1,rich,0.0,0.151,0.0,0.0,usual,,0,0,9,,0
 Poland,Pologne,Europe,Europe,1,0,0,0.8,thin,0.0,0.0,0.0,0.0,usual,,0,0,5,,0
 Panama,Panama,Americas,Amériques,1,0,0,0.5,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Qatar,Qatar,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,closed,0
@@ -89,6 +90,5 @@ Sudan,Soudan,Sub-Saharan Africa,Afrique subsaharienne,1,0,0,0.4,thin,0.0,0.0,0.0
 Syria,Syrie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.6,thin,0.0,0.0,0.0,0.0,usual,,0,0,4,,0
 Thailand,Thaïlande,Asia and Pacific,Asie et Pacifique,1,0,0,0.4,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Taiwan,Taïwan,Asia and Pacific,Asie et Pacifique,1,0,0,0.3,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
-Venezuela,Venezuela,Americas,Amériques,1,0,0,1.6,moderate,0.0,0.119,0.0,0.0,usual,,0,0,2,closed,0
 West Bank,Cisjordanie,Middle East and North Africa,Moyen-Orient et Afrique du Nord,1,0,0,0.6,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
 Zimbabwe,Zimbabwe,Sub-Saharan Africa,Afrique subsaharienne,1,0,0,0.5,thin,0.0,0.0,0.0,0.0,usual,,0,0,0,,0
