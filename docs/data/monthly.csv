@@ -474,7 +474,7 @@ month,country,share,reports
 2026-08-01,Albania,0.194,2
 2026-09-01,Albania,0.414,5
 2026-10-01,Albania,12.023,217
-2026-11-01,Albania,6.567,14
+2026-11-01,Albania,5.648,15
 2017-01-01,Argentina,0.119,6
 2017-02-01,Argentina,0.265,14
 2017-03-01,Argentina,0.239,14
@@ -593,7 +593,7 @@ month,country,share,reports
 2026-08-01,Argentina,0.028,1
 2026-09-01,Argentina,0.125,5
 2026-10-01,Argentina,0.877,37
-2026-11-01,Argentina,0.138,1
+2026-11-01,Argentina,0.109,1
 2017-01-01,Australia,0.094,14
 2017-02-01,Australia,0.119,21
 2017-03-01,Australia,0.183,32
@@ -712,7 +712,7 @@ month,country,share,reports
 2026-08-01,Australia,0.633,45
 2026-09-01,Australia,0.387,27
 2026-10-01,Australia,0.167,12
-2026-11-01,Australia,0.091,1
+2026-11-01,Australia,0.074,1
 2017-01-01,Austria,0.083,2
 2017-02-01,Austria,0.132,3
 2017-03-01,Austria,0.154,4
@@ -831,7 +831,7 @@ month,country,share,reports
 2026-08-01,Austria,0.0,0
 2026-09-01,Austria,0.191,2
 2026-10-01,Austria,1.22,14
-2026-11-01,Austria,1.384,3
+2026-11-01,Austria,2.287,6
 2017-01-01,Belgium,0.184,8
 2017-02-01,Belgium,0.073,4
 2017-03-01,Belgium,0.126,8
@@ -949,8 +949,8 @@ month,country,share,reports
 2026-07-01,Belgium,0.0,0
 2026-08-01,Belgium,0.208,3
 2026-09-01,Belgium,0.16,3
-2026-10-01,Belgium,3.759,91
-2026-11-01,Belgium,0.374,2
+2026-10-01,Belgium,3.754,91
+2026-11-01,Belgium,0.299,2
 2017-01-01,Bangladesh,0.416,20
 2017-02-01,Bangladesh,0.474,22
 2017-03-01,Bangladesh,0.654,32
@@ -1069,7 +1069,7 @@ month,country,share,reports
 2026-08-01,Bangladesh,0.879,23
 2026-09-01,Bangladesh,0.295,6
 2026-10-01,Bangladesh,0.418,8
-2026-11-01,Bangladesh,0.284,1
+2026-11-01,Bangladesh,1.432,6
 2017-01-01,Bosnia and Herzegovina,0.0,0
 2017-02-01,Bosnia and Herzegovina,0.416,2
 2017-03-01,Bosnia and Herzegovina,0.0,0
@@ -1188,7 +1188,7 @@ month,country,share,reports
 2026-08-01,Bosnia and Herzegovina,0.0,0
 2026-09-01,Bosnia and Herzegovina,0.76,2
 2026-10-01,Bosnia and Herzegovina,0.867,2
-2026-11-01,Bosnia and Herzegovina,0.0,0
+2026-11-01,Bosnia and Herzegovina,3.322,1
 2017-01-01,Myanmar,0.398,6
 2017-02-01,Myanmar,0.306,4
 2017-03-01,Myanmar,0.19,2
@@ -1545,7 +1545,7 @@ month,country,share,reports
 2026-08-01,Brazil,0.056,3
 2026-09-01,Brazil,0.074,4
 2026-10-01,Brazil,0.617,48
-2026-11-01,Brazil,0.731,7
+2026-11-01,Brazil,0.688,8
 2017-01-01,Bulgaria,0.046,1
 2017-02-01,Bulgaria,0.0,0
 2017-03-01,Bulgaria,0.0,0
@@ -1783,7 +1783,7 @@ month,country,share,reports
 2026-08-01,Canada,0.166,15
 2026-09-01,Canada,0.142,15
 2026-10-01,Canada,0.295,29
-2026-11-01,Canada,0.138,2
+2026-11-01,Canada,0.285,5
 2017-01-01,Sri Lanka,0.658,12
 2017-02-01,Sri Lanka,2.308,43
 2017-03-01,Sri Lanka,0.583,14
@@ -2020,8 +2020,8 @@ month,country,share,reports
 2026-07-01,China,0.178,19
 2026-08-01,China,0.073,7
 2026-09-01,China,0.17,22
-2026-10-01,China,0.125,12
-2026-11-01,China,0.058,1
+2026-10-01,China,0.124,12
+2026-11-01,China,0.048,1
 2017-01-01,Chile,0.186,6
 2017-02-01,Chile,0.368,9
 2017-03-01,Chile,0.518,19
@@ -2140,7 +2140,7 @@ month,country,share,reports
 2026-08-01,Chile,0.232,2
 2026-09-01,Chile,0.787,8
 2026-10-01,Chile,1.279,12
-2026-11-01,Chile,0.0,0
+2026-11-01,Chile,0.926,2
 2017-01-01,Colombia,0.141,7
 2017-02-01,Colombia,0.161,8
 2017-03-01,Colombia,0.219,12
@@ -2259,7 +2259,7 @@ month,country,share,reports
 2026-08-01,Colombia,0.109,5
 2026-09-01,Colombia,0.08,3
 2026-10-01,Colombia,0.109,4
-2026-11-01,Colombia,0.175,1
+2026-11-01,Colombia,0.429,3
 2017-01-01,Cuba,0.029,1
 2017-02-01,Cuba,0.039,1
 2017-03-01,Cuba,0.209,5
@@ -2497,7 +2497,7 @@ month,country,share,reports
 2026-08-01,Cyprus,0.674,5
 2026-09-01,Cyprus,0.102,1
 2026-10-01,Cyprus,0.0,0
-2026-11-01,Cyprus,1.167,2
+2026-11-01,Cyprus,1.372,3
 2017-01-01,Denmark,0.204,5
 2017-02-01,Denmark,0.179,4
 2017-03-01,Denmark,0.07,2
@@ -2616,7 +2616,7 @@ month,country,share,reports
 2026-08-01,Denmark,0.0,0
 2026-09-01,Denmark,0.156,3
 2026-10-01,Denmark,0.0,0
-2026-11-01,Denmark,5.45,12
+2026-11-01,Denmark,4.675,13
 2017-01-01,Ecuador,0.202,3
 2017-02-01,Ecuador,0.068,1
 2017-03-01,Ecuador,0.208,3
@@ -2854,7 +2854,7 @@ month,country,share,reports
 2026-08-01,Egypt,0.0,0
 2026-09-01,Egypt,0.057,2
 2026-10-01,Egypt,0.072,3
-2026-11-01,Egypt,0.162,1
+2026-11-01,Egypt,0.283,2
 2017-01-01,Ireland,0.183,11
 2017-02-01,Ireland,0.215,12
 2017-03-01,Ireland,0.306,23
@@ -2972,8 +2972,8 @@ month,country,share,reports
 2026-07-01,Ireland,0.182,6
 2026-08-01,Ireland,0.269,7
 2026-09-01,Ireland,0.319,11
-2026-10-01,Ireland,0.384,12
-2026-11-01,Ireland,0.196,1
+2026-10-01,Ireland,0.383,12
+2026-11-01,Ireland,0.147,1
 2017-01-01,Czechia,0.435,10
 2017-02-01,Czechia,0.1,2
 2017-03-01,Czechia,0.218,5
@@ -3092,7 +3092,7 @@ month,country,share,reports
 2026-08-01,Czechia,0.275,2
 2026-09-01,Czechia,0.11,1
 2026-10-01,Czechia,0.749,8
-2026-11-01,Czechia,2.848,6
+2026-11-01,Czechia,2.253,6
 2017-01-01,Finland,0.163,3
 2017-02-01,Finland,0.057,1
 2017-03-01,Finland,0.195,4
@@ -3329,8 +3329,8 @@ month,country,share,reports
 2026-07-01,France,0.125,10
 2026-08-01,France,0.182,10
 2026-09-01,France,1.475,123
-2026-10-01,France,7.176,768
-2026-11-01,France,4.581,67
+2026-10-01,France,7.175,768
+2026-11-01,France,4.142,74
 2017-01-01,Georgia,0.0,0
 2017-02-01,Georgia,0.6,3
 2017-03-01,Georgia,1.334,9
@@ -3687,7 +3687,7 @@ month,country,share,reports
 2026-08-01,Germany,0.035,2
 2026-09-01,Germany,0.413,35
 2026-10-01,Germany,0.646,46
-2026-11-01,Germany,0.312,4
+2026-11-01,Germany,0.264,4
 2017-01-01,Greece,0.355,26
 2017-02-01,Greece,0.457,33
 2017-03-01,Greece,0.714,51
@@ -3806,7 +3806,7 @@ month,country,share,reports
 2026-08-01,Greece,0.052,2
 2026-09-01,Greece,0.703,30
 2026-10-01,Greece,1.679,86
-2026-11-01,Greece,2.154,16
+2026-11-01,Greece,1.905,17
 2017-01-01,Gaza,0.0,0
 2017-02-01,Gaza,0.0,0
 2017-03-01,Gaza,0.0,0
@@ -4163,7 +4163,7 @@ month,country,share,reports
 2026-08-01,Hong Kong,0.724,2
 2026-09-01,Hong Kong,1.539,6
 2026-10-01,Hong Kong,0.0,0
-2026-11-01,Hong Kong,6.01,5
+2026-11-01,Hong Kong,5.319,6
 2017-01-01,Croatia,0.0,0
 2017-02-01,Croatia,0.059,1
 2017-03-01,Croatia,0.053,1
@@ -4282,7 +4282,7 @@ month,country,share,reports
 2026-08-01,Croatia,0.0,0
 2026-09-01,Croatia,0.084,1
 2026-10-01,Croatia,0.243,3
-2026-11-01,Croatia,0.609,1
+2026-11-01,Croatia,0.978,2
 2017-01-01,Hungary,0.055,1
 2017-02-01,Hungary,0.049,1
 2017-03-01,Hungary,0.204,5
@@ -4401,7 +4401,7 @@ month,country,share,reports
 2026-08-01,Hungary,0.0,0
 2026-09-01,Hungary,0.094,1
 2026-10-01,Hungary,1.348,16
-2026-11-01,Hungary,1.343,3
+2026-11-01,Hungary,1.456,4
 2017-01-01,Indonesia,0.303,24
 2017-02-01,Indonesia,0.334,28
 2017-03-01,Indonesia,0.219,21
@@ -4520,7 +4520,7 @@ month,country,share,reports
 2026-08-01,Indonesia,0.543,28
 2026-09-01,Indonesia,0.31,11
 2026-10-01,Indonesia,1.848,62
-2026-11-01,Indonesia,0.167,1
+2026-11-01,Indonesia,0.282,2
 2017-01-01,India,1.059,321
 2017-02-01,India,1.46,398
 2017-03-01,India,0.948,295
@@ -4638,8 +4638,8 @@ month,country,share,reports
 2026-07-01,India,4.342,953
 2026-08-01,India,3.869,795
 2026-09-01,India,1.777,376
-2026-10-01,India,2.765,633
-2026-11-01,India,1.292,45
+2026-10-01,India,2.764,633
+2026-11-01,India,1.146,47
 2017-01-01,Iran,0.146,19
 2017-02-01,Iran,0.173,24
 2017-03-01,Iran,0.103,10
@@ -4758,7 +4758,7 @@ month,country,share,reports
 2026-08-01,Iran,0.095,11
 2026-09-01,Iran,0.081,10
 2026-10-01,Iran,0.254,25
-2026-11-01,Iran,0.127,3
+2026-11-01,Iran,0.145,4
 2017-01-01,Israel,0.197,43
 2017-02-01,Israel,0.287,59
 2017-03-01,Israel,0.328,66
@@ -4877,7 +4877,7 @@ month,country,share,reports
 2026-08-01,Israel,0.223,37
 2026-09-01,Israel,0.402,64
 2026-10-01,Israel,0.503,91
-2026-11-01,Israel,0.293,8
+2026-11-01,Israel,0.253,8
 2017-01-01,Italy,0.129,15
 2017-02-01,Italy,0.301,34
 2017-03-01,Italy,0.293,38
@@ -4996,7 +4996,7 @@ month,country,share,reports
 2026-08-01,Italy,0.12,8
 2026-09-01,Italy,0.356,27
 2026-10-01,Italy,2.695,234
-2026-11-01,Italy,1.823,26
+2026-11-01,Italy,1.682,30
 2017-01-01,Iraq,0.315,39
 2017-02-01,Iraq,0.415,45
 2017-03-01,Iraq,0.254,29
@@ -5115,7 +5115,7 @@ month,country,share,reports
 2026-08-01,Iraq,0.068,1
 2026-09-01,Iraq,0.0,0
 2026-10-01,Iraq,0.279,4
-2026-11-01,Iraq,1.198,2
+2026-11-01,Iraq,0.961,2
 2017-01-01,Japan,0.128,10
 2017-02-01,Japan,0.074,6
 2017-03-01,Japan,0.226,20
@@ -5353,7 +5353,7 @@ month,country,share,reports
 2026-08-01,Jamaica,0.21,1
 2026-09-01,Jamaica,0.167,1
 2026-10-01,Jamaica,0.0,0
-2026-11-01,Jamaica,1.01,1
+2026-11-01,Jamaica,0.879,1
 2017-01-01,Jordan,0.177,5
 2017-02-01,Jordan,0.17,5
 2017-03-01,Jordan,0.118,5
@@ -5829,7 +5829,7 @@ month,country,share,reports
 2026-08-01,Kosovo,0.0,0
 2026-09-01,Kosovo,1.725,11
 2026-10-01,Kosovo,2.868,16
-2026-11-01,Kosovo,1.185,1
+2026-11-01,Kosovo,0.992,1
 2017-01-01,Lebanon,0.0,0
 2017-02-01,Lebanon,0.154,6
 2017-03-01,Lebanon,0.317,12
@@ -5948,7 +5948,7 @@ month,country,share,reports
 2026-08-01,Lebanon,0.049,1
 2026-09-01,Lebanon,0.0,0
 2026-10-01,Lebanon,0.15,2
-2026-11-01,Lebanon,0.464,1
+2026-11-01,Lebanon,0.388,1
 2017-01-01,Liberia,0.417,3
 2017-02-01,Liberia,0.579,4
 2017-03-01,Liberia,0.0,0
@@ -6174,7 +6174,7 @@ month,country,share,reports
 2025-08-01,Slovakia,0.821,3
 2025-09-01,Slovakia,0.0,0
 2025-10-01,Slovakia,0.0,0
-2025-11-01,Slovakia,1.306,7
+2025-11-01,Slovakia,1.305,7
 2025-12-01,Slovakia,0.0,0
 2026-01-01,Slovakia,0.222,1
 2026-02-01,Slovakia,0.0,0
@@ -6543,7 +6543,7 @@ month,country,share,reports
 2026-08-01,Mexico,0.192,13
 2026-09-01,Mexico,0.864,59
 2026-10-01,Mexico,0.29,21
-2026-11-01,Mexico,0.098,1
+2026-11-01,Mexico,0.235,3
 2017-01-01,Malaysia,0.026,1
 2017-02-01,Malaysia,0.087,5
 2017-03-01,Malaysia,0.016,1
@@ -6781,7 +6781,7 @@ month,country,share,reports
 2026-08-01,Nigeria,0.148,17
 2026-09-01,Nigeria,0.177,20
 2026-10-01,Nigeria,0.172,20
-2026-11-01,Nigeria,0.059,1
+2026-11-01,Nigeria,0.048,1
 2017-01-01,Netherlands,0.159,6
 2017-02-01,Netherlands,0.297,11
 2017-03-01,Netherlands,0.114,10
@@ -7126,7 +7126,7 @@ month,country,share,reports
 2025-08-01,Nepal,0.0,0
 2025-09-01,Nepal,1.638,50
 2025-10-01,Nepal,0.658,8
-2025-11-01,Nepal,0.514,6
+2025-11-01,Nepal,0.513,6
 2025-12-01,Nepal,0.814,10
 2026-01-01,Nepal,0.09,1
 2026-02-01,Nepal,0.504,5
@@ -7495,7 +7495,7 @@ month,country,share,reports
 2026-08-01,Peru,0.075,1
 2026-09-01,Peru,0.153,2
 2026-10-01,Peru,0.135,2
-2026-11-01,Peru,2.348,7
+2026-11-01,Peru,1.713,7
 2017-01-01,Pakistan,0.214,26
 2017-02-01,Pakistan,0.484,62
 2017-03-01,Pakistan,0.346,42
@@ -7614,7 +7614,7 @@ month,country,share,reports
 2026-08-01,Pakistan,0.369,24
 2026-09-01,Pakistan,0.104,6
 2026-10-01,Pakistan,0.087,5
-2026-11-01,Pakistan,0.553,4
+2026-11-01,Pakistan,0.562,5
 2017-01-01,Poland,0.989,47
 2017-02-01,Poland,0.273,12
 2017-03-01,Poland,0.863,50
@@ -7971,7 +7971,7 @@ month,country,share,reports
 2026-08-01,Portugal,0.08,1
 2026-09-01,Portugal,0.075,1
 2026-10-01,Portugal,0.981,16
-2026-11-01,Portugal,0.277,1
+2026-11-01,Portugal,0.225,1
 2017-01-01,Qatar,0.0,0
 2017-02-01,Qatar,0.0,0
 2017-03-01,Qatar,0.107,2
@@ -8197,7 +8197,7 @@ month,country,share,reports
 2025-08-01,Serbia,4.302,49
 2025-09-01,Serbia,1.7,19
 2025-10-01,Serbia,1.931,22
-2025-11-01,Serbia,2.289,26
+2025-11-01,Serbia,2.288,26
 2025-12-01,Serbia,0.716,8
 2026-01-01,Serbia,1.044,10
 2026-02-01,Serbia,0.737,8
@@ -8209,7 +8209,7 @@ month,country,share,reports
 2026-08-01,Serbia,0.212,3
 2026-09-01,Serbia,1.032,15
 2026-10-01,Serbia,4.942,71
-2026-11-01,Serbia,2.787,7
+2026-11-01,Serbia,2.264,7
 2017-01-01,Romania,0.448,37
 2017-02-01,Romania,0.263,25
 2017-03-01,Romania,0.229,20
@@ -8328,7 +8328,7 @@ month,country,share,reports
 2026-08-01,Romania,0.145,4
 2026-09-01,Romania,0.134,4
 2026-10-01,Romania,0.03,1
-2026-11-01,Romania,0.185,1
+2026-11-01,Romania,0.149,1
 2017-01-01,Philippines,0.122,10
 2017-02-01,Philippines,0.27,21
 2017-03-01,Philippines,0.332,27
@@ -8446,8 +8446,8 @@ month,country,share,reports
 2026-07-01,Philippines,0.124,4
 2026-08-01,Philippines,0.129,3
 2026-09-01,Philippines,0.642,15
-2026-10-01,Philippines,0.239,7
-2026-11-01,Philippines,0.201,1
+2026-10-01,Philippines,0.238,7
+2026-11-01,Philippines,0.161,1
 2017-01-01,Russia,0.081,28
 2017-02-01,Russia,0.072,25
 2017-03-01,Russia,0.152,59
@@ -8566,7 +8566,7 @@ month,country,share,reports
 2026-08-01,Russia,0.046,9
 2026-09-01,Russia,0.076,18
 2026-10-01,Russia,0.172,45
-2026-11-01,Russia,0.027,1
+2026-11-01,Russia,0.067,3
 2017-01-01,South Africa,0.719,46
 2017-02-01,South Africa,0.664,52
 2017-03-01,South Africa,0.954,80
@@ -8685,7 +8685,7 @@ month,country,share,reports
 2026-08-01,South Africa,0.367,12
 2026-09-01,South Africa,0.372,15
 2026-10-01,South Africa,0.177,7
-2026-11-01,South Africa,0.277,2
+2026-11-01,South Africa,0.238,2
 2017-01-01,Senegal,0.0,0
 2017-02-01,Senegal,0.215,2
 2017-03-01,Senegal,0.595,7
@@ -9042,7 +9042,7 @@ month,country,share,reports
 2026-08-01,Spain,0.087,7
 2026-09-01,Spain,0.31,24
 2026-10-01,Spain,0.578,48
-2026-11-01,Spain,0.37,5
+2026-11-01,Spain,0.364,6
 2017-01-01,Sudan,0.829,25
 2017-02-01,Sudan,0.692,20
 2017-03-01,Sudan,0.222,7
@@ -9279,8 +9279,8 @@ month,country,share,reports
 2026-07-01,Sweden,0.207,8
 2026-08-01,Sweden,0.307,13
 2026-09-01,Sweden,0.336,17
-2026-10-01,Sweden,0.535,26
-2026-11-01,Sweden,0.532,4
+2026-10-01,Sweden,0.534,26
+2026-11-01,Sweden,0.432,4
 2017-01-01,Syria,0.023,5
 2017-02-01,Syria,0.193,36
 2017-03-01,Syria,0.086,17
@@ -9399,7 +9399,7 @@ month,country,share,reports
 2026-08-01,Syria,0.0,0
 2026-09-01,Syria,0.372,7
 2026-10-01,Syria,0.159,3
-2026-11-01,Syria,0.356,1
+2026-11-01,Syria,0.288,1
 2017-01-01,Switzerland,0.031,2
 2017-02-01,Switzerland,0.128,6
 2017-03-01,Switzerland,0.091,5
@@ -9518,7 +9518,7 @@ month,country,share,reports
 2026-08-01,Switzerland,0.067,1
 2026-09-01,Switzerland,0.223,4
 2026-10-01,Switzerland,0.399,7
-2026-11-01,Switzerland,0.358,1
+2026-11-01,Switzerland,0.302,1
 2017-01-01,Thailand,0.254,6
 2017-02-01,Thailand,0.13,3
 2017-03-01,Thailand,0.2,5
@@ -9994,7 +9994,7 @@ month,country,share,reports
 2026-08-01,Taiwan,0.0,0
 2026-09-01,Taiwan,0.241,3
 2026-10-01,Taiwan,0.0,0
-2026-11-01,Taiwan,0.72,1
+2026-11-01,Taiwan,0.58,1
 2017-01-01,Uganda,0.41,7
 2017-02-01,Uganda,0.0,0
 2017-03-01,Uganda,0.223,4
@@ -10113,7 +10113,7 @@ month,country,share,reports
 2026-08-01,Uganda,0.098,1
 2026-09-01,Uganda,0.0,0
 2026-10-01,Uganda,0.09,1
-2026-11-01,Uganda,1.17,2
+2026-11-01,Uganda,0.932,2
 2017-01-01,United Kingdom,0.188,74
 2017-02-01,United Kingdom,0.236,85
 2017-03-01,United Kingdom,0.231,105
@@ -10232,7 +10232,7 @@ month,country,share,reports
 2026-08-01,United Kingdom,0.102,18
 2026-09-01,United Kingdom,0.117,24
 2026-10-01,United Kingdom,0.224,44
-2026-11-01,United Kingdom,0.253,8
+2026-11-01,United Kingdom,0.23,9
 2017-01-01,Ukraine,0.072,10
 2017-02-01,Ukraine,0.112,20
 2017-03-01,Ukraine,0.227,38
@@ -10351,7 +10351,7 @@ month,country,share,reports
 2026-08-01,Ukraine,0.098,15
 2026-09-01,Ukraine,0.056,10
 2026-10-01,Ukraine,0.13,27
-2026-11-01,Ukraine,0.0,0
+2026-11-01,Ukraine,0.025,1
 2017-01-01,United States,0.302,704
 2017-02-01,United States,0.504,1166
 2017-03-01,United States,0.384,902
@@ -10470,7 +10470,7 @@ month,country,share,reports
 2026-08-01,United States,0.138,133
 2026-09-01,United States,0.233,238
 2026-10-01,United States,0.312,340
-2026-11-01,United States,0.273,55
+2026-11-01,United States,0.294,72
 2017-01-01,Venezuela,0.49,25
 2017-02-01,Venezuela,0.58,32
 2017-03-01,Venezuela,1.138,75
@@ -10588,7 +10588,7 @@ month,country,share,reports
 2026-07-01,Venezuela,0.06,2
 2026-08-01,Venezuela,0.04,1
 2026-09-01,Venezuela,0.26,9
-2026-10-01,Venezuela,0.171,5
+2026-10-01,Venezuela,0.17,5
 2026-11-01,Venezuela,0.0,0
 2017-01-01,Vietnam,0.424,15
 2017-02-01,Vietnam,0.206,7
@@ -10696,7 +10696,7 @@ month,country,share,reports
 2025-08-01,Vietnam,0.263,5
 2025-09-01,Vietnam,0.581,11
 2025-10-01,Vietnam,0.306,6
-2025-11-01,Vietnam,0.587,11
+2025-11-01,Vietnam,0.586,11
 2025-12-01,Vietnam,0.277,4
 2026-01-01,Vietnam,0.29,4
 2026-02-01,Vietnam,1.01,11
@@ -10708,7 +10708,7 @@ month,country,share,reports
 2026-08-01,Vietnam,0.166,2
 2026-09-01,Vietnam,0.294,4
 2026-10-01,Vietnam,0.501,7
-2026-11-01,Vietnam,0.863,2
+2026-11-01,Vietnam,0.714,2
 2017-01-01,West Bank,0.064,1
 2017-02-01,West Bank,0.175,3
 2017-03-01,West Bank,0.715,11
@@ -10827,7 +10827,7 @@ month,country,share,reports
 2026-08-01,West Bank,0.21,3
 2026-09-01,West Bank,0.0,0
 2026-10-01,West Bank,0.0,0
-2026-11-01,West Bank,0.705,1
+2026-11-01,West Bank,0.58,1
 2017-01-01,Zimbabwe,0.325,7
 2017-02-01,Zimbabwe,0.134,3
 2017-03-01,Zimbabwe,0.043,1
