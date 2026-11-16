@@ -1,5 +1,4 @@
 day,country,share,reports,reports_day
-2026-05-19,United Arab Emirates,0.0,0,0
 2026-05-20,United Arab Emirates,0.211,1,1
 2026-05-21,United Arab Emirates,0.227,1,0
 2026-05-22,United Arab Emirates,0.266,1,0
@@ -179,7 +178,7 @@ day,country,share,reports,reports_day
 2026-11-12,United Arab Emirates,0.0,0,0
 2026-11-13,United Arab Emirates,0.0,0,0
 2026-11-14,United Arab Emirates,0.0,0,0
-2026-05-19,Afghanistan,0.475,1,0
+2026-11-15,United Arab Emirates,0.0,0,0
 2026-05-20,Afghanistan,0.0,0,0
 2026-05-21,Afghanistan,0.0,0,0
 2026-05-22,Afghanistan,0.0,0,0
@@ -359,7 +358,7 @@ day,country,share,reports,reports_day
 2026-11-12,Afghanistan,0.0,0,0
 2026-11-13,Afghanistan,0.0,0,0
 2026-11-14,Afghanistan,0.0,0,0
-2026-05-19,Algeria,0.0,0,0
+2026-11-15,Afghanistan,0.0,0,0
 2026-05-20,Algeria,0.0,0,0
 2026-05-21,Algeria,0.0,0,0
 2026-05-22,Algeria,0.0,0,0
@@ -539,7 +538,7 @@ day,country,share,reports,reports_day
 2026-11-12,Algeria,0.0,0,0
 2026-11-13,Algeria,0.0,0,0
 2026-11-14,Algeria,0.0,0,0
-2026-05-19,Azerbaijan,0.0,0,0
+2026-11-15,Algeria,0.0,0,0
 2026-05-20,Azerbaijan,0.0,0,0
 2026-05-21,Azerbaijan,0.0,0,0
 2026-05-22,Azerbaijan,0.0,0,0
@@ -719,7 +718,7 @@ day,country,share,reports,reports_day
 2026-11-12,Azerbaijan,0.423,2,0
 2026-11-13,Azerbaijan,0.0,0,0
 2026-11-14,Azerbaijan,0.0,0,0
-2026-05-19,Albania,5.404,16,3
+2026-11-15,Azerbaijan,0.0,0,0
 2026-05-20,Albania,5.629,17,2
 2026-05-21,Albania,6.293,20,4
 2026-05-22,Albania,6.331,20,1
@@ -898,8 +897,8 @@ day,country,share,reports,reports_day
 2026-11-11,Albania,5.972,18,4
 2026-11-12,Albania,4.584,14,0
 2026-11-13,Albania,4.316,13,0
-2026-11-14,Albania,2.142,6,1
-2026-05-19,Argentina,1.175,9,0
+2026-11-14,Albania,2.141,6,1
+2026-11-15,Albania,1.735,5,0
 2026-05-20,Argentina,0.0,0,0
 2026-05-21,Argentina,0.0,0,0
 2026-05-22,Argentina,0.0,0,0
@@ -1079,7 +1078,7 @@ day,country,share,reports,reports_day
 2026-11-12,Argentina,0.222,3,1
 2026-11-13,Argentina,0.31,4,1
 2026-11-14,Argentina,0.317,4,0
-2026-05-19,Australia,0.051,1,1
+2026-11-15,Argentina,0.341,4,0
 2026-05-20,Australia,0.052,1,0
 2026-05-21,Australia,0.103,2,1
 2026-05-22,Australia,0.1,2,0
@@ -1259,7 +1258,7 @@ day,country,share,reports,reports_day
 2026-11-12,Australia,0.187,3,3
 2026-11-13,Australia,0.185,3,0
 2026-11-14,Australia,0.184,3,0
-2026-05-19,Austria,0.346,1,1
+2026-11-15,Australia,0.182,3,0
 2026-05-20,Austria,0.359,1,0
 2026-05-21,Austria,0.357,1,0
 2026-05-22,Austria,0.357,1,0
@@ -1432,14 +1431,14 @@ day,country,share,reports,reports_day
 2026-11-05,Austria,1.083,3,0
 2026-11-06,Austria,2.105,6,3
 2026-11-07,Austria,2.083,6,0
-2026-11-08,Austria,2.331,7,1
-2026-11-09,Austria,2.23,7,0
-2026-11-10,Austria,1.618,5,0
-2026-11-11,Austria,1.307,4,0
-2026-11-12,Austria,1.465,4,0
+2026-11-08,Austria,2.328,7,1
+2026-11-09,Austria,2.227,7,0
+2026-11-10,Austria,1.616,5,0
+2026-11-11,Austria,1.305,4,0
+2026-11-12,Austria,1.463,4,0
 2026-11-13,Austria,0.389,1,0
-2026-11-14,Austria,0.389,1,0
-2026-05-19,Belgium,0.0,0,0
+2026-11-14,Austria,0.388,1,0
+2026-11-15,Austria,0.0,0,0
 2026-05-20,Belgium,0.0,0,0
 2026-05-21,Belgium,0.0,0,0
 2026-05-22,Belgium,0.0,0,0
@@ -1619,7 +1618,7 @@ day,country,share,reports,reports_day
 2026-11-12,Belgium,0.0,0,0
 2026-11-13,Belgium,0.0,0,0
 2026-11-14,Belgium,0.0,0,0
-2026-05-19,Bangladesh,0.965,5,2
+2026-11-15,Belgium,0.0,0,0
 2026-05-20,Bangladesh,0.932,5,0
 2026-05-21,Bangladesh,0.877,5,0
 2026-05-22,Bangladesh,1.012,6,1
@@ -1769,12 +1768,12 @@ day,country,share,reports,reports_day
 2026-10-13,Bangladesh,0.504,2,2
 2026-10-14,Bangladesh,0.715,3,1
 2026-10-15,Bangladesh,0.723,3,0
-2026-10-16,Bangladesh,0.677,3,0
+2026-10-16,Bangladesh,0.676,3,0
 2026-10-17,Bangladesh,0.642,3,0
 2026-10-18,Bangladesh,0.857,4,1
 2026-10-19,Bangladesh,0.87,4,0
 2026-10-20,Bangladesh,0.614,3,1
-2026-10-21,Bangladesh,0.415,2,0
+2026-10-21,Bangladesh,0.414,2,0
 2026-10-22,Bangladesh,0.409,2,0
 2026-10-23,Bangladesh,0.416,2,0
 2026-10-24,Bangladesh,0.445,2,0
@@ -1798,8 +1797,8 @@ day,country,share,reports,reports_day
 2026-11-11,Bangladesh,1.8,9,2
 2026-11-12,Bangladesh,1.805,9,0
 2026-11-13,Bangladesh,0.818,4,0
-2026-11-14,Bangladesh,0.619,3,0
-2026-05-19,Bosnia and Herzegovina,0.0,0,0
+2026-11-14,Bangladesh,0.618,3,0
+2026-11-15,Bangladesh,1.016,5,2
 2026-05-20,Bosnia and Herzegovina,0.0,0,0
 2026-05-21,Bosnia and Herzegovina,0.0,0,0
 2026-05-22,Bosnia and Herzegovina,0.0,0,0
@@ -1979,7 +1978,7 @@ day,country,share,reports,reports_day
 2026-11-12,Bosnia and Herzegovina,2.597,1,0
 2026-11-13,Bosnia and Herzegovina,0.0,0,0
 2026-11-14,Bosnia and Herzegovina,0.0,0,0
-2026-05-19,Myanmar,0.0,0,0
+2026-11-15,Bosnia and Herzegovina,0.0,0,0
 2026-05-20,Myanmar,0.0,0,0
 2026-05-21,Myanmar,0.0,0,0
 2026-05-22,Myanmar,0.0,0,0
@@ -2159,7 +2158,7 @@ day,country,share,reports,reports_day
 2026-11-12,Myanmar,0.0,0,0
 2026-11-13,Myanmar,0.0,0,0
 2026-11-14,Myanmar,0.0,0,0
-2026-05-19,Benin,0.0,0,0
+2026-11-15,Myanmar,0.0,0,0
 2026-05-20,Benin,0.0,0,0
 2026-05-21,Benin,0.0,0,0
 2026-05-22,Benin,0.0,0,0
@@ -2339,7 +2338,7 @@ day,country,share,reports,reports_day
 2026-11-12,Benin,0.0,0,0
 2026-11-13,Benin,0.0,0,0
 2026-11-14,Benin,0.0,0,0
-2026-05-19,Brazil,0.179,2,0
+2026-11-15,Benin,0.0,0,0
 2026-05-20,Brazil,0.179,2,0
 2026-05-21,Brazil,0.0,0,0
 2026-05-22,Brazil,0.0,0,0
@@ -2490,7 +2489,7 @@ day,country,share,reports,reports_day
 2026-10-14,Brazil,0.952,12,0
 2026-10-15,Brazil,0.236,3,0
 2026-10-16,Brazil,0.077,1,0
-2026-10-17,Brazil,0.154,2,1
+2026-10-17,Brazil,0.153,2,1
 2026-10-18,Brazil,0.625,8,6
 2026-10-19,Brazil,0.896,12,4
 2026-10-20,Brazil,0.793,11,0
@@ -2519,7 +2518,7 @@ day,country,share,reports,reports_day
 2026-11-12,Brazil,0.081,1,0
 2026-11-13,Brazil,0.159,2,2
 2026-11-14,Brazil,0.158,2,0
-2026-05-19,Bulgaria,0.0,0,0
+2026-11-15,Brazil,0.237,3,1
 2026-05-20,Bulgaria,0.0,0,0
 2026-05-21,Bulgaria,0.0,0,0
 2026-05-22,Bulgaria,0.0,0,0
@@ -2699,7 +2698,7 @@ day,country,share,reports,reports_day
 2026-11-12,Bulgaria,0.0,0,0
 2026-11-13,Bulgaria,0.0,0,0
 2026-11-14,Bulgaria,0.0,0,0
-2026-05-19,Canada,0.052,1,1
+2026-11-15,Bulgaria,0.0,0,0
 2026-05-20,Canada,0.052,1,0
 2026-05-21,Canada,0.052,1,0
 2026-05-22,Canada,0.051,1,0
@@ -2854,7 +2853,7 @@ day,country,share,reports,reports_day
 2026-10-18,Canada,0.181,4,2
 2026-10-19,Canada,0.168,4,0
 2026-10-20,Canada,0.16,4,0
-2026-10-21,Canada,0.241,6,3
+2026-10-21,Canada,0.24,6,3
 2026-10-22,Canada,0.31,8,2
 2026-10-23,Canada,0.355,9,1
 2026-10-24,Canada,0.394,10,2
@@ -2879,7 +2878,7 @@ day,country,share,reports,reports_day
 2026-11-12,Canada,0.249,5,1
 2026-11-13,Canada,0.294,6,4
 2026-11-14,Canada,0.581,12,6
-2026-05-19,Sri Lanka,0.585,1,1
+2026-11-15,Canada,0.672,14,2
 2026-05-20,Sri Lanka,1.135,2,1
 2026-05-21,Sri Lanka,1.139,2,0
 2026-05-22,Sri Lanka,1.172,2,0
@@ -3059,7 +3058,7 @@ day,country,share,reports,reports_day
 2026-11-12,Sri Lanka,0.0,0,0
 2026-11-13,Sri Lanka,0.0,0,0
 2026-11-14,Sri Lanka,0.0,0,0
-2026-05-19,China,0.021,1,0
+2026-11-15,Sri Lanka,0.0,0,0
 2026-05-20,China,0.022,1,0
 2026-05-21,China,0.024,1,0
 2026-05-22,China,0.027,1,0
@@ -3239,7 +3238,7 @@ day,country,share,reports,reports_day
 2026-11-12,China,0.0,0,0
 2026-11-13,China,0.0,0,0
 2026-11-14,China,0.0,0,0
-2026-05-19,Chile,1.456,3,0
+2026-11-15,China,0.0,0,0
 2026-05-20,Chile,1.416,3,0
 2026-05-21,Chile,1.425,3,0
 2026-05-22,Chile,1.002,2,1
@@ -3419,7 +3418,7 @@ day,country,share,reports,reports_day
 2026-11-12,Chile,0.854,2,0
 2026-11-13,Chile,0.912,2,0
 2026-11-14,Chile,0.954,2,0
-2026-05-19,Colombia,0.482,3,0
+2026-11-15,Chile,0.993,2,0
 2026-05-20,Colombia,0.457,3,0
 2026-05-21,Colombia,0.298,2,0
 2026-05-22,Colombia,0.146,1,0
@@ -3599,7 +3598,7 @@ day,country,share,reports,reports_day
 2026-11-12,Colombia,0.237,2,0
 2026-11-13,Colombia,0.0,0,0
 2026-11-14,Colombia,0.0,0,0
-2026-05-19,Cuba,0.0,0,0
+2026-11-15,Colombia,0.121,1,1
 2026-05-20,Cuba,0.0,0,0
 2026-05-21,Cuba,0.0,0,0
 2026-05-22,Cuba,0.0,0,0
@@ -3779,7 +3778,7 @@ day,country,share,reports,reports_day
 2026-11-12,Cuba,0.0,0,0
 2026-11-13,Cuba,0.0,0,0
 2026-11-14,Cuba,0.0,0,0
-2026-05-19,Cyprus,0.0,0,0
+2026-11-15,Cuba,0.0,0,0
 2026-05-20,Cyprus,0.0,0,0
 2026-05-21,Cyprus,0.0,0,0
 2026-05-22,Cyprus,0.0,0,0
@@ -3959,7 +3958,7 @@ day,country,share,reports,reports_day
 2026-11-12,Cyprus,1.402,4,0
 2026-11-13,Cyprus,1.45,4,1
 2026-11-14,Cyprus,1.455,4,0
-2026-05-19,Denmark,0.0,0,0
+2026-11-15,Cyprus,0.681,2,0
 2026-05-20,Denmark,0.0,0,0
 2026-05-21,Denmark,0.0,0,0
 2026-05-22,Denmark,0.0,0,0
@@ -4139,7 +4138,7 @@ day,country,share,reports,reports_day
 2026-11-12,Denmark,0.268,1,0
 2026-11-13,Denmark,0.0,0,0
 2026-11-14,Denmark,0.0,0,0
-2026-05-19,Ecuador,1.057,2,0
+2026-11-15,Denmark,0.0,0,0
 2026-05-20,Ecuador,0.0,0,0
 2026-05-21,Ecuador,0.0,0,0
 2026-05-22,Ecuador,0.0,0,0
@@ -4319,7 +4318,7 @@ day,country,share,reports,reports_day
 2026-11-12,Ecuador,1.24,2,0
 2026-11-13,Ecuador,1.233,2,0
 2026-11-14,Ecuador,1.203,2,0
-2026-05-19,Egypt,0.0,0,0
+2026-11-15,Ecuador,0.609,1,0
 2026-05-20,Egypt,0.0,0,0
 2026-05-21,Egypt,0.0,0,0
 2026-05-22,Egypt,0.257,2,2
@@ -4499,7 +4498,7 @@ day,country,share,reports,reports_day
 2026-11-12,Egypt,0.125,1,0
 2026-11-13,Egypt,0.0,0,0
 2026-11-14,Egypt,0.0,0,0
-2026-05-19,Ireland,0.0,0,0
+2026-11-15,Egypt,0.0,0,0
 2026-05-20,Ireland,0.0,0,0
 2026-05-21,Ireland,0.0,0,0
 2026-05-22,Ireland,0.0,0,0
@@ -4678,8 +4677,8 @@ day,country,share,reports,reports_day
 2026-11-11,Ireland,0.312,3,2
 2026-11-12,Ireland,0.52,6,3
 2026-11-13,Ireland,0.637,8,2
-2026-11-14,Ireland,0.618,8,0
-2026-05-19,Czechia,0.0,0,0
+2026-11-14,Ireland,0.617,8,0
+2026-11-15,Ireland,0.607,8,0
 2026-05-20,Czechia,0.0,0,0
 2026-05-21,Czechia,0.0,0,0
 2026-05-22,Czechia,0.0,0,0
@@ -4834,7 +4833,7 @@ day,country,share,reports,reports_day
 2026-10-18,Czechia,0.0,0,0
 2026-10-19,Czechia,0.325,1,1
 2026-10-20,Czechia,0.346,1,0
-2026-10-21,Czechia,0.351,1,0
+2026-10-21,Czechia,0.35,1,0
 2026-10-22,Czechia,0.353,1,0
 2026-10-23,Czechia,0.365,1,0
 2026-10-24,Czechia,0.707,2,1
@@ -4852,14 +4851,14 @@ day,country,share,reports,reports_day
 2026-11-05,Czechia,3.815,10,0
 2026-11-06,Czechia,2.459,7,0
 2026-11-07,Czechia,2.442,7,1
-2026-11-08,Czechia,2.443,7,1
-2026-11-09,Czechia,2.251,6,1
-2026-11-10,Czechia,2.31,6,3
-2026-11-11,Czechia,2.291,6,0
-2026-11-12,Czechia,2.806,7,1
-2026-11-13,Czechia,3.393,8,1
-2026-11-14,Czechia,3.004,7,0
-2026-05-19,Finland,0.401,1,0
+2026-11-08,Czechia,2.441,7,1
+2026-11-09,Czechia,2.249,6,1
+2026-11-10,Czechia,2.308,6,3
+2026-11-11,Czechia,2.288,6,0
+2026-11-12,Czechia,2.802,7,1
+2026-11-13,Czechia,3.388,8,1
+2026-11-14,Czechia,3.0,7,0
+2026-11-15,Czechia,3.317,9,3
 2026-05-20,Finland,0.385,1,0
 2026-05-21,Finland,0.373,1,0
 2026-05-22,Finland,0.402,1,0
@@ -5039,7 +5038,7 @@ day,country,share,reports,reports_day
 2026-11-12,Finland,0.0,0,0
 2026-11-13,Finland,0.0,0,0
 2026-11-14,Finland,0.0,0,0
-2026-05-19,France,0.182,3,1
+2026-11-15,Finland,0.0,0,0
 2026-05-20,France,0.253,4,1
 2026-05-21,France,0.247,4,0
 2026-05-22,France,0.24,4,0
@@ -5189,13 +5188,13 @@ day,country,share,reports,reports_day
 2026-10-13,France,8.78,189,30
 2026-10-14,France,7.733,158,18
 2026-10-15,France,7.097,140,13
-2026-10-16,France,6.395,125,17
-2026-10-17,France,6.916,143,31
-2026-10-18,France,7.309,170,40
+2026-10-16,France,6.394,125,17
+2026-10-17,France,6.915,143,31
+2026-10-18,France,7.308,170,40
 2026-10-19,France,6.878,181,32
-2026-10-20,France,6.29,177,26
-2026-10-21,France,5.954,177,18
-2026-10-22,France,6.068,189,25
+2026-10-20,France,6.289,177,26
+2026-10-21,France,5.953,177,18
+2026-10-22,France,6.067,189,25
 2026-10-23,France,6.011,197,25
 2026-10-24,France,5.589,187,21
 2026-10-25,France,5.046,162,15
@@ -5212,14 +5211,14 @@ day,country,share,reports,reports_day
 2026-11-05,France,4.893,97,15
 2026-11-06,France,4.589,93,7
 2026-11-07,France,4.262,86,12
-2026-11-08,France,4.086,80,4
+2026-11-08,France,4.085,80,4
 2026-11-09,France,3.612,76,9
 2026-11-10,France,3.038,69,7
 2026-11-11,France,2.406,57,3
 2026-11-12,France,2.029,47,5
 2026-11-13,France,1.971,45,5
-2026-11-14,France,1.713,39,6
-2026-05-19,Georgia,3.044,2,0
+2026-11-14,France,1.712,39,6
+2026-11-15,France,1.919,44,9
 2026-05-20,Georgia,0.0,0,0
 2026-05-21,Georgia,0.0,0,0
 2026-05-22,Georgia,0.0,0,0
@@ -5399,7 +5398,7 @@ day,country,share,reports,reports_day
 2026-11-12,Georgia,0.0,0,0
 2026-11-13,Georgia,0.0,0,0
 2026-11-14,Georgia,0.0,0,0
-2026-05-19,Ghana,0.0,0,0
+2026-11-15,Georgia,0.0,0,0
 2026-05-20,Ghana,0.0,0,0
 2026-05-21,Ghana,0.0,0,0
 2026-05-22,Ghana,0.0,0,0
@@ -5579,7 +5578,7 @@ day,country,share,reports,reports_day
 2026-11-12,Ghana,0.268,1,0
 2026-11-13,Ghana,1.273,5,4
 2026-11-14,Ghana,1.325,5,0
-2026-05-19,Germany,0.212,3,0
+2026-11-15,Ghana,1.363,5,0
 2026-05-20,Germany,0.069,1,0
 2026-05-21,Germany,0.066,1,0
 2026-05-22,Germany,0.065,1,0
@@ -5754,12 +5753,12 @@ day,country,share,reports,reports_day
 2026-11-07,Germany,0.242,4,0
 2026-11-08,Germany,0.32,5,2
 2026-11-09,Germany,0.191,3,1
-2026-11-10,Germany,0.187,3,0
+2026-11-10,Germany,0.186,3,0
 2026-11-11,Germany,0.492,8,5
 2026-11-12,Germany,0.502,8,0
 2026-11-13,Germany,0.487,8,0
 2026-11-14,Germany,0.476,8,0
-2026-05-19,Greece,0.419,4,2
+2026-11-15,Germany,0.36,6,0
 2026-05-20,Greece,0.505,5,1
 2026-05-21,Greece,0.598,6,1
 2026-05-22,Greece,0.676,7,1
@@ -5939,7 +5938,7 @@ day,country,share,reports,reports_day
 2026-11-12,Greece,0.679,7,3
 2026-11-13,Greece,0.68,7,1
 2026-11-14,Greece,0.581,6,0
-2026-05-19,Gaza,0.0,0,0
+2026-11-15,Greece,0.68,7,1
 2026-05-20,Gaza,0.0,0,0
 2026-05-21,Gaza,0.0,0,0
 2026-05-22,Gaza,0.0,0,0
@@ -6119,7 +6118,7 @@ day,country,share,reports,reports_day
 2026-11-12,Gaza,0.0,0,0
 2026-11-13,Gaza,0.0,0,0
 2026-11-14,Gaza,0.0,0,0
-2026-05-19,Haiti,0.0,0,0
+2026-11-15,Gaza,0.0,0,0
 2026-05-20,Haiti,0.0,0,0
 2026-05-21,Haiti,0.0,0,0
 2026-05-22,Haiti,0.0,0,0
@@ -6299,7 +6298,7 @@ day,country,share,reports,reports_day
 2026-11-12,Haiti,0.0,0,0
 2026-11-13,Haiti,0.0,0,0
 2026-11-14,Haiti,0.0,0,0
-2026-05-19,Hong Kong,0.0,0,0
+2026-11-15,Haiti,0.0,0,0
 2026-05-20,Hong Kong,0.0,0,0
 2026-05-21,Hong Kong,0.0,0,0
 2026-05-22,Hong Kong,0.0,0,0
@@ -6479,7 +6478,7 @@ day,country,share,reports,reports_day
 2026-11-12,Hong Kong,2.671,3,1
 2026-11-13,Hong Kong,2.132,2,0
 2026-11-14,Hong Kong,1.179,1,0
-2026-05-19,Croatia,0.385,1,1
+2026-11-15,Hong Kong,1.211,1,0
 2026-05-20,Croatia,0.767,2,1
 2026-05-21,Croatia,0.77,2,0
 2026-05-22,Croatia,0.767,2,0
@@ -6653,13 +6652,13 @@ day,country,share,reports,reports_day
 2026-11-06,Croatia,0.877,2,1
 2026-11-07,Croatia,0.874,2,0
 2026-11-08,Croatia,0.427,1,0
-2026-11-09,Croatia,0.402,1,0
+2026-11-09,Croatia,0.401,1,0
 2026-11-10,Croatia,0.37,1,0
 2026-11-11,Croatia,0.326,1,0
 2026-11-12,Croatia,0.31,1,0
 2026-11-13,Croatia,0.0,0,0
 2026-11-14,Croatia,0.0,0,0
-2026-05-19,Hungary,0.0,0,0
+2026-11-15,Croatia,0.0,0,0
 2026-05-20,Hungary,0.0,0,0
 2026-05-21,Hungary,0.0,0,0
 2026-05-22,Hungary,0.0,0,0
@@ -6832,14 +6831,14 @@ day,country,share,reports,reports_day
 2026-11-05,Hungary,2.815,8,0
 2026-11-06,Hungary,2.686,8,1
 2026-11-07,Hungary,1.343,4,0
-2026-11-08,Hungary,1.373,4,0
-2026-11-09,Hungary,1.691,5,1
-2026-11-10,Hungary,1.372,4,0
+2026-11-08,Hungary,1.372,4,0
+2026-11-09,Hungary,1.69,5,1
+2026-11-10,Hungary,1.371,4,0
 2026-11-11,Hungary,0.697,2,0
 2026-11-12,Hungary,0.729,2,0
-2026-11-13,Hungary,0.376,1,0
+2026-11-13,Hungary,0.375,1,0
 2026-11-14,Hungary,0.362,1,0
-2026-05-19,Indonesia,0.2,2,0
+2026-11-15,Hungary,0.348,1,0
 2026-05-20,Indonesia,0.0,0,0
 2026-05-21,Indonesia,0.094,1,1
 2026-05-22,Indonesia,0.185,2,1
@@ -7015,11 +7014,11 @@ day,country,share,reports,reports_day
 2026-11-08,Indonesia,0.266,2,0
 2026-11-09,Indonesia,0.529,4,2
 2026-11-10,Indonesia,1.467,11,7
-2026-11-11,Indonesia,1.575,12,1
+2026-11-11,Indonesia,1.574,12,1
 2026-11-12,Indonesia,1.93,15,4
 2026-11-13,Indonesia,1.752,14,0
-2026-11-14,Indonesia,1.701,14,0
-2026-05-19,India,0.898,41,2
+2026-11-14,Indonesia,1.7,14,0
+2026-11-15,Indonesia,1.783,15,1
 2026-05-20,India,0.704,32,5
 2026-05-21,India,0.647,29,4
 2026-05-22,India,0.495,22,0
@@ -7169,13 +7168,13 @@ day,country,share,reports,reports_day
 2026-10-13,India,2.754,154,31
 2026-10-14,India,2.782,159,21
 2026-10-15,India,3.05,177,32
-2026-10-16,India,3.45,202,40
-2026-10-17,India,3.703,209,36
-2026-10-18,India,3.829,210,28
-2026-10-19,India,3.782,202,14
-2026-10-20,India,3.526,183,12
-2026-10-21,India,3.334,168,6
-2026-10-22,India,3.056,149,13
+2026-10-16,India,3.449,202,40
+2026-10-17,India,3.702,209,36
+2026-10-18,India,3.828,210,28
+2026-10-19,India,3.78,202,14
+2026-10-20,India,3.525,183,12
+2026-10-21,India,3.333,168,6
+2026-10-22,India,3.055,149,13
 2026-10-23,India,2.514,120,11
 2026-10-24,India,2.148,103,19
 2026-10-25,India,1.996,98,23
@@ -7192,14 +7191,14 @@ day,country,share,reports,reports_day
 2026-11-05,India,1.316,65,13
 2026-11-06,India,1.146,55,2
 2026-11-07,India,1.079,50,3
-2026-11-08,India,0.88,39,1
-2026-11-09,India,0.806,34,4
+2026-11-08,India,0.879,39,1
+2026-11-09,India,0.805,34,4
 2026-11-10,India,0.767,31,1
 2026-11-11,India,0.804,32,8
 2026-11-12,India,0.56,22,3
 2026-11-13,India,0.626,25,5
-2026-11-14,India,0.712,29,7
-2026-05-19,Iran,0.051,2,0
+2026-11-14,India,0.711,29,7
+2026-11-15,India,0.662,28,0
 2026-05-20,Iran,0.078,3,1
 2026-05-21,Iran,0.08,3,0
 2026-05-22,Iran,0.054,2,1
@@ -7379,7 +7378,7 @@ day,country,share,reports,reports_day
 2026-11-12,Iran,0.032,1,0
 2026-11-13,Iran,0.0,0,0
 2026-11-14,Iran,0.0,0,0
-2026-05-19,Israel,0.29,13,0
+2026-11-15,Iran,0.0,0,0
 2026-05-20,Israel,0.282,13,3
 2026-05-21,Israel,0.232,11,1
 2026-05-22,Israel,0.172,8,1
@@ -7532,10 +7531,10 @@ day,country,share,reports,reports_day
 2026-10-16,Israel,0.685,25,12
 2026-10-17,Israel,0.682,25,4
 2026-10-18,Israel,0.639,24,0
-2026-10-19,Israel,0.745,29,6
+2026-10-19,Israel,0.744,29,6
 2026-10-20,Israel,0.823,33,5
 2026-10-21,Israel,0.851,34,5
-2026-10-22,Israel,0.85,34,2
+2026-10-22,Israel,0.849,34,2
 2026-10-23,Israel,0.568,23,1
 2026-10-24,Israel,0.566,23,4
 2026-10-25,Israel,0.564,23,0
@@ -7553,13 +7552,13 @@ day,country,share,reports,reports_day
 2026-11-06,Israel,0.257,9,0
 2026-11-07,Israel,0.229,8,0
 2026-11-08,Israel,0.228,8,0
-2026-11-09,Israel,0.265,9,1
+2026-11-09,Israel,0.264,9,1
 2026-11-10,Israel,0.148,5,2
 2026-11-11,Israel,0.121,4,0
 2026-11-12,Israel,0.121,4,1
 2026-11-13,Israel,0.15,5,1
-2026-11-14,Israel,0.15,5,0
-2026-05-19,Italy,0.33,7,0
+2026-11-14,Israel,0.149,5,0
+2026-11-15,Israel,0.151,5,0
 2026-05-20,Italy,0.324,7,0
 2026-05-21,Italy,0.364,8,2
 2026-05-22,Italy,0.18,4,1
@@ -7736,10 +7735,10 @@ day,country,share,reports,reports_day
 2026-11-09,Italy,1.082,22,4
 2026-11-10,Italy,0.954,20,2
 2026-11-11,Italy,0.997,22,4
-2026-11-12,Italy,1.01,22,4
+2026-11-12,Italy,1.009,22,4
 2026-11-13,Italy,0.944,20,2
 2026-11-14,Italy,0.996,21,3
-2026-05-19,Iraq,0.288,1,0
+2026-11-15,Italy,0.956,20,1
 2026-05-20,Iraq,0.287,1,0
 2026-05-21,Iraq,0.293,1,0
 2026-05-22,Iraq,0.298,1,0
@@ -7919,7 +7918,7 @@ day,country,share,reports,reports_day
 2026-11-12,Iraq,1.172,5,2
 2026-11-13,Iraq,1.186,5,0
 2026-11-14,Iraq,1.165,5,0
-2026-05-19,Japan,0.137,1,0
+2026-11-15,Iraq,1.228,5,2
 2026-05-20,Japan,0.138,1,0
 2026-05-21,Japan,0.139,1,0
 2026-05-22,Japan,0.0,0,0
@@ -8099,7 +8098,7 @@ day,country,share,reports,reports_day
 2026-11-12,Japan,0.0,0,0
 2026-11-13,Japan,0.0,0,0
 2026-11-14,Japan,0.0,0,0
-2026-05-19,Jamaica,0.0,0,0
+2026-11-15,Japan,0.0,0,0
 2026-05-20,Jamaica,0.0,0,0
 2026-05-21,Jamaica,0.0,0,0
 2026-05-22,Jamaica,0.0,0,0
@@ -8279,7 +8278,7 @@ day,country,share,reports,reports_day
 2026-11-12,Jamaica,0.873,1,0
 2026-11-13,Jamaica,0.853,1,0
 2026-11-14,Jamaica,1.704,2,1
-2026-05-19,Jordan,0.0,0,0
+2026-11-15,Jamaica,1.759,2,0
 2026-05-20,Jordan,0.508,1,1
 2026-05-21,Jordan,0.518,1,0
 2026-05-22,Jordan,0.577,1,0
@@ -8435,7 +8434,7 @@ day,country,share,reports,reports_day
 2026-10-19,Jordan,0.0,0,0
 2026-10-20,Jordan,0.0,0,0
 2026-10-21,Jordan,0.0,0,0
-2026-10-22,Jordan,1.207,2,2
+2026-10-22,Jordan,1.173,2,2
 2026-10-23,Jordan,0.788,2,0
 2026-10-24,Jordan,0.522,2,0
 2026-10-25,Jordan,0.456,2,0
@@ -8458,8 +8457,8 @@ day,country,share,reports,reports_day
 2026-11-11,Jordan,0.41,1,0
 2026-11-12,Jordan,0.445,1,0
 2026-11-13,Jordan,0.493,1,0
-2026-11-14,Jordan,1.503,3,2
-2026-05-19,Kenya,0.0,0,0
+2026-11-14,Jordan,1.496,3,2
+2026-11-15,Jordan,0.827,2,0
 2026-05-20,Kenya,0.0,0,0
 2026-05-21,Kenya,0.0,0,0
 2026-05-22,Kenya,0.518,2,2
@@ -8639,7 +8638,7 @@ day,country,share,reports,reports_day
 2026-11-12,Kenya,0.0,0,0
 2026-11-13,Kenya,0.0,0,0
 2026-11-14,Kenya,0.0,0,0
-2026-05-19,South Korea,0.0,0,0
+2026-11-15,Kenya,0.0,0,0
 2026-05-20,South Korea,0.0,0,0
 2026-05-21,South Korea,0.0,0,0
 2026-05-22,South Korea,0.0,0,0
@@ -8789,13 +8788,13 @@ day,country,share,reports,reports_day
 2026-10-13,South Korea,0.605,5,2
 2026-10-14,South Korea,0.628,5,0
 2026-10-15,South Korea,0.544,4,0
-2026-10-16,South Korea,0.808,6,2
-2026-10-17,South Korea,0.832,6,0
-2026-10-18,South Korea,0.834,6,0
-2026-10-19,South Korea,0.548,4,0
-2026-10-20,South Korea,0.26,2,0
-2026-10-21,South Korea,0.384,3,1
-2026-10-22,South Korea,0.371,3,0
+2026-10-16,South Korea,0.806,6,2
+2026-10-17,South Korea,0.83,6,0
+2026-10-18,South Korea,0.832,6,0
+2026-10-19,South Korea,0.547,4,0
+2026-10-20,South Korea,0.259,2,0
+2026-10-21,South Korea,0.383,3,1
+2026-10-22,South Korea,0.37,3,0
 2026-10-23,South Korea,0.116,1,0
 2026-10-24,South Korea,0.11,1,0
 2026-10-25,South Korea,0.22,2,1
@@ -8819,7 +8818,7 @@ day,country,share,reports,reports_day
 2026-11-12,South Korea,0.134,1,0
 2026-11-13,South Korea,0.135,1,0
 2026-11-14,South Korea,0.134,1,0
-2026-05-19,Kosovo,0.0,0,0
+2026-11-15,South Korea,0.13,1,0
 2026-05-20,Kosovo,0.0,0,0
 2026-05-21,Kosovo,0.0,0,0
 2026-05-22,Kosovo,0.0,0,0
@@ -8999,7 +8998,7 @@ day,country,share,reports,reports_day
 2026-11-12,Kosovo,0.0,0,0
 2026-11-13,Kosovo,0.0,0,0
 2026-11-14,Kosovo,0.0,0,0
-2026-05-19,Lebanon,0.0,0,0
+2026-11-15,Kosovo,0.0,0,0
 2026-05-20,Lebanon,0.0,0,0
 2026-05-21,Lebanon,0.0,0,0
 2026-05-22,Lebanon,0.0,0,0
@@ -9179,7 +9178,7 @@ day,country,share,reports,reports_day
 2026-11-12,Lebanon,0.0,0,0
 2026-11-13,Lebanon,0.0,0,0
 2026-11-14,Lebanon,0.0,0,0
-2026-05-19,Liberia,0.0,0,0
+2026-11-15,Lebanon,0.272,1,1
 2026-05-20,Liberia,0.0,0,0
 2026-05-21,Liberia,0.0,0,0
 2026-05-22,Liberia,0.0,0,0
@@ -9359,7 +9358,7 @@ day,country,share,reports,reports_day
 2026-11-12,Liberia,0.626,1,0
 2026-11-13,Liberia,0.626,1,0
 2026-11-14,Liberia,0.605,1,0
-2026-05-19,Slovakia,0.0,0,0
+2026-11-15,Liberia,0.602,1,0
 2026-05-20,Slovakia,0.0,0,0
 2026-05-21,Slovakia,0.0,0,0
 2026-05-22,Slovakia,0.0,0,0
@@ -9539,7 +9538,7 @@ day,country,share,reports,reports_day
 2026-11-12,Slovakia,0.0,0,0
 2026-11-13,Slovakia,0.0,0,0
 2026-11-14,Slovakia,0.0,0,0
-2026-05-19,North Macedonia,7.036,17,4
+2026-11-15,Slovakia,0.0,0,0
 2026-05-20,North Macedonia,8.434,21,6
 2026-05-21,North Macedonia,9.768,24,3
 2026-05-22,North Macedonia,10.45,26,2
@@ -9719,7 +9718,7 @@ day,country,share,reports,reports_day
 2026-11-12,North Macedonia,0.0,0,0
 2026-11-13,North Macedonia,0.0,0,0
 2026-11-14,North Macedonia,0.0,0,0
-2026-05-19,Morocco,0.397,1,0
+2026-11-15,North Macedonia,0.0,0,0
 2026-05-20,Morocco,0.387,1,0
 2026-05-21,Morocco,0.392,1,0
 2026-05-22,Morocco,0.37,1,0
@@ -9899,7 +9898,7 @@ day,country,share,reports,reports_day
 2026-11-12,Morocco,0.0,0,0
 2026-11-13,Morocco,0.318,1,1
 2026-11-14,Morocco,0.314,1,0
-2026-05-19,Mexico,0.587,10,4
+2026-11-15,Morocco,0.312,1,0
 2026-05-20,Mexico,0.608,10,1
 2026-05-21,Mexico,0.489,8,1
 2026-05-22,Mexico,0.492,8,1
@@ -10079,7 +10078,7 @@ day,country,share,reports,reports_day
 2026-11-12,Mexico,0.191,3,0
 2026-11-13,Mexico,0.064,1,0
 2026-11-14,Mexico,0.065,1,0
-2026-05-19,Malaysia,0.0,0,0
+2026-11-15,Mexico,0.065,1,0
 2026-05-20,Malaysia,0.0,0,0
 2026-05-21,Malaysia,0.0,0,0
 2026-05-22,Malaysia,0.0,0,0
@@ -10259,7 +10258,7 @@ day,country,share,reports,reports_day
 2026-11-12,Malaysia,0.0,0,0
 2026-11-13,Malaysia,0.0,0,0
 2026-11-14,Malaysia,0.0,0,0
-2026-05-19,Nigeria,0.182,5,1
+2026-11-15,Malaysia,0.0,0,0
 2026-05-20,Nigeria,0.182,5,1
 2026-05-21,Nigeria,0.221,6,2
 2026-05-22,Nigeria,0.259,7,1
@@ -10439,7 +10438,7 @@ day,country,share,reports,reports_day
 2026-11-12,Nigeria,0.0,0,0
 2026-11-13,Nigeria,0.0,0,0
 2026-11-14,Nigeria,0.0,0,0
-2026-05-19,Netherlands,0.0,0,0
+2026-11-15,Nigeria,0.211,5,5
 2026-05-20,Netherlands,0.0,0,0
 2026-05-21,Netherlands,0.0,0,0
 2026-05-22,Netherlands,0.0,0,0
@@ -10619,7 +10618,7 @@ day,country,share,reports,reports_day
 2026-11-12,Netherlands,0.242,1,0
 2026-11-13,Netherlands,0.252,1,0
 2026-11-14,Netherlands,0.0,0,0
-2026-05-19,Norway,0.0,0,0
+2026-11-15,Netherlands,0.0,0,0
 2026-05-20,Norway,0.0,0,0
 2026-05-21,Norway,0.0,0,0
 2026-05-22,Norway,0.0,0,0
@@ -10799,7 +10798,7 @@ day,country,share,reports,reports_day
 2026-11-12,Norway,0.0,0,0
 2026-11-13,Norway,0.0,0,0
 2026-11-14,Norway,0.0,0,0
-2026-05-19,Nepal,0.368,1,0
+2026-11-15,Norway,0.0,0,0
 2026-05-20,Nepal,0.373,1,0
 2026-05-21,Nepal,0.376,1,0
 2026-05-22,Nepal,0.374,1,0
@@ -10979,7 +10978,7 @@ day,country,share,reports,reports_day
 2026-11-12,Nepal,0.0,0,0
 2026-11-13,Nepal,0.0,0,0
 2026-11-14,Nepal,0.0,0,0
-2026-05-19,Nicaragua,0.0,0,0
+2026-11-15,Nepal,0.0,0,0
 2026-05-20,Nicaragua,0.0,0,0
 2026-05-21,Nicaragua,0.0,0,0
 2026-05-22,Nicaragua,0.0,0,0
@@ -11159,7 +11158,7 @@ day,country,share,reports,reports_day
 2026-11-12,Nicaragua,0.0,0,0
 2026-11-13,Nicaragua,0.0,0,0
 2026-11-14,Nicaragua,0.0,0,0
-2026-05-19,New Zealand,0.0,0,0
+2026-11-15,Nicaragua,0.0,0,0
 2026-05-20,New Zealand,0.0,0,0
 2026-05-21,New Zealand,0.0,0,0
 2026-05-22,New Zealand,0.0,0,0
@@ -11335,11 +11334,11 @@ day,country,share,reports,reports_day
 2026-11-08,New Zealand,0.238,1,1
 2026-11-09,New Zealand,0.715,3,2
 2026-11-10,New Zealand,0.947,4,1
-2026-11-11,New Zealand,0.967,4,0
-2026-11-12,New Zealand,0.977,4,0
-2026-11-13,New Zealand,0.958,4,0
-2026-11-14,New Zealand,1.02,4,0
-2026-05-19,Peru,3.336,9,0
+2026-11-11,New Zealand,0.966,4,0
+2026-11-12,New Zealand,0.976,4,0
+2026-11-13,New Zealand,0.957,4,0
+2026-11-14,New Zealand,1.018,4,0
+2026-11-15,New Zealand,0.852,3,0
 2026-05-20,Peru,1.907,5,0
 2026-05-21,Peru,1.91,5,0
 2026-05-22,Peru,0.0,0,0
@@ -11519,7 +11518,7 @@ day,country,share,reports,reports_day
 2026-11-12,Peru,0.0,0,0
 2026-11-13,Peru,0.0,0,0
 2026-11-14,Peru,0.0,0,0
-2026-05-19,Pakistan,0.249,3,1
+2026-11-15,Peru,0.0,0,0
 2026-05-20,Pakistan,0.24,3,0
 2026-05-21,Pakistan,0.457,6,3
 2026-05-22,Pakistan,0.425,6,0
@@ -11692,14 +11691,14 @@ day,country,share,reports,reports_day
 2026-11-05,Pakistan,0.396,4,1
 2026-11-06,Pakistan,0.488,5,1
 2026-11-07,Pakistan,0.592,6,1
-2026-11-08,Pakistan,0.592,6,1
-2026-11-09,Pakistan,0.575,6,0
+2026-11-08,Pakistan,0.591,6,1
+2026-11-09,Pakistan,0.574,6,0
 2026-11-10,Pakistan,0.56,6,0
 2026-11-11,Pakistan,0.455,5,1
 2026-11-12,Pakistan,0.345,4,0
 2026-11-13,Pakistan,0.254,3,0
 2026-11-14,Pakistan,0.162,2,0
-2026-05-19,Poland,0.0,0,0
+2026-11-15,Pakistan,0.079,1,0
 2026-05-20,Poland,0.0,0,0
 2026-05-21,Poland,0.0,0,0
 2026-05-22,Poland,0.0,0,0
@@ -11879,7 +11878,7 @@ day,country,share,reports,reports_day
 2026-11-12,Poland,0.0,0,0
 2026-11-13,Poland,0.0,0,0
 2026-11-14,Poland,0.0,0,0
-2026-05-19,Panama,0.873,1,0
+2026-11-15,Poland,0.0,0,0
 2026-05-20,Panama,0.898,1,0
 2026-05-21,Panama,0.89,1,0
 2026-05-22,Panama,0.0,0,0
@@ -12059,7 +12058,7 @@ day,country,share,reports,reports_day
 2026-11-12,Panama,0.0,0,0
 2026-11-13,Panama,0.0,0,0
 2026-11-14,Panama,0.0,0,0
-2026-05-19,Portugal,0.533,2,1
+2026-11-15,Panama,0.0,0,0
 2026-05-20,Portugal,0.529,2,0
 2026-05-21,Portugal,0.804,3,1
 2026-05-22,Portugal,0.78,3,0
@@ -12211,11 +12210,11 @@ day,country,share,reports,reports_day
 2026-10-15,Portugal,0.579,2,0
 2026-10-16,Portugal,0.573,2,0
 2026-10-17,Portugal,0.286,1,0
-2026-10-18,Portugal,1.079,4,3
-2026-10-19,Portugal,1.567,6,2
+2026-10-18,Portugal,1.078,4,3
+2026-10-19,Portugal,1.566,6,2
 2026-10-20,Portugal,1.48,6,0
-2026-10-21,Portugal,1.715,7,2
-2026-10-22,Portugal,1.963,8,1
+2026-10-21,Portugal,1.714,7,2
+2026-10-22,Portugal,1.962,8,1
 2026-10-23,Portugal,2.253,9,1
 2026-10-24,Portugal,2.453,10,1
 2026-10-25,Portugal,2.177,9,2
@@ -12239,7 +12238,7 @@ day,country,share,reports,reports_day
 2026-11-12,Portugal,0.228,1,0
 2026-11-13,Portugal,0.243,1,0
 2026-11-14,Portugal,0.247,1,0
-2026-05-19,Qatar,0.0,0,0
+2026-11-15,Portugal,0.249,1,0
 2026-05-20,Qatar,0.0,0,0
 2026-05-21,Qatar,0.0,0,0
 2026-05-22,Qatar,0.0,0,0
@@ -12419,7 +12418,7 @@ day,country,share,reports,reports_day
 2026-11-12,Qatar,0.0,0,0
 2026-11-13,Qatar,0.0,0,0
 2026-11-14,Qatar,0.0,0,0
-2026-05-19,Serbia,0.795,2,0
+2026-11-15,Qatar,0.0,0,0
 2026-05-20,Serbia,0.742,2,0
 2026-05-21,Serbia,0.363,1,0
 2026-05-22,Serbia,0.361,1,0
@@ -12598,8 +12597,8 @@ day,country,share,reports,reports_day
 2026-11-11,Serbia,1.764,5,4
 2026-11-12,Serbia,1.515,4,0
 2026-11-13,Serbia,2.444,6,2
-2026-11-14,Serbia,2.906,7,1
-2026-05-19,Romania,0.293,2,0
+2026-11-14,Serbia,2.905,7,1
+2026-11-15,Serbia,2.931,7,0
 2026-05-20,Romania,0.0,0,0
 2026-05-21,Romania,0.0,0,0
 2026-05-22,Romania,0.0,0,0
@@ -12779,7 +12778,7 @@ day,country,share,reports,reports_day
 2026-11-12,Romania,0.0,0,0
 2026-11-13,Romania,0.135,1,1
 2026-11-14,Romania,0.135,1,0
-2026-05-19,Philippines,0.389,3,1
+2026-11-15,Romania,0.131,1,0
 2026-05-20,Philippines,0.433,3,0
 2026-05-21,Philippines,0.465,3,0
 2026-05-22,Philippines,0.495,3,0
@@ -12929,9 +12928,9 @@ day,country,share,reports,reports_day
 2026-10-13,Philippines,0.693,4,0
 2026-10-14,Philippines,0.679,4,0
 2026-10-15,Philippines,0.651,4,0
-2026-10-16,Philippines,0.657,4,0
-2026-10-17,Philippines,0.665,4,0
-2026-10-18,Philippines,0.333,2,0
+2026-10-16,Philippines,0.653,4,0
+2026-10-17,Philippines,0.66,4,0
+2026-10-18,Philippines,0.33,2,0
 2026-10-19,Philippines,0.0,0,0
 2026-10-20,Philippines,0.0,0,0
 2026-10-21,Philippines,0.0,0,0
@@ -12952,14 +12951,14 @@ day,country,share,reports,reports_day
 2026-11-05,Philippines,0.145,1,0
 2026-11-06,Philippines,0.141,1,0
 2026-11-07,Philippines,0.142,1,0
-2026-11-08,Philippines,0.146,1,0
+2026-11-08,Philippines,0.145,1,0
 2026-11-09,Philippines,0.0,0,0
 2026-11-10,Philippines,0.0,0,0
 2026-11-11,Philippines,0.0,0,0
 2026-11-12,Philippines,0.0,0,0
 2026-11-13,Philippines,0.0,0,0
-2026-11-14,Philippines,0.222,2,2
-2026-05-19,Russia,0.022,1,0
+2026-11-14,Philippines,0.221,2,2
+2026-11-15,Philippines,0.291,3,1
 2026-05-20,Russia,0.021,1,0
 2026-05-21,Russia,0.021,1,0
 2026-05-22,Russia,0.021,1,0
@@ -13139,7 +13138,7 @@ day,country,share,reports,reports_day
 2026-11-12,Russia,0.052,3,0
 2026-11-13,Russia,0.034,2,1
 2026-11-14,Russia,0.033,2,0
-2026-05-19,South Africa,0.249,2,0
+2026-11-15,Russia,0.048,3,1
 2026-05-20,South Africa,0.125,1,0
 2026-05-21,South Africa,0.127,1,1
 2026-05-22,South Africa,0.127,1,0
@@ -13317,9 +13316,9 @@ day,country,share,reports,reports_day
 2026-11-10,South Africa,0.115,1,0
 2026-11-11,South Africa,0.121,1,1
 2026-11-12,South Africa,0.124,1,0
-2026-11-13,South Africa,0.123,1,0
+2026-11-13,South Africa,0.122,1,0
 2026-11-14,South Africa,0.122,1,0
-2026-05-19,Senegal,2.123,2,0
+2026-11-15,South Africa,0.366,3,2
 2026-05-20,Senegal,2.195,2,0
 2026-05-21,Senegal,2.268,2,0
 2026-05-22,Senegal,0.0,0,0
@@ -13499,7 +13498,7 @@ day,country,share,reports,reports_day
 2026-11-12,Senegal,0.0,0,0
 2026-11-13,Senegal,0.0,0,0
 2026-11-14,Senegal,0.0,0,0
-2026-05-19,Singapore,0.0,0,0
+2026-11-15,Senegal,0.0,0,0
 2026-05-20,Singapore,0.0,0,0
 2026-05-21,Singapore,0.0,0,0
 2026-05-22,Singapore,0.0,0,0
@@ -13679,7 +13678,7 @@ day,country,share,reports,reports_day
 2026-11-12,Singapore,0.0,0,0
 2026-11-13,Singapore,0.0,0,0
 2026-11-14,Singapore,0.0,0,0
-2026-05-19,Spain,0.326,6,2
+2026-11-15,Singapore,0.0,0,0
 2026-05-20,Spain,0.492,9,3
 2026-05-21,Spain,0.487,9,2
 2026-05-22,Spain,0.476,9,1
@@ -13858,8 +13857,8 @@ day,country,share,reports,reports_day
 2026-11-11,Spain,0.381,7,1
 2026-11-12,Spain,0.331,6,0
 2026-11-13,Spain,0.336,6,1
-2026-11-14,Spain,0.282,5,0
-2026-05-19,Sudan,0.91,2,0
+2026-11-14,Spain,0.451,8,3
+2026-11-15,Spain,0.333,6,0
 2026-05-20,Sudan,0.946,2,0
 2026-05-21,Sudan,0.963,2,0
 2026-05-22,Sudan,1.044,2,0
@@ -14039,7 +14038,7 @@ day,country,share,reports,reports_day
 2026-11-12,Sudan,0.795,2,0
 2026-11-13,Sudan,0.822,2,0
 2026-11-14,Sudan,1.186,3,1
-2026-05-19,Sweden,0.811,9,0
+2026-11-15,Sudan,1.229,3,0
 2026-05-20,Sweden,0.53,6,1
 2026-05-21,Sweden,0.418,5,1
 2026-05-22,Sweden,0.301,4,0
@@ -14218,8 +14217,8 @@ day,country,share,reports,reports_day
 2026-11-11,Sweden,0.294,3,1
 2026-11-12,Sweden,0.296,3,1
 2026-11-13,Sweden,0.605,6,3
-2026-11-14,Sweden,0.61,6,0
-2026-05-19,Syria,0.0,0,0
+2026-11-14,Sweden,0.711,7,1
+2026-11-15,Sweden,0.716,7,0
 2026-05-20,Syria,0.0,0,0
 2026-05-21,Syria,0.0,0,0
 2026-05-22,Syria,0.0,0,0
@@ -14399,7 +14398,7 @@ day,country,share,reports,reports_day
 2026-11-12,Syria,0.0,0,0
 2026-11-13,Syria,0.0,0,0
 2026-11-14,Syria,0.0,0,0
-2026-05-19,Switzerland,0.0,0,0
+2026-11-15,Syria,0.0,0,0
 2026-05-20,Switzerland,0.0,0,0
 2026-05-21,Switzerland,0.0,0,0
 2026-05-22,Switzerland,0.234,1,1
@@ -14579,7 +14578,7 @@ day,country,share,reports,reports_day
 2026-11-12,Switzerland,0.572,2,0
 2026-11-13,Switzerland,0.556,2,0
 2026-11-14,Switzerland,0.557,2,0
-2026-05-19,Thailand,0.375,1,0
+2026-11-15,Switzerland,0.547,2,0
 2026-05-20,Thailand,0.0,0,0
 2026-05-21,Thailand,0.0,0,0
 2026-05-22,Thailand,0.0,0,0
@@ -14759,7 +14758,7 @@ day,country,share,reports,reports_day
 2026-11-12,Thailand,0.0,0,0
 2026-11-13,Thailand,0.0,0,0
 2026-11-14,Thailand,0.0,0,0
-2026-05-19,Tunisia,0.0,0,0
+2026-11-15,Thailand,0.0,0,0
 2026-05-20,Tunisia,0.0,0,0
 2026-05-21,Tunisia,0.0,0,0
 2026-05-22,Tunisia,0.0,0,0
@@ -14939,7 +14938,7 @@ day,country,share,reports,reports_day
 2026-11-12,Tunisia,0.0,0,0
 2026-11-13,Tunisia,0.0,0,0
 2026-11-14,Tunisia,0.0,0,0
-2026-05-19,Turkey,0.176,2,2
+2026-11-15,Tunisia,0.0,0,0
 2026-05-20,Turkey,0.257,3,1
 2026-05-21,Turkey,0.245,3,0
 2026-05-22,Turkey,0.231,3,0
@@ -15119,7 +15118,7 @@ day,country,share,reports,reports_day
 2026-11-12,Turkey,0.111,2,0
 2026-11-13,Turkey,0.109,2,0
 2026-11-14,Turkey,0.107,2,0
-2026-05-19,Taiwan,0.0,0,0
+2026-11-15,Turkey,0.106,2,0
 2026-05-20,Taiwan,0.0,0,0
 2026-05-21,Taiwan,0.0,0,0
 2026-05-22,Taiwan,0.0,0,0
@@ -15299,7 +15298,7 @@ day,country,share,reports,reports_day
 2026-11-12,Taiwan,0.0,0,0
 2026-11-13,Taiwan,0.0,0,0
 2026-11-14,Taiwan,0.0,0,0
-2026-05-19,Uganda,0.0,0,0
+2026-11-15,Taiwan,0.0,0,0
 2026-05-20,Uganda,0.0,0,0
 2026-05-21,Uganda,0.0,0,0
 2026-05-22,Uganda,0.0,0,0
@@ -15479,7 +15478,7 @@ day,country,share,reports,reports_day
 2026-11-12,Uganda,0.0,0,0
 2026-11-13,Uganda,0.0,0,0
 2026-11-14,Uganda,0.0,0,0
-2026-05-19,United Kingdom,0.113,5,0
+2026-11-15,Uganda,0.0,0,0
 2026-05-20,United Kingdom,0.091,4,0
 2026-05-21,United Kingdom,0.094,4,2
 2026-05-22,United Kingdom,0.12,5,1
@@ -15659,7 +15658,7 @@ day,country,share,reports,reports_day
 2026-11-12,United Kingdom,0.128,6,1
 2026-11-13,United Kingdom,0.108,5,0
 2026-11-14,United Kingdom,0.128,6,1
-2026-05-19,Ukraine,0.088,3,0
+2026-11-15,United Kingdom,0.15,7,1
 2026-05-20,Ukraine,0.09,3,0
 2026-05-21,Ukraine,0.061,2,0
 2026-05-22,Ukraine,0.059,2,0
@@ -15839,7 +15838,7 @@ day,country,share,reports,reports_day
 2026-11-12,Ukraine,0.076,4,0
 2026-11-13,Ukraine,0.056,3,0
 2026-11-14,Ukraine,0.109,6,3
-2026-05-19,United States,0.216,55,9
+2026-11-15,Ukraine,0.126,7,1
 2026-05-20,United States,0.232,60,17
 2026-05-21,United States,0.201,52,2
 2026-05-22,United States,0.187,48,12
@@ -16016,10 +16015,10 @@ day,country,share,reports,reports_day
 2026-11-09,United States,0.282,75,6
 2026-11-10,United States,0.267,70,9
 2026-11-11,United States,0.263,65,10
-2026-11-12,United States,0.243,59,9
-2026-11-13,United States,0.202,48,6
+2026-11-12,United States,0.242,59,9
+2026-11-13,United States,0.201,48,6
 2026-11-14,United States,0.19,45,4
-2026-05-19,Venezuela,1.409,12,5
+2026-11-15,United States,0.212,50,6
 2026-05-20,Venezuela,1.465,13,2
 2026-05-21,Venezuela,1.085,10,0
 2026-05-22,Venezuela,1.062,10,0
@@ -16175,7 +16174,7 @@ day,country,share,reports,reports_day
 2026-10-19,Venezuela,0.0,0,0
 2026-10-20,Venezuela,0.0,0,0
 2026-10-21,Venezuela,0.0,0,0
-2026-10-22,Venezuela,0.176,1,1
+2026-10-22,Venezuela,0.175,1,1
 2026-10-23,Venezuela,0.179,1,0
 2026-10-24,Venezuela,0.183,1,0
 2026-10-25,Venezuela,0.167,1,0
@@ -16199,7 +16198,7 @@ day,country,share,reports,reports_day
 2026-11-12,Venezuela,0.0,0,0
 2026-11-13,Venezuela,0.157,1,1
 2026-11-14,Venezuela,0.16,1,0
-2026-05-19,Vietnam,0.0,0,0
+2026-11-15,Venezuela,0.16,1,0
 2026-05-20,Vietnam,0.0,0,0
 2026-05-21,Vietnam,0.0,0,0
 2026-05-22,Vietnam,0.0,0,0
@@ -16379,7 +16378,7 @@ day,country,share,reports,reports_day
 2026-11-12,Vietnam,0.259,1,0
 2026-11-13,Vietnam,0.264,1,0
 2026-11-14,Vietnam,0.526,2,1
-2026-05-19,West Bank,0.422,1,1
+2026-11-15,Vietnam,0.517,2,0
 2026-05-20,West Bank,0.432,1,0
 2026-05-21,West Bank,0.455,1,0
 2026-05-22,West Bank,0.484,1,0
@@ -16553,13 +16552,13 @@ day,country,share,reports,reports_day
 2026-11-06,West Bank,0.5,1,0
 2026-11-07,West Bank,0.515,1,0
 2026-11-08,West Bank,0.503,1,0
-2026-11-09,West Bank,0.541,1,0
+2026-11-09,West Bank,0.54,1,0
 2026-11-10,West Bank,0.0,0,0
 2026-11-11,West Bank,0.0,0,0
 2026-11-12,West Bank,0.0,0,0
 2026-11-13,West Bank,0.0,0,0
 2026-11-14,West Bank,0.0,0,0
-2026-05-19,Zimbabwe,0.0,0,0
+2026-11-15,West Bank,0.0,0,0
 2026-05-20,Zimbabwe,0.0,0,0
 2026-05-21,Zimbabwe,0.0,0,0
 2026-05-22,Zimbabwe,0.0,0,0
@@ -16739,3 +16738,4 @@ day,country,share,reports,reports_day
 2026-11-12,Zimbabwe,0.0,0,0
 2026-11-13,Zimbabwe,0.0,0,0
 2026-11-14,Zimbabwe,0.0,0,0
+2026-11-15,Zimbabwe,0.0,0,0
